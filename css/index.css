@@ -1,0 +1,512 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+
+
+/* 
+white-space: nowrap;
+object-fit: cover;
+*/
+
+/* 
+css => *{font-size=16px}
+html =>
+    폰트 사이즈 rem단위 사용(html 기준으로 곱하기)
+    폰트 사이즈 em단위 자제(상위 기준으로 곱하기) 
+
+ex) <div style="font-sixe:24px">
+    <p>폰트사이즈 2em (상위요소 24*2=>48)</p>
+    <p>폰트사이즈 2rem (최상위요소[html] 16*2=32)</p>
+*/
+
+
+/* header */
+
+.header{
+    height: 100px; left: 0; top: 0; background-color: white;
+    border-bottom: 1px solid lightgray; margin: 0; padding: 0px;
+    width: 100%;  position: fixed; z-index: 10;
+}
+.head{
+    position: relative;
+    width: 80%; margin: 0 auto; margin-top: 25px;
+    display: flex; align-items: flex-end; justify-content: space-between;}
+.head h1{ width: 130px;}
+.head h1 img{ width: 100%; left: 0; top: 0;}
+.head nav{margin-top: 20px;}
+.head nav ul{ display: flex;}
+.head nav ul li{position: relative; z-index: 11;}
+.head nav ul li > a{
+    /* 각 li 안의 주메뉴 */
+    font-size: 18px; padding: 15px 40px;}
+.head nav ul li > div{
+    /* 각 li 안의 서브메뉴 */
+    position: absolute; transform: translateY(100%);  left: 0; bottom: 0;
+    text-align: center; width: 100%; line-height: 1.8; padding: 30px 0;
+    display: none;}
+.head nav ul li > div a{ display: block;}
+.head nav ul li > a:hover{ background-color: #0088e7; color: white; }
+header::after{
+    content: ''; width: 100%; height: 130px;
+    background-color: rgb(248, 248, 248); border-top: 1px solid lightgray;
+    position: absolute; bottom: 0; left: 0; transform: translateY(100%);
+    z-index: 10; display: none;}
+.head nav:hover ul li > div{ display: block; }
+header:hover::after{ display: block; }
+
+.head select{  /* 언어선택 */
+    font-size: 12px; color: #999999; width: 80px; border: none;
+    right: 40px; top: 0; position: absolute;
+}
+.head nav ul li > div a:hover{color: #0088e7;}
+
+
+
+
+/* main1 */
+
+
+.main1{
+    position: relative;
+    left: 0; top: 101px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    z-index: 5;
+}
+.main1 article{}
+.main1 article h1{
+    display: inline-block;
+    position: absolute;
+    color: white;
+    text-align: end;
+    font-size: 70px;
+    font-family: 'InkLipquid';
+    right: 20%; top: 40%;
+    z-index: 3;
+}
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.main1 article div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main1 article > div p{
+    left: 0; top: 0; width: 100%;
+    animation: a1 15s 2s infinite;
+}
+@keyframes a1 {
+    0%{transform: translateY(0);}
+    35%{transform: translateY(-100%);}
+    70%{transform: translateY(-200%);}
+    100%{transform: translateY(-300%);}    
+}
+.main1 article > div p img{
+    width: 100%; height: 600px;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.main1 article > p{
+    position: absolute;
+    right: 5%; top: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main1 article > p span{
+    z-index: 30;
+    display: inline-block;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    width: 12px; height: 12px;
+    margin: 5px 0;
+}
+
+
+.main1 article > p span:nth-child(1){
+    height: 40px;
+    background-color: #0088e7;
+}
+.main1 article > span{
+    font-size: 0;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;  height: 100%;
+    background-color: rgba(0,0,0,0.5)
+}
+
+
+
+
+
+/* mapnav */
+
+
+.mapnav{
+    width: 80%; height: 50px;
+    background-color: #005bb5;
+    border-radius: 25px;
+
+    position: absolute;
+    left: 50%; top: 676px;
+    transform: translate(-50%, 0);
+    z-index: 6;
+}
+
+.mapnav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mapnav ul li{
+    background-color: white;
+    width: 50%;
+    margin: 4.5px 5px;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 30px;
+}
+.mapnav ul > li:nth-child(4){
+    background-color: #004472;
+    width: 0;
+}
+.mapnav ul li h1{}
+.mapnav ul li span{}
+.mapnav ul li span img{
+    width: 20px;
+    transform: translate(-45%, 0);
+}
+
+
+
+
+
+
+/* main2 */
+
+
+.main2{
+    left: 0; top: 0; margin-top: 101px;
+    width: 100%; height: 500px;
+}
+.main2::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.left{
+    width: 40%;
+    left: 0; top: 0;
+    margin-top: 340px;
+    padding-left: 5%;
+    float: left;
+    box-sizing: border-box;
+}
+.left h2{
+    font-size: 20px;
+}
+.left p{
+    font-size: 15px;
+    white-space: pre-line;
+    color: #999999;
+}
+
+
+
+.right{
+    width: 60%; float: right; margin: 85px 0;
+    display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
+    position: absolute; right: 0; overflow: hidden;
+}
+.right figure{
+    width: 220px; height: 360px; margin: 0 15px;
+    animation: a2 10s 2s infinite;
+}
+@keyframes a2 {
+    0%{transform: translateX(0%);}
+    35%{transform: translateX(-120%);}
+    70%{transform: translateX(-230%);}
+    100%{transform: translateX(-340%);}
+}
+
+.right figure > p{ margin-bottom: 17px; width:100%; height: 300px;
+    box-sizing: border-box; border-radius: 10px; overflow: hidden;
+
+}
+.right figure p img{
+    height: 100%; vertical-align: top; object-fit: cover; transform: translate(-12%, 0);
+}
+.right figure figcaption{}
+.right figure figcaption h1{ font-size: 16px; }
+.right figure figcaption p{ font-size: 13px; line-height: 20px; color: #999;
+}
+.right div{ position: absolute; right: 0; top: 38%; width: 30px;
+}
+.right div img{ width: 100%;
+}
+
+
+
+
+
+/* main3 */
+
+
+.main3{
+    position: relative;
+    left: 0; top: 0; width: 100%; height: 430px;
+}
+.main3 figure{
+    min-height: 100%;
+    background: url('3-photo1.jpg') fixed;
+    background-size: cover; background-position-x: 50%;
+}
+.main3 figure img{
+    height: 100%; width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+
+.main3 article{
+    position: absolute;
+    left: 50%; top: 50px;  transform: translate(-50%, 40%);
+    text-align: center; line-height: 30px;
+    z-index: 4;
+}
+.main3 article h2{ color: white; font-size: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.main3 article span{ color: rgba(250, 250, 250, 0.7); font-size: 15px;
+}
+
+
+/* 메인3 아이콘 전체 */
+.main3 .icon{
+    width: 100%; left: 0; top: 0;
+    display: flex; justify-content: flex-start;  align-items: flex-start;
+    position: absolute;
+}
+.main3 .icon ul{
+    left: 0; top: 0;  width: 25%;  height: 430px;
+    background-color: rgba(0,0,0,0.2);
+}
+.main3 .icon ul:nth-child(2n){ background-color: rgba(0,0,0,0.25);}
+.main3 .icon ul{ text-align: center; left: 0; top: 0; position: relative;}
+.main3 .icon ul li{ position: absolute; left: 50%; top: 50%;}
+.main3 .icon ul li a{ opacity: 70%;}
+
+/* 메인3 아이콘 */
+.main3 .icon ul li a img{
+    transform: translate(-50%, 80%); width: 40px;
+}
+/* 메인3 텍스트 */
+.main3 .icon ul li:nth-child(3) a{
+    width: 150px;    color: white;
+    position: absolute; transform: translate(-50%, 500%);
+}
+.main3 .icon ul:nth-child(1) li a img{width: 62px; transform: translate(-50%, 90%);}
+.main3 .icon ul:nth-child(2) li a img{width: 50px; transform: translate(-50%, 110%)}
+.main3 .icon ul:nth-child(3) li a img{transform: translate(-50%, 90%)}
+
+/* 메인3 자세히 */
+.main3 .icon ul li:nth-child(4) a{
+    width: 100px; padding-top: 3px; border: 1px solid white;
+    font-size: 12px; color: white; opacity: 70%;
+    position: absolute; transform: translate(-50%, 630%);
+    display: none;
+}
+
+/* main3 hover */
+.main3 .icon ul:hover{ transition: 0.8s; background-color: rgba(0,0,0,0.4);}
+.main3 .icon ul:hover > li{ transition: 0.8s; left:50%; top: 40%;}
+.main3 .icon ul:hover li a{ transition: 0.8s; opacity: 100%;}
+.main3 .icon ul:hover > li:nth-child(4) a{ transition: 0.8s; display: block;}
+
+
+
+
+/* main4 */
+
+.main4{ left: 0; top: 0; width: 65%; height: 400px;
+    margin: 0 auto; margin-top: 101px;
+}
+
+/* 상단탭 */
+.tap{
+    margin-bottom: 15px;
+    display: flex; align-items: baseline; justify-content: space-between;
+}
+.tap div span{
+    font-size: 18px; margin: 0 10px; opacity: 70%;
+}
+.tap div span:nth-child(1){
+    margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;
+}
+.tap div span:hover{
+    border-bottom: 2px solid #0088e7; opacity: 100%;
+}
+.tap > a{
+    font-size: 13px; color: gray;
+}
+.tap > a:hover{
+    color: #0088e7;  border-bottom: 1px solid #0088e7;
+}
+
+
+/* 컨텐츠 */
+
+.news{}
+.news figure{
+}
+.news figure a{
+    border-bottom: 2px solid #e3e3e3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.news figure:nth-child(1){
+    border-top: 2px solid #e3e3e3;
+    background-color: rgba(0, 136, 231, 0.05);
+}
+
+
+.news figure a figcaption{
+    width: 100%;
+    left: 0px; top: 0;
+    margin: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news figure:nth-child(1) a figcaption{
+    display: block;
+    width: 60%;
+    height: 130px;
+    margin: 20px 0 20px 30px;
+    overflow: hidden;
+}
+
+
+.news figure a figcaption small{
+    font-size: 11px; color: rgb(195, 195, 195);
+}
+.news figure a figcaption h2{
+    margin: 10px 0; font-size: 16px; color: #666;
+    transition: .5s;
+}
+.news figure:nth-child(1) a figcaption h2{
+    font-size: 20px; color: #333;
+}
+.news figure a figcaption p{
+    font-size: 15px; line-height: 23px; color: #999;
+}
+.news figure a > p{
+    width: 30%; height: 170px;
+}
+.news figure a p img{
+    width: 100%; height: 100%; object-fit: cover; vertical-align: top;
+}
+
+.news figure a:hover figcaption h2{
+    color: #0088e7;
+}
+
+
+/* main5 */
+.main5{
+    left: 0; top: 0; margin-top: 101px;
+    width: 100%; height: 200px;
+}
+.main5 article {
+}
+
+.main5 article > div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.main5 article > div a{
+    position: relative;
+}
+
+.main5 div a h2{
+    position: absolute;
+    left: 50%; top: 50%;
+    font-size: 18px;
+    color: white;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+}
+
+.main5 div a div{
+    height: 50%;
+    z-index: 3;
+}
+
+.main5 div a div span{
+    position: absolute;
+    display: inline-block;
+    width: 100%; height: 100px;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 0;
+}
+.main5 div a div p{
+    width: 100%; height: 100px;
+    overflow: hidden;
+    
+}
+.main5 div a div p img{
+    width: 100%; height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.main5 div a:hover div span{
+    transition: 0.5s;
+    background: none;
+    border: 4px solid #0088e7; box-sizing: border-box;
+    z-index: 2;
+}
+
+
+
+
+/* footer */
+.footer{ left: 0; top: 0;
+    width: 100%; height: 100px; background-color: rgb(248, 248, 248);}
+.footer > div{ width: 80%; left: 0; top: 0; margin: 0 auto; padding-top: 35px;
+    display: flex; align-items: flex-start; justify-content: space-between;}
+
+/* logo */
+.logo{  width: 20%; display: flex; align-items: center; justify-content: space-between;}
+.logo p{ margin: 6px;}
+.logo p img{ width: 100%;}
+
+/* 안내 */
+.text{  width: 60%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.text li{ margin: 2px 0; font-size: 13px; color: #999;}
+.text > li:nth-child(1) a{ font-size: 13px; padding: 0 10px; color: #999;}
+.text > li  small{ font-size: 11px; color: #c6c6c6;}
+
+/* sns */
+.sns{ width: 20%; left: 0; top: 0;}
+.sns input{ float: left; width: 70%;}
+.sns input::after{ content: ''; display: block; clear: both;}
+.sns p{ float: right; width: 23%; height: 20px;
+    display: flex; align-items: center; justify-content: space-between;}
+.sns p a{ width: 23px;}
+.sns p a img{ width: 100%;}

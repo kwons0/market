@@ -1,0 +1,164 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+
+/* header */
+
+.header{
+    height: 100px; left: 0; top: 0;
+    background-color: white;
+    border-bottom: 1px solid lightgray; margin: 0; padding: 0px;
+    width: 100%;  position: fixed; z-index: 10;
+}
+.head{
+    position: relative;
+    width: 80%; margin: 0 auto; margin-top: 25px;
+    display: flex; align-items: flex-end; justify-content: space-between;}
+.head h1{ width: 130px;}
+.head h1 img{ width: 100%; left: 0; top: 0;}
+.head nav{margin-top: 20px;}
+.head nav ul{ display: flex;}
+.head nav ul li{position: relative; z-index: 11;}
+.head nav ul li > a{
+    /* 각 li 안의 주메뉴 */
+    font-size: 18px; padding: 15px 40px;}
+.head nav ul li > div{
+    /* 각 li 안의 서브메뉴 */
+    position: absolute; transform: translateY(100%);  left: 0; bottom: 0;
+    text-align: center; width: 100%; line-height: 1.8; padding: 30px 0;
+    display: none;}
+.head nav ul li > div a{ display: block;}
+.head nav ul li:nth-child(3) > a{ background-color: #0088e7; color: white; }
+.head nav ul li > a:hover{ background-color: #0088e7; color: white; }
+header::after{
+    content: ''; width: 100%; height: 130px;
+    background-color: rgb(248, 248, 248); border-top: 1px solid lightgray;
+    position: absolute; bottom: 0; left: 0; transform: translateY(100%);
+    z-index: 10; display: none;}
+.head nav:hover ul li > div{ display: block; }
+header:hover::after{ display: block; }
+
+.head select{  /* 언어선택 */
+    font-size: 12px; color: #999999; width: 80px; border: none;
+    right: 40px; top: 0; position: absolute;
+}
+.head nav ul li > div a:hover{color: #0088e7;}
+
+
+/* menu */
+
+.menu{ margin-top: 101px; border-top: 1px solid rgb(248, 248, 248);
+    left: 0; top: 101px; width: 100%; height: 50px; background-color: rgb(248, 248, 248);}
+.menu ul{ width: 80%; height: 100%; margin: 0 auto;}
+.menu ul li{  width: 30%;  text-align: center; margin: 16.5px auto; transform: translateX(100%);}
+.menu ul li a{ margin: 0 10px;}
+.menu ul li a:nth-child(1){ color: #0088e7;}
+
+/* title */
+.title{
+    left: 0; top: 101px; width: 80%; height: 60px;
+    margin: 0 auto; padding: 53px 0 0 0;
+    border-bottom: 2px solid lightgray;
+    display: flex; align-items: center; justify-content: flex-start;
+}
+.title p{width: 30px; margin-right: 10px; }
+.title p img{width: 100%; ;
+    transform-style: preserve-3d; perspective: 20px; animation: a3 2s infinite;
+}
+@keyframes a3 {
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+.title h2{left: 0; top: 0; font-size: 22px; margin-left: 5px;
+}
+
+/* contents */
+.contents{  width: 80%; margin: 0 auto;
+}
+.contents div{
+    margin: 0 auto; margin-top: 60px; width: 97%; 
+    display: flex; align-items: flex-start; justify-content: space-between;
+}
+.contents div:nth-child(1){ margin-top: 50px;}
+.contents div article{
+    width: 31%; height: 390px;  overflow: hidden;
+    border-bottom: 2px solid #eaeaea;
+}
+.contents div:last-of-type article{
+    border-bottom: none;
+}
+.contents div article figure{
+    position: relative; overflow: hidden;
+}
+.contents div article figure > a{}
+.contents div article figure > a img{
+    width: 100%; height: 250px;
+    object-fit: cover; transition: 1s; 
+}
+.contents div article figure > a span{
+    position: absolute; display: inline-block; 
+    background-color: rgba(0, 136, 231, 0.5);
+    width: 100%; height: 100%; left: 0; top: 0;
+    opacity: 0; transition: 1s;
+}
+.contents div article figure > a span img{
+    width: 30px; height: 30px; position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.contents div article small{
+    font-size: 13px; color: rgb(183, 183, 183);
+    margin: 15px 0 10px 0; padding: 0 10px;
+    display: block;
+}
+.contents div article > a{}
+.contents div article > a h2{
+    line-height: 1.5; padding: 0 10px; font-size: 18px;
+}
+.contents > a{
+    margin: 0 auto; margin-top: 30px; display: block;
+    width: 10%; padding: 15px 40px; font-size: 18px;
+    text-align: center; transition: .3s; color: #0088e7;
+    border: 1.5px solid #c6c6c6; border-radius: 30px;
+} 
+
+/* hover */
+.contents div article:hover figure > a > img{ transform: scale(1.3);}
+.contents div article:hover figure > a span{ opacity: 1;}
+.contents div article:hover > a h2{color: #0088e7;}
+
+.contents > a:hover{
+    border: 1.5px solid #0088e7;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* footer */
+.footer{ margin-top: 50px; left: 0; top: 0;
+    width: 100%; height: 100px; background-color: rgb(248, 248, 248);}
+.footer > div{ width: 80%; left: 0; top: 0; margin: 0 auto; padding-top: 35px;
+    display: flex; align-items: flex-start; justify-content: space-between;}
+
+/* logo */
+.logo{  width: 20%; display: flex; align-items: center; justify-content: space-between;}
+.logo p{ margin: 6px;}
+.logo p img{ width: 100%;}
+
+/* 안내 */
+.text{  width: 60%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.text li{ margin: 2px 0; font-size: 13px; color: #999;}
+.text > li:nth-child(1) a{ font-size: 13px; padding: 0 10px; color: #999;}
+.text > li  small{ font-size: 11px; color: #c6c6c6;}
+
+/* sns */
+.sns{ width: 20%; left: 0; top: 0;}
+.sns input{ float: left; width: 70%;}
+.sns input::after{ content: ''; display: block; clear: both;}
+.sns p{ float: right; width: 23%; height: 20px;
+    display: flex; align-items: center; justify-content: space-between;}
+.sns p a{ width: 23px;}
+.sns p a img{ width: 100%;}
