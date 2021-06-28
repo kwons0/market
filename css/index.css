@@ -159,6 +159,7 @@ header:hover::after{ display: block; }
     float: left; box-sizing: border-box;
 }
 .left h2{ font-size: 22px; font-family: 'Chosunilbo_myungjo';}
+.left h2 b{ font-size: 22px; color: #0088e7;}
 @font-face {
     font-family: 'Chosunilbo_myungjo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
@@ -202,13 +203,13 @@ header:hover::after{ display: block; }
 
 .main3{ position: relative; left: 0; top: 0; width: 100%; height: 430px;}
 .main3 figure{ min-height: 100%; background: url('3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;}
-.main3 figure img{ height: 100%; width: 100%; vertical-align: top; object-fit: cover;}
 
 
 .main3 article{ position: absolute; left: 50%; top: 50px;  transform: translate(-50%, 40%);
     text-align: center; line-height: 30px; z-index: 4;}
 .main3 article h2{ color: white; font-size: 24px;  font-family: 'Chosunilbo_myungjo'; 
-    text-shadow: 3px 3px 5px rgba(0,0,0,0.3); margin-bottom: 6px;}
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3); margin-bottom: 6px;
+}
 .main3 article span{ color: rgba(250, 250, 250, 0.7); font-size: 15px; margin-top: 20px;}
 
 
@@ -264,7 +265,7 @@ header:hover::after{ display: block; }
 .tap div span:nth-child(1){ margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;}
 .tap div span:hover{ border-bottom: 2px solid #0088e7; opacity: 100%;}
 .tap > a{font-size: 13px; color: gray;}
-.tap > a:hover{ color: #0088e7;  border-bottom: 1px solid #0088e7;}
+.tap > a:hover{ color: #0088e7;  border-bottom: 1px solid #0088e7; font-weight: bold;}
 
 
 /* 컨텐츠 */
@@ -304,18 +305,18 @@ header:hover::after{ display: block; }
 
 .main5 div a h2{
     position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
-    z-index: 2; transform: translate(-50%, -50%);
+    z-index: 4; transform: translate(-50%, -50%);
     text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
 }
 
 .main5 div a div{ height: 50%;  z-index: 3;}
 .main5 div a div span{
     position: absolute; display: inline-block;
-    width: 100%; height: 100px; background-color: rgba(0,0,0,0.4); font-size: 0;}
+    width: 100%; height: 100px; background-color: rgba(0,0,0,0.5); font-size: 0;}
 .main5 div a div p{ width: 100%; height: 100px; overflow: hidden;}
 .main5 div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
 .main5 div a:hover div span{
-    transition: 0.5s; background: none; border: 4px solid #0088e7; box-sizing: border-box;  z-index: 2;
+    transition: 0.5s; background-color: rgba(0,0,0,0.2); z-index: 2;
 }
 
 
