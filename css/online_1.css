@@ -128,7 +128,7 @@ header:hover::after{ display: block; }
 
 
 /* best */
-.best{ width: 80%; margin: 0 auto; left: 0; top: 0; margin-top: 100px;}
+.best{ width: 80%; margin: 0 auto; left: 0; top: 0; margin-top: 130px;}
 .best h2{text-align: center; font-size: 25px; margin-bottom: 40px;}
 .best > div{ display: flex; align-items: flex-start; justify-content: space-between;}
 .best > div > div{ width: 32%; height: 340px; overflow: hidden;
@@ -167,7 +167,7 @@ header:hover::after{ display: block; }
     background-color: rgba(0,0,0,0.5); width: 100%; height: 100px; text-align: center; padding: 15px 20px; box-sizing: border-box;
 }
 .best > div > div > a figure figcaption small{ color: #c6c6c6; font-size: 13px;}
-.best > div > div > a figure figcaption > h2{ color: white; margin: 5px 0; font-size: 19px;}
+.best > div > div > a figure figcaption > h2{ color: white; margin: 4px 0; font-size: 17px;}
 .best > div > div > a figure figcaption div{ display: flex; align-items: baseline; justify-content: center;}
 .best > div > div > a figure figcaption div > p{font-size: 20px; padding: 0 10px;}
 .best > div > div > a figure figcaption div > p:nth-of-type(1){ color: #fad354;}
@@ -203,17 +203,20 @@ header:hover::after{ display: block; }
 
 /* item */
 
-.item{ width: 80%; margin: 0 auto; margin-top: 40px;}
+.item{ width: 80%; margin: 0 auto; margin-top: 50px;}
 .item > div{ display: flex; align-items: flex-start; justify-content: space-between;
     margin-bottom: 50px;
 }
-.item > div a{ width: 23%; padding-bottom: 30px; border-bottom: 2px solid rgb(244, 244, 244);}
+.item > div a{ width: 24.5%; padding-bottom: 30px; 
+    border-bottom: 2px solid rgb(244, 244, 244);
+}
 .item > div:nth-child(3) a{border-bottom: none;}
+.item > div a:nth-child(5){display: none;}
 
 /* 제품이미지 */
 .item > div a figure{position: relative; transition: .5s;}
 .item > div a figure > div{}
-.item > div a figure > div > img{width: 100%; height: 230px; object-fit: cover;}
+.item > div a figure > div > img{width: 100%; height: 180px; object-fit: cover;transition: .5s;}
 
 /* 주석 */
 .item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s;}
@@ -225,20 +228,20 @@ header:hover::after{ display: block; }
 
 /* 이미지 호버 */
 
-.item > div a:hover figure{transform: translate(-2%, -2%);}
+.item > div a:hover figure{transform: translate(-1%, -1%);}
 .item > div a:hover figure > div > img{
-    opacity: 70%; box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    opacity: 70%; box-shadow: 5px 5px 7px rgba(0,0,0,0.2);
 }
 
 
 /* 판매내용 */
-.item > div a article{ margin-top: 10px; line-height: 1.5;}
+.item > div a article{ margin-top: 15px; line-height: 1.5;}
 .item > div a article small{ color: #c6c6c6; font-size: 14px;}
-.item > div a article h2{ font-size: 17px; color: #5a5a5a;}
+.item > div a article h2{ margin-top: 5px; color: #5a5a5a;}
 .item > div a article > div{ display: flex; align-items: baseline; justify-content: flex-start;}
 .item > div a article > div p{}
-.item > div a article > div p:nth-child(1){color: #0088e7; font-size: 22px; padding-right: 10px;}
-.item > div a article > div h3{ font-size: 22px; padding-right: 10px;}
+.item > div a article > div p:nth-child(1){color: #0088e7; font-size: 21px; padding-right: 10px;}
+.item > div a article > div h3{ font-size: 21px; padding-right: 10px;}
 .item > div a article > div p:nth-child(3){ color: #c6c6c6; text-decoration: line-through;}
 
 
@@ -246,7 +249,7 @@ header:hover::after{ display: block; }
 .item > a{
     margin: 0 auto; margin-top: 30px; display: block;
     width: 10%; padding: 15px 40px; font-size: 18px;
-    text-align: center; transition: .3s; color: #0088e7;
+    text-align: center; transition: .3s; color: #0088e7;background-color: white;
     border: 1.5px solid #c6c6c6; border-radius: 30px;
 } 
 .item > a:hover{

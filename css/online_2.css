@@ -55,6 +55,39 @@ header:hover::after{ display: block; }
 .menu ul li a:nth-child(2){ color: #0088e7;}
 
 
+/* title */
+.title{ 
+    left: 0; top: 101px; width: 80%; height: 50px; margin: 0 auto; padding: 50px 0 0 0;
+    display: flex; align-items: center; justify-content: flex-start;
+}
+.title p{width: 30px; margin-right: 10px; transform: translateY(-10%) }
+.title p img{width: 100%; ;
+    transform-style: preserve-3d; perspective: 20px; animation: a3 2s infinite;
+}
+@keyframes a3 {
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+.title h2{ left: 0; top: 0; font-size: 22px; }
+
+
+/* event */
+.event{width: 80%; margin: 0 auto;}
+.event a{}
+.event a:nth-of-type(1){}
+.event a:nth-of-type(1) figure{}
+
+
+.event a:nth-of-type(2){width: 100%;}
+.event a:nth-of-type(2) figure{}
+.event a:nth-of-type(2) figure p{}
+.event a:nth-of-type(2) figure p img{width: 100%; }
+
+
+.event div:nth-of-type(3){}
+.event div:nth-of-type(4){}
+
+
 
 
 

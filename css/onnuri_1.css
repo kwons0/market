@@ -2,7 +2,6 @@
 @import url('common.css');
 
 
-
 /* header */
 
 .header{
@@ -95,140 +94,68 @@ header:hover::after{ display: block; }
 .money figure:nth-child(4){ width: 40%;}
 .money figure:nth-child(4) p{  padding-top: 55px;}
 
-.money figure p img{
-    width: 100%; vertical-align: top;  object-fit: cover;
-}
-.money figure:nth-child(4) p img{
-}
+.money figure p img{width: 100%; vertical-align: top;  object-fit: cover;}
+.money figure small{ width: 100%; text-align: center; color: #999; font-size: 15px; margin-top: 10px;}
 
-.money figure small{
-    width: 100%; text-align: center; color: #999; font-size: 15px;
-}
-
-.paper > p{
-    margin: 20px auto;  background-color: rgb(248, 248, 248);  padding: 15px 15px; line-height: 1.5;
-}
+.paper > p{margin: 20px auto;  background-color: rgb(248, 248, 248);  padding: 15px 15px; line-height: 1.5;}
 
 
 /* title2 */
-.title2{
-    left: 0; top: 101px;
-    width: 80%; height: 190px; margin: 0 auto;
+.title2{ left: 0; top: 101px; width: 80%; height: 190px; margin: 0 auto;
     padding: 130px 0 0 0; box-sizing: border-box;
 }
-.title2 nav{
-    border-bottom: 2px solid lightgray;
+.title2 nav{ border-bottom: 2px solid lightgray;}
+.title2 nav a{ margin-left: 20px; font-size: 17px; color:lightgray;}
 
-}
-.title2 nav a{
-    margin-left: 20px;
-    font-size: 17px;
-    color:lightgray;
-}
-
-.title2 nav a:nth-child(2){
-    color: #333;
-    border-bottom: 2px solid #333;
-}
+.title2 nav a:nth-child(2){ color: #333; border-bottom: 2px solid #333;}
 .title2 nav a:hover{color: #0088e7; border-bottom: 2px solid #0088e7;}
     
 
 
 /* elec */
-.elec{
-    width: 75%; height: 500px;
-    margin: 0 auto;
-    left: 0; top: 101px;
-    padding-top: 30px;
+.elec{ width: 75%; height: 500px; margin: 0 auto; left: 0; top: 101px; padding-top: 30px;}
+.card{ margin: 0 auto; width: 80%;
+    display: flex; align-items: center; justify-content: space-between;
 }
-.card{
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card figure{
-    width: 24%;  margin-bottom: 20px;
+.card figure{ width: 24%;  margin-bottom: 20px;
     display: flex; align-items: center; justify-content: space-between; flex-direction: column;
 }
 .card figure p{}
-.card figure p img{
-    width: 100%; vertical-align: top; object-fit: cover;
-}
-.card figure small{
-    width: 100%; text-align: center;
-    color: #999;
-    font-size: 15px;
-}
+.card figure p img{  width: 100%; vertical-align: top; object-fit: cover;}
+.card figure small{ width: 100%; text-align: center; color: #999;  font-size: 15px;margin-top: 10px;}
 
-.elec > p{
-    margin: 20px auto;
-    background-color: rgb(248, 248, 248);
-    padding: 15px 15px;
-    line-height: 1.5;
+.elec > p{margin: 20px auto;  background-color: rgb(248, 248, 248); padding: 15px 15px; line-height: 1.5;
 }
 
 
 /* title3 */
-.title3{
-    left: 0; top: 101px;
-    width: 80%; height: 190px; margin: 0 auto;
+.title3{ left: 0; top: 101px; width: 80%; height: 190px; margin: 0 auto;
     padding: 130px 0 0 0; box-sizing: border-box;
 }
-.title3 nav{
-    border-bottom: 2px solid lightgray;
+.title3 nav{  border-bottom: 2px solid lightgray;}
+.title3 nav a{ margin-left: 20px; font-size: 17px; color:lightgray;}
 
-}
-.title3 nav a{
-    margin-left: 20px;
-    font-size: 17px;
-    color:lightgray;
-}
-
-.title3 nav a:nth-child(3){
-    color: #333;
-    border-bottom: 2px solid #333;
-}
-.title3 nav a:hover{color: #0088e7; border-bottom: 2px solid #0088e7;
-}
+.title3 nav a:nth-child(3){ color: #333;  border-bottom: 2px solid #333;}
+.title3 nav a:hover{color: #0088e7; border-bottom: 2px solid #0088e7;}
 
 
 /* mobile */
-.mobile{
-    width: 75%; height: 500px;
-    margin: 0 auto;
-    left: 0; top: 101px;
-    padding-top: 30px;
-}
-.video{
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.mobile{  width: 75%; height: 500px;  margin: 0 auto;  left: 0; top: 101px; padding-top: 30px;}
+.video{ margin: 0 auto; width: 80%;
+    display: flex;  align-items: center; justify-content: space-between;
 }
 .video figure{
-    width: 100%; height: 100%;
-    margin-bottom: 20px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    width: 100%; height: 100%; margin-bottom: 20px;
+    display: flex;  align-items: center;  justify-content: space-between; flex-direction: column;
 }
 
 .video figure small{
-    width: 100%; text-align: center;
-    color: #999;
-    font-size: 15px;
+    width: 100%; text-align: center; color: #999;  font-size: 15px; margin-top: 10px;
 }
 
 .mobile > p{
-    margin: 20px auto;
-    background-color: rgb(248, 248, 248);
-    padding: 15px 15px;
-    line-height: 1.5;
+    margin: 20px auto;  background-color: rgb(248, 248, 248);
+    padding: 15px 15px; line-height: 1.5;
 }
 
 

@@ -3,7 +3,6 @@
 
 
 
-
 /* 
 white-space: nowrap;
 object-fit: cover;
@@ -20,6 +19,7 @@ ex) <div style="font-sixe:24px">
     <p>폰트사이즈 2rem (최상위요소[html] 16*2=32)</p>
 */
 
+body{ background: none;}
 
 /* header */
 
@@ -68,37 +68,27 @@ header:hover::after{ display: block; }
 
 
 .main1{
-    position: relative;
-    left: 0; top: 101px;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    z-index: 5;
+    position: relative; left: 0; top: 101px; width: 100%;
+    height: 680px; overflow: hidden; z-index: 5;
 }
 .main1 article{}
-.main1 article h1{
-    display: inline-block;
-    position: absolute;
-    color: white;
-    text-align: end;
-    font-size: 70px;
-    font-family: 'InkLipquid';
-    right: 20%; top: 40%;
-    z-index: 3;
+.main1 article div { display: inline-block; position: absolute; right: 20%; top: 37%; z-index: 3; text-align: end;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
+.main1 article div h1{  color: white; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1; letter-spacing: 2px;}
+.main1 article div h1 b{  color: #57b3ff; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1;}
+.main1 article div p{color: #dbdbdb; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
+.main1 article div p b{color: #57b3ff; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
+
 @font-face {
     font-family: 'InkLipquid';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: normal;  font-style: normal;
 }
-.main1 article div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.main1 article figure{
+    display: flex; align-items: center;  justify-content: center;   flex-direction: column;
 }
-.main1 article > div p{
+.main1 article > figure p{
     left: 0; top: 0; width: 100%;
     animation: a1 15s 2s infinite;
 }
@@ -108,41 +98,24 @@ header:hover::after{ display: block; }
     70%{transform: translateY(-200%);}
     100%{transform: translateY(-300%);}    
 }
-.main1 article > div p img{
-    width: 100%; height: 600px;
-    vertical-align: top;
-    object-fit: cover;
+.main1 article > figure p img{
+    width: 100%; height: 680px;  vertical-align: top; object-fit: cover;
 }
 
 .main1 article > p{
-    position: absolute;
-    right: 5%; top: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    position: absolute;  right: 5%; top: 50%;
+    display: flex;  justify-content: center;   align-items: center;  flex-direction: column;
 }
 .main1 article > p span{
-    z-index: 30;
-    display: inline-block;
-    background-color: #e3e3e3;
-    border-radius: 10px;
-    width: 12px; height: 12px;
-    margin: 5px 0;
+    z-index: 30; display: inline-block;  background-color: #e3e3e3;
+    border-radius: 10px;   width: 12px; height: 12px;   margin: 5px 0;
 }
 
-
-.main1 article > p span:nth-child(1){
-    height: 40px;
-    background-color: #0088e7;
+.main1 article > p span:nth-child(1){height: 40px;  background: linear-gradient( to bottom, #57b3ff, #0088e7);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
 }
 .main1 article > span{
-    font-size: 0;
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;  height: 100%;
-    background-color: rgba(0,0,0,0.5)
+    font-size: 0;  position: absolute; left: 0; top: 0;   width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5)
 }
 
 
@@ -153,38 +126,20 @@ header:hover::after{ display: block; }
 
 
 .mapnav{
-    width: 80%; height: 50px;
-    background-color: #005bb5;
-    border-radius: 25px;
-
-    position: absolute;
-    left: 50%; top: 676px;
-    transform: translate(-50%, 0);
-    z-index: 6;
+    width: 80%; height: 60px; background-color: #005bb5; border-radius: 30px;
+    background: linear-gradient( to right, #0088e7, #005bb5);
+    position: absolute; left: 50%; top: 750px; transform: translate(-50%, 0); z-index: 6;
 }
-
-.mapnav ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.mapnav ul{ display: flex; align-items: center; justify-content: space-between;}
 .mapnav ul li{
-    background-color: white;
-    width: 50%;
-    margin: 4.5px 5px;
-    padding: 10px 30px;
-    text-align: center;
-    border-radius: 30px;
+    background-color: white; width: 50%; margin: 7px 7px;
+    padding: 12px 25px;  text-align: center;  border-radius: 30px;
 }
-.mapnav ul > li:nth-child(4){
-    background-color: #004472;
-    width: 0;
-}
-.mapnav ul li h1{}
-.mapnav ul li span{}
-.mapnav ul li span img{
-    width: 20px;
-    transform: translate(-45%, 0);
+.mapnav ul li:nth-child(1){margin-left: 12px;}
+.mapnav ul li:last-child{margin-right: 20px;}
+.mapnav ul > li:nth-child(4){ background-color: #005bb5; width: 0;}
+.mapnav ul > li h1{ color: #005bb5; font-size: 18px;}
+.mapnav ul li span img{  width: 20px;  transform: translate(-45%, 0);
 }
 
 
@@ -195,41 +150,28 @@ header:hover::after{ display: block; }
 /* main2 */
 
 
-.main2{
-    left: 0; top: 0; margin-top: 101px;
-    width: 100%; height: 500px;
-}
-.main2::after{
-    content: '';
-    display: block;
-    clear: both;
-}
+.main2{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 530px;}
+.main2::after{ content: ''; display: block; clear: both;}
 
-
+/* left */
 .left{
-    width: 40%;
-    left: 0; top: 0;
-    margin-top: 340px;
-    padding-left: 5%;
-    float: left;
-    box-sizing: border-box;
+    width: 40%; left: 0; top: 0; margin-top: 363px; padding-left: 5%;
+    float: left; box-sizing: border-box;
 }
-.left h2{
-    font-size: 20px;
+.left h2{ font-size: 22px; font-family: 'Chosunilbo_myungjo';}
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.left p{
-    font-size: 15px;
-    white-space: pre-line;
-    color: #999999;
-}
+.left p{ font-size: 15px; white-space: pre-line; color: #999999;}
 
-
-
+/* right */
 .right{
-    width: 60%; float: right; margin: 85px 0;
+    width: 60%; float: right; margin: 105px 0;
     display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
-    position: absolute; right: 0; overflow: hidden;
-}
+    position: absolute; right: 0; overflow: hidden;}
 .right figure{
     width: 220px; height: 360px; margin: 0 15px;
     animation: a2 10s 2s infinite;
@@ -241,21 +183,15 @@ header:hover::after{ display: block; }
     100%{transform: translateX(-340%);}
 }
 
-.right figure > p{ margin-bottom: 17px; width:100%; height: 300px;
-    box-sizing: border-box; border-radius: 10px; overflow: hidden;
-
-}
+.right figure > p{ margin-bottom: 17px; width:100%; height: 300px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+    box-sizing: border-box; border-radius: 10px; overflow: hidden;}
 .right figure p img{
-    height: 100%; vertical-align: top; object-fit: cover; transform: translate(-12%, 0);
-}
+    height: 100%; vertical-align: top; object-fit: cover; transform: translate(-12%, 0); }
 .right figure figcaption{}
 .right figure figcaption h1{ font-size: 16px; }
-.right figure figcaption p{ font-size: 13px; line-height: 20px; color: #999;
-}
-.right div{ position: absolute; right: 0; top: 38%; width: 30px;
-}
-.right div img{ width: 100%;
-}
+.right figure figcaption p{ font-size: 13px; line-height: 20px; color: #999;}
+.right div{ position: absolute; right: 0; top: 38%; width: 30px;}
+.right div img{ width: 100%;}
 
 
 
@@ -264,44 +200,24 @@ header:hover::after{ display: block; }
 /* main3 */
 
 
-.main3{
-    position: relative;
-    left: 0; top: 0; width: 100%; height: 430px;
-}
-.main3 figure{
-    min-height: 100%;
-    background: url('3-photo1.jpg') fixed;
-    background-size: cover; background-position-x: 50%;
-}
-.main3 figure img{
-    height: 100%; width: 100%;
-    vertical-align: top;
-    object-fit: cover;
-}
+.main3{ position: relative; left: 0; top: 0; width: 100%; height: 430px;}
+.main3 figure{ min-height: 100%; background: url('3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;}
+.main3 figure img{ height: 100%; width: 100%; vertical-align: top; object-fit: cover;}
 
 
-.main3 article{
-    position: absolute;
-    left: 50%; top: 50px;  transform: translate(-50%, 40%);
-    text-align: center; line-height: 30px;
-    z-index: 4;
-}
-.main3 article h2{ color: white; font-size: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-.main3 article span{ color: rgba(250, 250, 250, 0.7); font-size: 15px;
-}
+.main3 article{ position: absolute; left: 50%; top: 50px;  transform: translate(-50%, 40%);
+    text-align: center; line-height: 30px; z-index: 4;}
+.main3 article h2{ color: white; font-size: 24px;  font-family: 'Chosunilbo_myungjo'; 
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3); margin-bottom: 6px;}
+.main3 article span{ color: rgba(250, 250, 250, 0.7); font-size: 15px; margin-top: 20px;}
 
 
 /* 메인3 아이콘 전체 */
-.main3 .icon{
-    width: 100%; left: 0; top: 0;
-    display: flex; justify-content: flex-start;  align-items: flex-start;
-    position: absolute;
-}
+.main3 .icon{ width: 100%; left: 0; top: 0;
+    display: flex; justify-content: flex-start;  align-items: flex-start; position: absolute;}
 .main3 .icon ul{
     left: 0; top: 0;  width: 25%;  height: 430px;
-    background-color: rgba(0,0,0,0.2);
-}
+    background-color: rgba(0,0,0,0.2);}
 .main3 .icon ul:nth-child(2n){ background-color: rgba(0,0,0,0.25);}
 .main3 .icon ul{ text-align: center; left: 0; top: 0; position: relative;}
 .main3 .icon ul li{ position: absolute; left: 50%; top: 50%;}
@@ -339,147 +255,67 @@ header:hover::after{ display: block; }
 
 /* main4 */
 
-.main4{ left: 0; top: 0; width: 65%; height: 400px;
-    margin: 0 auto; margin-top: 101px;
-}
+.main4{ left: 0; top: 0; width: 65%; height: 400px; margin: 0 auto; margin-top: 101px;}
 
 /* 상단탭 */
-.tap{
-    margin-bottom: 15px;
-    display: flex; align-items: baseline; justify-content: space-between;
-}
-.tap div span{
-    font-size: 18px; margin: 0 10px; opacity: 70%;
-}
-.tap div span:nth-child(1){
-    margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;
-}
-.tap div span:hover{
-    border-bottom: 2px solid #0088e7; opacity: 100%;
-}
-.tap > a{
-    font-size: 13px; color: gray;
-}
-.tap > a:hover{
-    color: #0088e7;  border-bottom: 1px solid #0088e7;
-}
+.tap{margin-bottom: 15px;
+    display: flex; align-items: baseline; justify-content: space-between;}
+.tap div span{ font-size: 18px; margin: 0 10px; opacity: 70%;}
+.tap div span:nth-child(1){ margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;}
+.tap div span:hover{ border-bottom: 2px solid #0088e7; opacity: 100%;}
+.tap > a{font-size: 13px; color: gray;}
+.tap > a:hover{ color: #0088e7;  border-bottom: 1px solid #0088e7;}
 
 
 /* 컨텐츠 */
 
 .news{}
-.news figure{
+.news figure{}
+.news figure a{  border-bottom: 2px solid #e3e3e3;
+    display: flex; align-items: flex-start; justify-content: space-between;
 }
-.news figure a{
-    border-bottom: 2px solid #e3e3e3;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.news figure:nth-child(1){
-    border-top: 2px solid #e3e3e3;
-    background-color: rgba(0, 136, 231, 0.05);
-}
+.news figure:nth-child(1){  border-top: 2px solid #e3e3e3;  background-color: rgba(0, 136, 231, 0.05);}
 
 
 .news figure a figcaption{
-    width: 100%;
-    left: 0px; top: 0;
-    margin: 10px 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%; left: 0px; top: 0; margin: 10px 30px;
+    display: flex;  align-items: center; justify-content: space-between;
 }
 .news figure:nth-child(1) a figcaption{
-    display: block;
-    width: 60%;
-    height: 130px;
-    margin: 20px 0 20px 30px;
+    display: block;  width: 60%;  height: 130px; margin: 20px 0 20px 30px;
     overflow: hidden;
 }
 
 
-.news figure a figcaption small{
-    font-size: 11px; color: rgb(195, 195, 195);
-}
-.news figure a figcaption h2{
-    margin: 10px 0; font-size: 16px; color: #666;
-    transition: .5s;
-}
-.news figure:nth-child(1) a figcaption h2{
-    font-size: 20px; color: #333;
-}
-.news figure a figcaption p{
-    font-size: 15px; line-height: 23px; color: #999;
-}
-.news figure a > p{
-    width: 30%; height: 170px;
-}
-.news figure a p img{
-    width: 100%; height: 100%; object-fit: cover; vertical-align: top;
-}
+.news figure a figcaption small{ font-size: 11px; color: rgb(195, 195, 195);}
+.news figure a figcaption h2{  margin: 10px 0; font-size: 16px; color: #666; transition: .5s;}
+.news figure:nth-child(1) a figcaption h2{ font-size: 20px; color: #333;}
+.news figure a figcaption p{ font-size: 15px; line-height: 23px; color: #999;}
+.news figure a > p{ width: 30%; height: 170px;}
+.news figure a p img{ width: 100%; height: 100%; object-fit: cover; vertical-align: top;}
 
-.news figure a:hover figcaption h2{
-    color: #0088e7;
-}
+.news figure a:hover figcaption h2{  color: #0088e7;}
 
 
 /* main5 */
-.main5{
-    left: 0; top: 0; margin-top: 101px;
-    width: 100%; height: 200px;
-}
-.main5 article {
-}
-
-.main5 article > div{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.main5 article > div a{
-    position: relative;
-}
+.main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 200px;}
+.main5 article > div{ display: flex; align-items: flex-start; justify-content: space-between;}
+.main5 article > div a{ position: relative;}
 
 .main5 div a h2{
-    position: absolute;
-    left: 50%; top: 50%;
-    font-size: 18px;
-    color: white;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-    text-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+    position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
+    z-index: 2; transform: translate(-50%, -50%);
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
 }
 
-.main5 div a div{
-    height: 50%;
-    z-index: 3;
-}
-
+.main5 div a div{ height: 50%;  z-index: 3;}
 .main5 div a div span{
-    position: absolute;
-    display: inline-block;
-    width: 100%; height: 100px;
-    background-color: rgba(0,0,0,0.4);
-    font-size: 0;
-}
-.main5 div a div p{
-    width: 100%; height: 100px;
-    overflow: hidden;
-    
-}
-.main5 div a div p img{
-    width: 100%; height: 100%;
-    vertical-align: top;
-    object-fit: cover;
-}
-
+    position: absolute; display: inline-block;
+    width: 100%; height: 100px; background-color: rgba(0,0,0,0.4); font-size: 0;}
+.main5 div a div p{ width: 100%; height: 100px; overflow: hidden;}
+.main5 div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
 .main5 div a:hover div span{
-    transition: 0.5s;
-    background: none;
-    border: 4px solid #0088e7; box-sizing: border-box;
-    z-index: 2;
+    transition: 0.5s; background: none; border: 4px solid #0088e7; box-sizing: border-box;  z-index: 2;
 }
 
 

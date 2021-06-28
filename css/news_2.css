@@ -90,7 +90,7 @@ header:hover::after{ display: block; }
 }
 .contents div:nth-child(1){ margin-top: 50px;}
 .contents div article{
-    width: 31%; height: 390px;  overflow: hidden;
+    width: 32%; height: 350px;  overflow: hidden;
     border-bottom: 2px solid #eaeaea;
 }
 .contents div:last-of-type article{
@@ -101,7 +101,7 @@ header:hover::after{ display: block; }
 }
 .contents div article figure > a{}
 .contents div article figure > a img{
-    width: 100%; height: 250px;
+    width: 100%; height: 220px;
     object-fit: cover; transition: 1s; 
 }
 .contents div article figure > a span{
@@ -127,12 +127,12 @@ header:hover::after{ display: block; }
 .contents > a{
     margin: 0 auto; margin-top: 30px; display: block;
     width: 10%; padding: 15px 40px; font-size: 18px;
-    text-align: center; transition: .3s; color: #0088e7;
+    text-align: center; transition: .3s; color: #0088e7;background-color: white;
     border: 1.5px solid #c6c6c6; border-radius: 30px;
 } 
 
 /* hover */
-.contents div article:hover figure > a > img{ transform: scale(1.3);}
+.contents div article:hover figure > a > img{ transform: scale(1.2);}
 .contents div article:hover figure > a span{ opacity: 1;}
 .contents div article:hover > a h2{color: #0088e7;}
 
