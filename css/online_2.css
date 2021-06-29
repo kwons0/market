@@ -118,7 +118,7 @@ box-sizing: border-box; min-height: 470px; position: relative;}
 
 /* NEW딱지 */
 .event ul li a > span{
-    width: 60px; height: 60px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 60px; height: 60px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #0088e7; position: absolute; right: 5%; top: 42%; text-align: center;
 }
 .event ul li a > span h2{

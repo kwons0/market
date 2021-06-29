@@ -61,6 +61,14 @@ header:hover::after{ display: block; }
 }
 .head nav ul li > div a:hover{color: #0088e7;}
 
+.mhead{display: none;}
+
+
+
+
+
+
+
 
 
 
@@ -102,13 +110,13 @@ header:hover::after{ display: block; }
     width: 100%; height: 680px;  vertical-align: top; object-fit: cover;
 }
 
-.main1 article > p{
+.main1 article > p{ 
     position: absolute;  right: 5%; top: 50%;
-    display: flex;  justify-content: center;   align-items: center;  flex-direction: column;
+    display: flex;  justify-content: center;   align-items: center;  flex-direction: column; 
 }
-.main1 article > p span{
+.main1 article > p span{ 
     z-index: 30; display: inline-block;  background-color: #e3e3e3;
-    border-radius: 10px;   width: 12px; height: 12px;   margin: 5px 0;
+    border-radius: 10px;   width: 12px; height: 12px;   margin: 5px 0; 
 }
 
 .main1 article > p span:nth-child(1){height: 40px;  background: linear-gradient( to bottom, #57b3ff, #0088e7);
@@ -172,7 +180,7 @@ header:hover::after{ display: block; }
 .right{
     width: 60%; float: right; margin: 105px 0;
     display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
-    position: absolute; right: 0; overflow: hidden;}
+    position: relative; right: 0; overflow: hidden;}
 .right figure{
     width: 220px; height: 360px; margin: 0 15px;
     animation: a2 10s 2s infinite;
@@ -197,7 +205,6 @@ header:hover::after{ display: block; }
 
 
 
-
 /* main3 */
 
 
@@ -210,6 +217,8 @@ header:hover::after{ display: block; }
 .main3 article h2{ color: white; font-size: 24px;  font-family: 'Chosunilbo_myungjo'; 
     text-shadow: 3px 3px 5px rgba(0,0,0,0.3); margin-bottom: 6px;
 }
+.main3 article h3{display: none;}
+.main3 article a{display: none;}
 .main3 article span{ color: rgba(250, 250, 250, 0.7); font-size: 15px; margin-top: 20px;}
 
 
@@ -262,10 +271,12 @@ header:hover::after{ display: block; }
 .tap{margin-bottom: 15px;
     display: flex; align-items: baseline; justify-content: space-between;}
 .tap div span{ font-size: 18px; margin: 0 10px; opacity: 70%;}
-.tap div span:nth-child(1){ margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;}
+.tap div span:nth-child(2){ margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;}
 .tap div span:hover{ border-bottom: 2px solid #0088e7; opacity: 100%;}
 .tap > a{font-size: 13px; color: gray;}
 .tap > a:hover{ color: #0088e7;  border-bottom: 1px solid #0088e7; font-weight: bold;}
+
+.tap div h3{display: none;}
 
 
 /* 컨텐츠 */
@@ -290,6 +301,7 @@ header:hover::after{ display: block; }
 
 .news figure a figcaption small{ font-size: 11px; color: rgb(195, 195, 195);}
 .news figure a figcaption h2{  margin: 10px 0; font-size: 16px; color: #666; transition: .5s;}
+.news figure a figcaption h3{  display: none;}
 .news figure:nth-child(1) a figcaption h2{ font-size: 20px; color: #333;}
 .news figure a figcaption p{ font-size: 15px; line-height: 23px; color: #999;}
 .news figure a > p{ width: 30%; height: 170px;}
@@ -318,6 +330,7 @@ header:hover::after{ display: block; }
 .main5 div a:hover div span{
     transition: 0.5s; background-color: rgba(0,0,0,0.2); z-index: 2;
 }
+.onlinetitle{display: none;}
 
 
 
@@ -347,3 +360,182 @@ header:hover::after{ display: block; }
     display: flex; align-items: center; justify-content: space-between;}
 .sns p a{ width: 23px;}
 .sns p a img{ width: 100%;}
+
+
+
+
+
+
+
+@media (max-width:1005px){
+    body{position: relative;}
+    .header{    height: 85px; left: 0; top: 0; background-color: rgba( 255, 255, 255, 0 );
+        border-bottom: none; margin: 0; padding: 0px;
+        width: 100%;  position: absolute; z-index: 10;}
+    .head{display: none;}
+    header:hover::after{ display: none; }
+
+    /* .mhead */
+    .mhead{display: block; width: 80%; margin: 0 auto;}
+    .mhead ul{width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 30px;}
+    .mhead ul li{ display: flex; align-items: center; justify-content: space-between;}
+    
+    .mhead ul li:nth-child(1){width: 100px;}
+    .mhead ul li:nth-child(1) a img{width: 100%;}
+
+    .mhead ul li:nth-child(2){width: 70px;}
+    .mhead ul li:nth-child(2) a{width: 30%;}
+    .mhead ul li:nth-child(2) a img{width: 100%;}
+
+
+    /* main1 */
+    .main1{ 
+        position: relative; left: 0; top: 0; width: 100%;
+        height: 800px; overflow: hidden; z-index: 5; border-radius: 0 0 0 30px;
+    }
+    .main1 article > figure p img{ width: 100%; height: 800px;  vertical-align: top; object-fit: cover;}
+    .main1 article div{ width: 100%; text-align: start; left: 15%; top: 35%; }
+    .main1 article > p{display: none;}
+
+    .mapnav{display: none;}
+
+
+    /* main2 */
+    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 200px;}
+    .main2::after{ content: ''; display: block; clear: none;}
+
+    /* left */
+    .left{ width: 100%; left: 0; top: 0; margin-top: 60px; padding-left: 5%;
+        float: none; text-align: center; display: none;}
+    /* right */
+    .right{
+        width: 85%; float: none; margin: 40px 0; top: 550px; right: 0; z-index: 20;
+        position: absolute; overflow: hidden; background-color: white; padding: 20px 10px;
+        border-radius: 15px 0 15px 0;
+    }
+    .right figure{ width: 180px; height: 350px; margin: 0 15px; animation: none;}
+
+    .right figure > p{ margin-bottom: 17px; width:100%; height: 270px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+        box-sizing: border-box; border-radius: 10px; overflow: hidden; }
+    .right figure p img{
+        height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
+    .right div{ display: none;}
+
+    /* main3 */
+
+
+    .main3{ position: relative; left: 0; top: 0; width: 100%; height: 260px; background: #f6f6f6; margin-top: 20px;}
+    .main3 figure{ display: none;}
+
+    .main3 article{ position: inherit; left: 0; top: 0;  transform: translate(0, 0);
+        text-align: start; line-height: 0; z-index: 4; width: 90%; margin: 0 auto;
+        padding-top: 40px; 
+        display: flex; align-items: baseline; justify-content: space-between;
+    }
+    .main3 article h2{ display: none;}
+    .main3 article span{display: none;}
+    .main3 article h3{display: block; font-size: 22px;}
+    .main3 article a{display: block; color: #999999;}
+
+    /* 메인3 아이콘 전체 */
+    .main3 .icon{ width: 90%; left: 0; top: 0;  margin: 20px auto;
+        display: flex; justify-content: space-between;  align-items: flex-start; flex-wrap: wrap; position: inherit;}
+    .main3 .icon ul{  background-color: rgba(0,0,0,0.5);
+        background: url('3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;
+        left: 0; top: 0;  width: 45%;  height: 80px;
+    }
+    .main3 .icon ul:nth-child(2n){ background-color: rgba(0,0,0,0.5);}
+    .main3 .icon ul{ text-align: center; left: 0; top: 0; position: relative; width: 49%; margin-bottom: 10px;}
+    .main3 .icon ul li{ position: inherit; left: 0; top: 0; transform: translate(0, 0);
+    }
+    .main3 .icon ul li a{ opacity: 100%;}
+
+    /* 메인3 아이콘 */
+    .main3 .icon ul li a img{display: none;}
+    /* 메인3 텍스트 */
+    .main3 .icon ul li:nth-child(3) a{ display: block; font-size: 18px;
+        width: 100%;  color: white; background-color: rgba(0,0,0,0.4);
+        position: inherit; transform: translate(0,0);  padding: 30px 0;
+    }
+
+    /* main3 hover */
+    .main3 .icon ul:hover{ transition: none; background-color: rgba(0,0,0,0.5);}
+    .main3 .icon ul:hover > li{ transition: none; left:0; top: 0;}
+    .main3 .icon ul:hover li a{ transition: none; opacity: 100%;}
+    .main3 .icon ul:hover > li:nth-child(4) a{ transition: none; display: none;}
+
+
+
+
+    /* main4 */
+
+    .main4{ left: 0; top: 0; width: 100%; height: 400px; margin: 0 auto; margin-top: 50px;}
+
+    /* 상단탭 */
+    .tap{width: 90%; margin: 0 auto;
+        display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px;}
+    .tap div span{ display: none;}
+    .tap > a{font-size: 16px; color: #999;}
+    .tap > a:hover{ color: #999;  border-bottom: none; font-weight: unset;}
+    .tap div h3{display: block; font-size: 22px;}
+
+
+    /* 컨텐츠 */
+
+    .news{position: relative;}
+    .news figure{}
+    .news figure:nth-child(2){display: none;}
+    .news figure:nth-child(3){display: none;}
+    .news figure:nth-child(4){display: none;}
+
+    .news figure a{  border-bottom: none; display: inherit; align-items: flex-start; justify-content: space-between; }
+    .news figure:nth-child(1){  border-top: none;  background-color: rgba(0, 0, 0,0);}
+
+    .news figure a figcaption{ 
+        width: 100%; left: 0px; top: 0; margin: 10px 30px;
+        display: flex;  align-items: center; justify-content: space-between;
+    }
+    .news figure:nth-child(1) a figcaption{
+        display: block;  width: 60%;  height: 160px; margin: 0; overflow: hidden; padding: 20px 30px;
+        position: absolute; left: 0; top: 60%; width: 80%;  background-color: rgba(255, 255, 255);
+        border-radius: 0 30px 0 0;
+    }
+
+    .news figure a figcaption small{ display: none;}
+    .news figure a figcaption h2{  white-space: pre-line;}
+    .news figure a figcaption h3{  display: block; color: #0088e7; font-size: 15px;}
+
+    .news figure a > p{ width: 100%; height: 300px; overflow: hidden; border-radius: 0 0 30px 0;}
+    .news figure a p img{ width: 100%; height: 100%; object-fit: cover; vertical-align: top; }
+    .news figure a:hover figcaption h2{  color: #333;}
+
+
+
+
+    /* main5 */
+    .main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 200px; background-color: #f6f6f6; padding-top: 40px; }
+    .main5 article > div{ display: flex; align-items: flex-start; justify-content: space-between;}
+    .main5 article > div a{ position: relative;}
+
+    .main5 div a h2{
+        position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
+        z-index: 4; transform: translate(-50%, -50%);
+        text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
+    }
+
+    .main5 div a div{ height: 50%;  z-index: 3;}
+    .main5 div a div span{
+        position: absolute; display: inline-block;
+        width: 100%; height: 100px; background-color: rgba(0,0,0,0.5); font-size: 0;}
+    .main5 div a div p{ width: 100%; height: 100px; overflow: hidden;}
+    .main5 div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
+    .main5 div a:hover div span{
+        transition: 0.5s; background-color: rgba(0,0,0,0.2); z-index: 2;
+    }
+
+
+    .onlinetitle{display: block; width: 90%; margin: 0 auto; 
+        display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px; }
+    .onlinetitle h3{display: block; font-size: 22px;}
+    .onlinetitle a{display: block; color: #999999;}
+}
