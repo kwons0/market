@@ -202,6 +202,8 @@ header:hover::after{ display: block; }
 .right div{ position: absolute; right: 0; top: 38%; width: 30px;}
 .right div img{ width: 100%;}
 
+.arrow{display: none;}
+
 
 
 
@@ -315,7 +317,7 @@ header:hover::after{ display: block; }
 .main5 article > div{ display: flex; align-items: flex-start; justify-content: space-between;}
 .main5 article > div a{ position: relative;}
 
-.main5 div a h2{
+.main5 div a > p{
     position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
     z-index: 4; transform: translate(-50%, -50%);
     text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
@@ -376,7 +378,7 @@ header:hover::after{ display: block; }
     header:hover::after{ display: none; }
 
     /* .mhead */
-    .mhead{display: block; width: 80%; margin: 0 auto;}
+    .mhead{display: block; width: 80%; margin: 0 auto; }
     .mhead ul{width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 30px;}
     .mhead ul li{ display: flex; align-items: center; justify-content: space-between;}
     
@@ -386,50 +388,81 @@ header:hover::after{ display: block; }
     .mhead ul li:nth-child(2){width: 70px;}
     .mhead ul li:nth-child(2) a{width: 30%;}
     .mhead ul li:nth-child(2) a img{width: 100%;}
+    .mhead ul li:nth-child(2) a:nth-child(2){ z-index: 20;}
+
+    .bgmenu{ position: fixed; width: 50%; height: 100%; right: 0; top: 0; background-color: rgba(255, 255, 255);
+        display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;
+        z-index: 10; transform: translateX(100%); transition: .5s;
+    }
+    .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
+    .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
+    .bgmenu div div > h2{ font-size: 20px; margin: 5px 0;}
+    .bgmenu div div > a{}
+    .bgmenu div div > a p{ color: #999; font-size: 17px;}
+    .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(500%);}
+    .bgmenu div > p img{width: 100%;}
+
+    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
 
 
-    /* main1 */
+    /* main1 시장 사진 움직임 */
     .main1{ 
         position: relative; left: 0; top: 0; width: 100%;
-        height: 800px; overflow: hidden; z-index: 5; border-radius: 0 0 0 30px;
+        height: 800px; overflow: hidden; z-index: 1; border-radius: 0 0 0 30px;
     }
     .main1 article > figure p img{ width: 100%; height: 800px;  vertical-align: top; object-fit: cover;}
-    .main1 article div{ width: 100%; text-align: start; left: 15%; top: 35%; }
+    .main1 article div{ width: 100%; text-align: start; left: 15%; top: 40%; }
+
+    .main1 article div h1{  color: white; font-size: 60px; font-family: 'InkLipquid'; line-height: 1.1; letter-spacing: 2px;}
+    .main1 article div h1 b{  color: #57b3ff; font-size: 60px; font-family: 'InkLipquid'; line-height: 1.1;}
+    .main1 article div p{color: #dbdbdb; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
+    .main1 article div p b{color: #57b3ff; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
     .main1 article > p{display: none;}
 
     .mapnav{display: none;}
 
 
-    /* main2 */
-    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 200px;}
-    .main2::after{ content: ''; display: block; clear: none;}
+    /* main2 시장 여러개 보기 */
+    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 200px; position: relative;}
+    .main2::after{clear: none;}
 
     /* left */
     .left{ width: 100%; left: 0; top: 0; margin-top: 60px; padding-left: 5%;
         float: none; text-align: center; display: none;}
     /* right */
     .right{
-        width: 85%; float: none; margin: 40px 0; top: 550px; right: 0; z-index: 20;
+        width: 85%; float: none; margin: 40px 0; top: -235px; right: 0; z-index: 2;
         position: absolute; overflow: hidden; background-color: white; padding: 20px 10px;
         border-radius: 15px 0 15px 0;
     }
     .right figure{ width: 180px; height: 350px; margin: 0 15px; animation: none;}
-
-    .right figure > p{ margin-bottom: 17px; width:100%; height: 270px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+    .right figure > p{ margin-bottom: 17px; width:100%; max-height: 270px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
         box-sizing: border-box; border-radius: 10px; overflow: hidden; }
-    .right figure p img{
-        height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
+    .right figure p img{  height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
     .right div{ display: none;}
 
-    /* main3 */
+    .arrow{display: block;width: 100px; height: 100px;
+        position: absolute; left: 40px; top: -90px; z-index: 50;
+        display: flex; align-items: flex-start; justify-content: flex-start;
+        animation: scroll 1.2s infinite;
+    }
+    .arrow div span{ display: block; border: 1px solid white; width: 15px;}
+    .arrow div span:nth-child(1){ transform: rotate(-45deg) translateY(-350%);}
+    .arrow div span:nth-child(2){ transform: rotate(45deg) translateY(350%);}
+    @keyframes scroll {
+        0%{ transform: translateX(10%);}
+        100%{transform: translateX(-10px); opacity: 0;}
+    }
 
 
-    .main3{ position: relative; left: 0; top: 0; width: 100%; height: 260px; background: #f6f6f6; margin-top: 20px;}
+    /* main3 온누리상품권 */
+
+    .main3{ position: relative; left: 0; top: 0; width: 100%; height: 200px; background: #f6f6f6; margin-top: 20px;}
     .main3 figure{ display: none;}
 
     .main3 article{ position: inherit; left: 0; top: 0;  transform: translate(0, 0);
         text-align: start; line-height: 0; z-index: 4; width: 90%; margin: 0 auto;
-        padding-top: 40px; 
+        padding-top: 50px; 
         display: flex; align-items: baseline; justify-content: space-between;
     }
     .main3 article h2{ display: none;}
@@ -438,14 +471,14 @@ header:hover::after{ display: block; }
     .main3 article a{display: block; color: #999999;}
 
     /* 메인3 아이콘 전체 */
-    .main3 .icon{ width: 90%; left: 0; top: 0;  margin: 20px auto;
+    .main3 .icon{ width: 90%; left: 0; top: 0;  margin: 35px auto;
         display: flex; justify-content: space-between;  align-items: flex-start; flex-wrap: wrap; position: inherit;}
     .main3 .icon ul{  background-color: rgba(0,0,0,0.5);
-        background: url('3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;
+        background: url('../img/3-photo2.jpg') fixed; background-size: cover; background-position-x: 50%;
         left: 0; top: 0;  width: 45%;  height: 80px;
     }
     .main3 .icon ul:nth-child(2n){ background-color: rgba(0,0,0,0.5);}
-    .main3 .icon ul{ text-align: center; left: 0; top: 0; position: relative; width: 49%; margin-bottom: 10px;}
+    .main3 .icon ul{ text-align: center; left: 0; top: 0; position: relative; width: 24%; margin-bottom: 10px;}
     .main3 .icon ul li{ position: inherit; left: 0; top: 0; transform: translate(0, 0);
     }
     .main3 .icon ul li a{ opacity: 100%;}
@@ -467,13 +500,13 @@ header:hover::after{ display: block; }
 
 
 
-    /* main4 */
+    /* main4 전통시장 소식*/
 
-    .main4{ left: 0; top: 0; width: 100%; height: 400px; margin: 0 auto; margin-top: 50px;}
+    .main4{ left: 0; top: 0; width: 100%; height: 400px; margin: 0 auto; margin-top: 60px;}
 
     /* 상단탭 */
     .tap{width: 90%; margin: 0 auto;
-        display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px;}
+        display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 25px;}
     .tap div span{ display: none;}
     .tap > a{font-size: 16px; color: #999;}
     .tap > a:hover{ color: #999;  border-bottom: none; font-weight: unset;}
@@ -496,7 +529,7 @@ header:hover::after{ display: block; }
         display: flex;  align-items: center; justify-content: space-between;
     }
     .news figure:nth-child(1) a figcaption{
-        display: block;  width: 60%;  height: 160px; margin: 0; overflow: hidden; padding: 20px 30px;
+        display: block;  width: 60%; max-width: 600px;  height: 160px; margin: 0; overflow: hidden; padding: 20px 30px;
         position: absolute; left: 0; top: 60%; width: 80%;  background-color: rgba(255, 255, 255);
         border-radius: 0 30px 0 0;
     }
@@ -512,30 +545,102 @@ header:hover::after{ display: block; }
 
 
 
-    /* main5 */
-    .main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 200px; background-color: #f6f6f6; padding-top: 40px; }
-    .main5 article > div{ display: flex; align-items: flex-start; justify-content: space-between;}
-    .main5 article > div a{ position: relative;}
+    /* main5 온라인장보기 */
+    .main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 300px; background-color: #f6f6f6; padding-top: 50px; overflow: hidden;}
+    .main5 article:nth-child(2){display: flex; align-items: flex-start; justify-content: flex-start;}
+    .main5 article > div{ display: flex; align-items: flex-start; justify-content: flex-start;}
+    .main5 article > div a{ position: relative; margin: 0 20px 0 0;}
+    .line1{margin-bottom: 25px; margin-left: 5%;}
 
-    .main5 div a h2{
-        position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
-        z-index: 4; transform: translate(-50%, -50%);
-        text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
+    .main5 div a > p{
+        position: inherit; left: 0; top: 0; font-size: 16px; color: #333;
+        transform: translate(0, 0); text-shadow: 0 0 0 rgba(0,0,0,0); font-family: none; padding: 10px 0 0 10px;
     }
 
-    .main5 div a div{ height: 50%;  z-index: 3;}
-    .main5 div a div span{
-        position: absolute; display: inline-block;
-        width: 100%; height: 100px; background-color: rgba(0,0,0,0.5); font-size: 0;}
-    .main5 div a div p{ width: 100%; height: 100px; overflow: hidden;}
+    .main5 div a div{ height: 100%;  z-index: 3;}
+    .main5 div a div span{display: none;}
+    .main5 div a div p{ width: 190px; height: 200px; border-radius: 15px; overflow: hidden; box-shadow: 3px 3px 7px rgba(0,0,0,0.2)}
     .main5 div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
     .main5 div a:hover div span{
-        transition: 0.5s; background-color: rgba(0,0,0,0.2); z-index: 2;
+        transition: none; background-color: rgba(0,0,0,0); z-index: 2;
     }
-
 
     .onlinetitle{display: block; width: 90%; margin: 0 auto; 
         display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px; }
     .onlinetitle h3{display: block; font-size: 22px;}
     .onlinetitle a{display: block; color: #999999;}
+
+
+    /* footer */
+    .footer{ left: 0; top: 0;
+        width: 100%; height: 110px; background-color: rgb(255,255, 255);}
+    .footer > div{ width: 100%; left: 0; top: 0; margin: 0 auto; padding-top: 20px;
+        display: inherit; align-items: flex-start; justify-content: space-between;}
+
+    /* logo */
+    .logo{  width: 25%; min-width: 250px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;}
+    .logo p{ margin: 6px;}
+    .logo p img{ width: 100%;}
+
+    /* 안내 */
+    .text{  width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    .text li{ margin: 0; font-size: 12px; color: #999;}
+    .text > li:nth-child(1) a{ font-size: 12px; padding: 0 10px; color: #999;}
+    .text > li  small{ font-size: 11px; color: #c6c6c6;}
+
+    /* sns */
+    .sns{ display: none;}
+}
+
+
+
+@media (max-width:600px){
+
+    .header{height: 65px;}
+
+    /* .mhead */
+    .mhead{width: 90%;}
+    .mhead ul{margin-top: 15px;}
+    .mhead ul li:nth-child(1){width: 75px;}
+    .mhead ul li:nth-child(2){width: 60px;}
+
+    /* main1 사진움직이는 */
+    .main1 article div{ left: 15%; top: 43%; }
+    .main1 article div h1{font-size: 50px;}
+    .main1 article div h1 b{font-size: 50px;}
+    .main1 article div p{font-size: 16px;}
+    .main1 article div p b{font-size: 16px;}
+
+    /* main2 시장 여러개 보기 */
+    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 150px;}
+    .main2::after{ content: ''; display: block; clear: none;}
+
+    /* left */
+    .left{ width: 100%; left: 0; top: 0; margin-top: 60px; padding-left: 5%;
+        float: none; text-align: center; display: none;}
+    /* right */
+    .right{
+        width: 85%; float: none; margin: 40px 0; top: -235px; right: 0; z-index: 1;
+        position: absolute; overflow: hidden; background-color: white; padding: 20px 10px;
+        border-radius: 15px 0 15px 0;
+    }
+    .right figure{ width: 140px; height: 300px; margin: 0 10px; animation: none;}
+    .right figure > p{ margin-bottom: 17px; width:100%; max-height: 220px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+        box-sizing: border-box; border-radius: 10px; overflow: hidden; }
+    .right figure p img{
+        height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
+    .right div{ display: none;}
+
+
+    /* main3 온누리상품권 */
+
+    .main3{height: 290px; margin-top: 0px;}
+    .main3 .icon ul{ width: 49%;}
+
+    @keyframes scroll {
+        0%{ transform: translateX(-20%);}
+        100%{transform: translateX(-30%); opacity: 0;}
+    }
+    .bgmenu div > p{display: none;}
+
 }
