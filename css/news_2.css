@@ -82,19 +82,14 @@ header:hover::after{ display: block; }
 
 
 /* contents */
-.contents{  width: 80%; margin: 0 auto;
-}
+.contents{  width: 80%; margin: 0 auto;}
 .contents div{
-    margin: 0 auto; margin-top: 60px; width: 97%; 
-    display: flex; align-items: flex-start; justify-content: space-between;
+    margin: 0 auto; width: 97%; 
+    display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;
 }
-.contents div:nth-child(1){ margin-top: 50px;}
 .contents div article{
-    width: 32%; height: 350px;  overflow: hidden;
+    width: 32%; height: 350px;  overflow: hidden; margin-top: 50px;
     border-bottom: 2px solid #eaeaea;
-}
-.contents div:last-of-type article{
-    border-bottom: none;
 }
 .contents div article figure{
     position: relative; overflow: hidden;
@@ -141,6 +136,7 @@ header:hover::after{ display: block; }
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.mhead{display: none;}
 
 
 
@@ -171,3 +167,96 @@ header:hover::after{ display: block; }
     display: flex; align-items: center; justify-content: space-between;}
 .sns p a{ width: 23px;}
 .sns p a img{ width: 100%;}
+
+
+
+@media (max-width:1005px){
+
+    .header{    height: 85px; left: 0; top: 0; background-color: rgba( 255, 255, 255, 0 );
+        border-bottom: none; margin: 0; padding: 5px 0; box-sizing: border-box; 
+        width: 100%;  position: relative; z-index: 10;}
+    .head{display: none;}
+    header:hover::after{ display: none; }
+
+    /* .mhead */
+    .mhead{ display: block; width: 80%; margin: 0 auto; }
+    .mhead ul{width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 30px;}
+    .mhead ul li{ display: flex; align-items: center; justify-content: space-between;}
+    
+    .mhead ul li:nth-child(1){width: 25px;}
+    .mhead ul li:nth-child(1) a img{width: 100%;}
+
+    .mhead ul li:nth-child(2){width: 70px;}
+    .mhead ul li:nth-child(2) a{width: 30%;}
+    .mhead ul li:nth-child(2) a img{width: 100%;}
+    .mhead ul li:nth-child(2) a:nth-child(2){ z-index: 20;}
+
+    .bgmenu{ position: fixed; width: 50%; height: 100%; right: 0; top: 0; background-color: rgba(255, 255, 255);
+        display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;
+        z-index: 10; transform: translateX(100%); transition: .5s; box-shadow: -10px 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
+    .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
+    .bgmenu div div > h2{ font-size: 20px; margin: 5px 0;}
+    .bgmenu div div > a{}
+    .bgmenu div div > a p{ color: #999; font-size: 17px;}
+    .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(250px);}
+    .bgmenu div > p img{width: 100%;}
+
+    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
+
+
+
+    /* menu */
+
+    .menu{ margin-top: 0; border-top: none;
+        left: 0; top: 0; width: 100%; height: 50px; background-color: white;}
+    .menu ul{ width: 80%; height: 100%; margin: 0 auto; border-bottom: 2px solid #e3e3e3;}
+    .menu ul li{  width: 100%;  text-align: center; margin: 0 auto; transform: translateX(0);
+        display: flex; align-items: center; justify-content: center;
+    }
+    .menu ul li a{ margin: 0; width: 100%; height: 32.5px; color: #adadad;
+        display: block; font-size: 20px; transform: translateY(50%);
+    }
+    .menu ul li a:nth-child(2){ color: #0088e7; border-bottom: 2px solid #0088e7}
+
+    /* title */
+    .title{ display: none;}
+
+
+    /* contents */
+
+    .contents{  width: 80%; margin: 0 auto;}
+    .contents div{width: 100%;}
+    .contents div article{ width: 47%; height: 400px;  overflow: hidden; border-bottom: none;}
+    .contents div article figure{position: relative; overflow: hidden; border-radius: 15px; }
+    .contents div article figure > a span{display: none;}
+    .contents div article figure > a span img{display: none;}
+    .contents div article small{ font-size: 16px; color: rgb(183, 183, 183); margin: 15px 0 10px 0; padding: 15px 0 0 10px; display: block;
+        border-top: 2px solid #eaeaea;
+    }
+    .contents div article > a h2{line-height: 1.5; padding: 0 10px; font-size: 22px;}
+
+    .contents > a{
+        margin: 0 auto; margin-top: 30px; display: block;
+        width: 10%; padding: 15px 40px; font-size: 18px;
+        text-align: center; transition: .3s; color: #0088e7; background-color: white;
+        border: 1.5px solid #c6c6c6; border-radius: 30px;
+    } 
+
+    /* hover */
+    .contents div article:hover figure > a > img{ transform: scale(1.2);}
+    .contents div article:hover figure > a span{ opacity: 1;}
+    .contents div article:hover > a h2{color: #0088e7;}
+
+
+}
+
+
+@media (max-width:870px){
+
+    .contents{ width: 80%; margin: 0 auto;}
+    .contents div{ width: 100%;}
+    .contents div article{ width: 100%; height: 350px;}
+
+}
