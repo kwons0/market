@@ -83,7 +83,7 @@ header:hover::after{ display: block; }
 .main1 article div { display: inline-block; position: absolute; right: 20%; top: 37%; z-index: 3; text-align: end;
     text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
-.main1 article div h1{  color: white; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1; letter-spacing: 2px;}
+.main1 article div h1{  color: white; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1;}
 .main1 article div h1 b{  color: #57b3ff; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1;}
 .main1 article div p{color: #dbdbdb; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
 .main1 article div p b{color: #57b3ff; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
@@ -413,7 +413,7 @@ header:hover::after{ display: block; }
     .main1 article > figure p img{ width: 100%; height: 800px;  vertical-align: top; object-fit: cover;}
     .main1 article div{ width: 100%; text-align: start; left: 15%; top: 40%; }
 
-    .main1 article div h1{  color: white; font-size: 60px; font-family: 'InkLipquid'; line-height: 1.1; letter-spacing: 2px;}
+    .main1 article div h1{  color: white; font-size: 60px; font-family: 'InkLipquid'; line-height: 1.1; }
     .main1 article div h1 b{  color: #57b3ff; font-size: 60px; font-family: 'InkLipquid'; line-height: 1.1;}
     .main1 article div p{color: #dbdbdb; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
     .main1 article div p b{color: #57b3ff; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
