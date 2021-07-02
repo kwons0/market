@@ -43,7 +43,7 @@ header:hover::after{ display: block; }
 }
 .head nav ul li > div a:hover{color: #0088e7;}
 
-
+.mhead{display: none;}
 
 /* menu */
 
@@ -102,6 +102,7 @@ header:hover::after{ display: block; }
 .mapnav .e img{width: 20px}
 .mapnav .e:hover div{ color: #0088e7;}
 
+.mmnav{display: none;}
 
 /* popup */
 .popup{ z-index: 2; position: absolute;
@@ -135,6 +136,7 @@ header:hover::after{ display: block; }
 .market div{ margin: 30px 20px 0 20px;}
 .market div h2{ margin-bottom: 10px; font-size: 20px;}
 .market div small{white-space: pre-line; line-height: 1.5; color: #999;}
+.market div small b{color: rgb(119, 119, 119);}
 
 .guid{ position: relative; width: 63%;}
 .guid div{}
@@ -142,7 +144,7 @@ header:hover::after{ display: block; }
 .guid p{ position: absolute; left: 71%; top: 30%;}
 .guid p img{ width: 60px;}
 
-
+.map2{display: none;}
 
 
 
@@ -177,3 +179,125 @@ header:hover::after{ display: block; }
     display: flex; align-items: center; justify-content: space-between;}
 .sns p a{ width: 23px;}
 .sns p a img{ width: 100%;}
+
+
+@media (min-width:1360px) and (max-width:1544px){
+    .mapnav .a{width: 15%;}
+    .mapnav .b{width: 15%;}
+    .mapnav .c{width: 50%;}
+    .mapnav .d{width: 10%;}
+    .mapnav .e{width: 17%;}
+}
+@media (min-width:1212px) and (max-width:1359px){
+    .mapnav .d{width: 12%;}
+    .mapnav .e{width: 20%;}
+}
+@media (min-width:1046px) and (max-width:1211px){
+    .mapnav .d{width: 15%;}
+    .mapnav .e{width: 27%;}
+}
+@media (max-width:1046px){
+    .header{    height: 85px; left: 0; top: 0; background-color: rgba( 255, 255, 255, 0 );
+        border-bottom: none; margin: 0; padding: 5px 0; box-sizing: border-box; 
+        width: 100%;  position: relative; z-index: 10;}
+    .head{display: none;}
+    header:hover::after{ display: none; }
+
+    /* .mhead */
+    .mhead{ display: block; width: 80%; margin: 0 auto; background-color: white; }
+    .mhead ul{width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 30px;}
+    .mhead ul li{ display: flex; align-items: center; justify-content: space-between;}
+    
+    .mhead ul li:nth-child(1) a{width: 25px;}
+    .mhead ul li:nth-child(1) a img{width: 100%;}
+
+    .mhead ul li:nth-child(1) p{ margin-left: 20px; font-size: 22px;}
+
+    .mhead ul li:nth-child(2) a{width: 25px; z-index: 20;}
+    .mhead ul li:nth-child(2) a img{width: 100%;}
+
+    .bgmenu{ position: fixed; width: 50%; height: 100%; right: 0; top: 0; background-color: rgba(255, 255, 255);
+        display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;
+        z-index: 10; transform: translateX(100%); transition: .5s; box-shadow: -10px 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
+    .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
+    .bgmenu div div > h2{ font-size: 20px; margin: 5px 0;}
+    .bgmenu div div > a{}
+    .bgmenu div div > a p{ color: #999; font-size: 17px;}
+    .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(250px);}
+    .bgmenu div > p img{width: 100%;}
+
+    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
+    .menu{display: none;}
+    .title{display: none;}
+    .mapnav{display: none;}
+
+    /* mmnav */
+    .mmnav{display: block; width: 80%; height: 60px; margin: 0 auto;
+        background-color: white; border-radius: 10px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        position: absolute; left: 50%; top: 140px; transform: translateX(-50%);
+        z-index: 3;
+    }
+    .mmnav div{ width: 90%; margin: 0 auto; transform: translateY(90%);
+        display: flex; align-items: center; justify-content: space-between;}
+    .mmnav div p{ font-size: 18px; color: #c6c6c6;}
+    .mmnav div figure{ width: 20px}
+    .mmnav div figure img{ width: 100%;}
+    
+    .popup{display: none;}
+
+    /* map */
+
+    .map{display: none;}
+
+    .map2{ display: block; opacity: 100%;
+        width: 100%; margin: 0 auto; left: 0; top: 0; margin-top: 0; display: inherit;
+    }
+
+    .guid2{position: relative; width: 100%; height: 600px;}
+    .guid2 div{ width: 100%; height: 600px;}
+    .guid2 div img{width: 100%; height: 600px; object-fit: cover;}
+    .guid2 p{ position: absolute; left: 47.5%; top: 33%;}
+    .guid2 p img{ width: 60px;}
+    .guid2 a{ position: absolute; right: 5%; bottom: 5%; width: 60px; height: 60px;
+        background-color: white; border-radius: 40px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    .guid2 a img{ width: 50%; transform: translate(50%, 50%);}
+
+    .market2{ left: 0; top: 0; width: 100%;}
+
+    .market2 div{ width: 80%; margin: 20px auto; margin-top: 30px;}
+    .market2 div h2{ margin-bottom: 10px; font-size: 22px;}
+    .market2 div small{width: 50%; white-space: unset; line-height: 1.5; color: #999;}
+    .market2 div small b{color: rgb(119, 119, 119);}
+
+    .market2 figure{ width: 80%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+    .market2 figure p{ width: 48%; height: 200px; border-radius: 15px; overflow: hidden;}
+    .market2 figure p img{width: 100%; height: 200px; object-fit: cover; }
+
+
+
+
+
+    /* footer */
+    .footer{ left: 0; top: 0; margin-top: 40px;
+        width: 100%; height: 110px; background-color: rgb(248, 248, 248));}
+    .footer > div{ width: 100%; left: 0; top: 0; margin: 0 auto; padding-top: 20px;
+        display: inherit; align-items: flex-start; justify-content: space-between;}
+
+    /* logo */
+    .logo{  width: 25%; min-width: 250px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;}
+    .logo p{ margin: 6px;}
+    .logo p img{ width: 100%;}
+
+    /* 안내 */
+    .text{  width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    .text li{ margin: 0; font-size: 12px; color: #999;}
+    .text > li:nth-child(1) a{ font-size: 12px; padding: 0 10px; color: #999;}
+    .text > li  small{ font-size: 11px; color: #c6c6c6;}
+
+    /* sns */
+    .sns{ display: none;}
+
+}
