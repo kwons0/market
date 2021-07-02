@@ -20,4 +20,4 @@ a{text-decoration: none;}
         font-style: normal;
       } */
 }
-body{ background: url('bgimg.jpg') fixed; background-size: cover;}
+body{ background: url('bgimg.jpg') fixed; background-size: cover; height: 100vh;}
