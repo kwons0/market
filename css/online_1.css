@@ -359,8 +359,8 @@ header:hover::after{ display: block; }
 
     /* delivery */
     .delivery{width: 80%; margin: 0 auto; margin-top: 40px; position: relative;}
-    .delivery figure > p{border-radius: 15px; overflow: hidden; }
-    .delivery figure > p span{border-radius: 15px; overflow: hidden; background: linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));}
+    .delivery figure > p{border-radius: 10px; overflow: hidden; }
+    .delivery figure > p span{border-radius: 10px; overflow: hidden; background: linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));}
 
     .delivery figure article{ position: absolute; left: 5%; top: 65%;  width: 100%;
         display: flex; align-items: center; justify-content: space-between;
@@ -376,12 +376,12 @@ header:hover::after{ display: block; }
     /* best */
     .best{ width: 100%; margin-top: 130px; overflow: hidden;}
     .best h2{margin-bottom: 30px;}
-    .best > div{ width: 100%; height: 380px; 
+    .best > div{ width: 100%; height: 380px;
         display: flex; align-items: flex-start; justify-content: flex-start; }
     .best > div > div{ width: 100%; height: 360px; overflow: visible;
         display: flex; align-items: center; justify-content: flex-start; flex-direction: row; 
     }
-    .best > div > div > a {width: 250px; height: 380px; margin: 0 10px; animation: best 8s 2s infinite; }
+    .best > div > div > a {width: 230px; height: 360px; margin: 0 10px; animation: best 8s 2s infinite; }
     @keyframes best {
         0%{ttransform: translateX(0%);}
         50%{transform: translateX(-85%);}
@@ -392,10 +392,10 @@ header:hover::after{ display: block; }
 
     /* 메뉴 */
     .best > div > div > a figure {  position: inherit; width: 100%; overflow: hidden; }
-    .best > div > div > a figure > div{height: 250px; border-radius: 10px; overflow: hidden;}
+    .best > div > div > a figure > div{height: 230px; border-radius: 10px; overflow: hidden;}
 
     /* 이미지 */
-    .best > div > div > a figure > div > img{width: 100%; height: 100%; object-fit: cover; transition: .5s;}
+    .best > div > div > a figure > div > img{width: 250px; height: 100%; object-fit: cover; transition: .5s;}
     .best > div div > a:hover figure > div > img{transform: scale(1.1);}
 
     /* 하단정보 */
@@ -459,15 +459,9 @@ header:hover::after{ display: block; }
 
 
     .item > a{
-        margin: 0 auto; margin-top: 30px; display: block;
+        margin: 0 auto; margin-top: 60px; display: block;
         width: 10%; padding: 15px 40px; font-size: 18px;
-        text-align: center; transition: .3s; color: #0088e7;background-color: white;
-        border: 1.5px solid #c6c6c6; border-radius: 30px;
     } 
-    .item > a:hover{
-        border: 1.5px solid #0088e7;
-        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
-    }
 
     /* footer */
     .footer{ left: 0; top: 0;
@@ -502,6 +496,8 @@ header:hover::after{ display: block; }
 
     .item > a{ width: 20%;}
     .item > div a{ width: 100%;}
+
+    .new nav a{ width: 48%;}
 }
 
 @media (max-width:479px){

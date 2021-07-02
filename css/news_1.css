@@ -216,8 +216,6 @@ header:hover::after{ display: block; }
     .title{ display: none;}
 
     /* contents */
-
-
     .contents{  width: 80%; margin: 0 auto;}
     .contents div{margin: 0 auto; width: 100%; margin-top: 30px;
          display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;
@@ -235,18 +233,7 @@ header:hover::after{ display: block; }
     .contents div article > a p{font-size: 14px; color: rgb(151, 151, 151); border-top: 1px solid #e3e3e3;
         margin: 15px 0 10px 0; padding: 15px 10px; line-height: 1.5; transform: translateY(50px)
     }
-
-    .contents > a{
-        margin: 0 auto; margin-top: 30px; display: block;
-        width: 10%; padding: 15px 40px; font-size: 18px;
-        text-align: center; transition: .3s; color: #0088e7; background-color: white;
-        border: 1.5px solid #c6c6c6; border-radius: 30px;
-    } 
-
-    /* hover */
-    .contents div article:hover figure > a > img{ transform: scale(1.2);}
-    .contents div article:hover figure > a span{ opacity: 1;}
-    .contents div article:hover > a h2{color: #0088e7;}
+    .contents > a{margin-top: 60px;}
 
 
     /* footer */
@@ -278,7 +265,7 @@ header:hover::after{ display: block; }
     .contents{  width: 80%; margin: 0 auto;}
     .contents div{margin: 0 auto; width: 100%; margin-top: 30px;
     }
-    .contents div article{ width: 100%; height: 420px;}
+    .contents div article{ width: 100%; height: 460px;}
     .contents div article figure{transform: translateY(120px);}
     .contents div article small{ transform: translateY(-200px);}
     .contents div article > a h2{transform: translateY(-200px);}

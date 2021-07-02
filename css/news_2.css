@@ -234,12 +234,7 @@ header:hover::after{ display: block; }
     }
     .contents div article > a h2{line-height: 1.5; padding: 0 10px; font-size: 22px;}
 
-    .contents > a{
-        margin: 0 auto; margin-top: 30px; display: block;
-        width: 10%; padding: 15px 40px; font-size: 18px;
-        text-align: center; transition: .3s; color: #0088e7; background-color: white;
-        border: 1.5px solid #c6c6c6; border-radius: 30px;
-    } 
+    .contents > a{margin-top: 60px;} 
 
     /* hover */
     .contents div article:hover figure > a > img{ transform: scale(1.2);}
@@ -274,7 +269,7 @@ header:hover::after{ display: block; }
 
     .contents{ width: 80%; margin: 0 auto;}
     .contents div{ width: 100%;}
-    .contents div article{ width: 100%; height: 350px;}
+    .contents div article{ width: 100%; height: 380px;}
 
     .contents > a{width: 20%;} 
 
