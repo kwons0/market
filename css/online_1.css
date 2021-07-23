@@ -4,47 +4,7 @@
 
 
 /* header */
-
-.header{
-    height: 100px; left: 0; top: 0; background-color: white;
-    border-bottom: 1px solid lightgray; margin: 0; padding: 0px;
-    width: 100%;  position: fixed; z-index: 10;
-}
-.head{
-    position: relative;
-    width: 80%; margin: 0 auto; margin-top: 25px;
-    display: flex; align-items: flex-end; justify-content: space-between;}
-.head h1{ width: 130px;}
-.head h1 img{ width: 100%; left: 0; top: 0;}
-.head nav{margin-top: 20px;}
-.head nav ul{ display: flex;}
-.head nav ul li{position: relative; z-index: 11;}
-.head nav ul li > a{
-    /* 각 li 안의 주메뉴 */
-    font-size: 18px; padding: 15px 40px}
-.head nav ul li > div{
-    /* 각 li 안의 서브메뉴 */
-    position: absolute; transform: translateY(100%);  left: 0; bottom: 0;
-    text-align: center; width: 100%; line-height: 1.8; padding: 30px 0;
-    display: none;}
-.head nav ul li > div a{ display: block;}
 .head nav ul li:nth-child(4) > a{ background-color: #0088e7; color: white; }
-.head nav ul li > a:hover{ background-color: #0088e7; color: white; }
-header::after{
-    content: ''; width: 100%; height: 130px;
-    background-color: rgb(248, 248, 248); border-top: 1px solid lightgray;
-    position: absolute; bottom: 0; left: 0; transform: translateY(100%);
-    z-index: 10; display: none;}
-.head nav:hover ul li > div{ display: block; }
-header:hover::after{ display: block; }
-
-.head select{  /* 언어선택 */
-    font-size: 12px; color: #999999; width: 80px; border: none;
-    right: 40px; top: 0; position: absolute;
-}
-.head nav ul li > div a:hover{color: #0088e7;}
-
-.mhead{display: none;}
 
 
 /* menu */
@@ -205,35 +165,37 @@ header:hover::after{ display: block; }
 /* item */
 
 .item{ width: 80%; margin: 0 auto; margin-top: 50px;}
-.item > div{ display: flex; align-items: flex-start; justify-content: space-between;
-    margin-bottom: 30px;
+.item > div{ display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;
+    margin-bottom: 30px; 
 }
-.item > div a{ width: 24.5%;
-    /* border-bottom: 2px solid rgb(244, 244, 244); */
-    border-top: 2px solid rgb(244, 244, 244);
+.item > div a{ width: 32%; border-top: 2px solid rgb(244, 244, 244); margin-bottom: 50px;
 }
-.item > div:nth-child(1) a{border-top: none; padding-top: 0px;}
-.item > div a:nth-child(5){display: none;}
 
 /* 제품이미지 */
 .item > div a figure{position: relative; transition: .5s;}
-.item > div a figure > div{}
 .item > div a figure > div > img{width: 100%; height: 180px; object-fit: cover;transition: .5s;}
 
 /* 주석 */
 .item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s;}
 .item > div a figure > span b{ background-color: #0088e7; color: white; padding: 3px 13px 0 13px; border-radius: 25px;}
 
+.item > div a:nth-of-type(2) figure > span{display: none;}
+.item > div a:nth-of-type(3) figure > span{display: none;}
+.item > div a:nth-of-type(6) figure > span{display: none;}
+.item > div a:nth-of-type(8) figure > span{display: none;}
+.item > div a:nth-of-type(9) figure > span{display: none;}
+.item > div a:nth-of-type(11) figure > span{display: none;}
+.item > div a:nth-of-type(12) figure > span{display: none;}
+.item > div a:nth-of-type(13) figure > span{display: none;}
+.item > div a:nth-of-type(14) figure > span{display: none;}
+.item > div a:nth-of-type(15) figure > span{display: none;}
+
 /* 아이콘 */
 .item > div a figure > p{ position: absolute; right: 4%; bottom: 5%;}
 .item > div a figure > p img{width: 37px;}
 
 /* 이미지 호버 */
-
-.item > div a:hover figure{transform: translate(-1%, -1%);}
-.item > div a:hover figure > div > img{
-    opacity: 70%; box-shadow: 5px 5px 7px rgba(0,0,0,0.2);
-}
+.item > div a:hover figure > div > img{opacity: 70%;}
 
 
 /* 판매내용 */
@@ -241,7 +203,6 @@ header:hover::after{ display: block; }
 .item > div a article small{ color: #c6c6c6; font-size: 14px;}
 .item > div a article h2{ margin-top: 5px; color: #5a5a5a;}
 .item > div a article > div{ display: flex; align-items: baseline; justify-content: flex-start;}
-.item > div a article > div p{}
 .item > div a article > div p:nth-child(1){color: #0088e7; font-size: 21px; padding-right: 10px;}
 .item > div a article > div h3{ font-size: 21px; padding-right: 10px;}
 .item > div a article > div p:nth-child(3){ color: #c6c6c6; text-decoration: line-through;}
@@ -259,34 +220,6 @@ header:hover::after{ display: block; }
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-/* footer */
-.footer{ margin-top: 50px; left: 0; top: 101px;
-    width: 100%; height: 100px; background-color: rgb(248, 248, 248);}
-.footer > div{ width: 80%; left: 0; top: 0; margin: 0 auto; padding-top: 35px;
-    display: flex; align-items: flex-start; justify-content: space-between;}
-
-/* logo */
-.logo{  width: 20%; display: flex; align-items: center; justify-content: space-between;}
-.logo p{ margin: 6px;}
-.logo p img{ width: 100%;}
-
-/* 안내 */
-.text{  width: 60%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
-.text li{ margin: 2px 0; font-size: 13px; color: #999;}
-.text > li:nth-child(1) a{ font-size: 13px; padding: 0 10px; color: #999;}
-.text > li  small{ font-size: 11px; color: #c6c6c6;}
-
-/* sns */
-.sns{ width: 20%; left: 0; top: 0;}
-.sns input{ float: left; width: 70%;}
-.sns input::after{ content: ''; display: block; clear: both;}
-.sns p{ float: right; width: 23%; height: 20px;
-    display: flex; align-items: center; justify-content: space-between;}
-.sns p a{ width: 23px;}
-.sns p a img{ width: 100%;}
 
 
 
@@ -322,12 +255,12 @@ header:hover::after{ display: block; }
     .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
     .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
     .bgmenu div div > h2{ font-size: 19px; margin: 5px 0;}
-    .bgmenu div div > a{}
     .bgmenu div div > a p{ color: #999; font-size: 17px;}
     .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(250px);}
     .bgmenu div > p img{width: 100%;}
 
-    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
+    .bgmenu.active{transform: translateX(0);}
+    .active div > a p:hover{color: #0088e7;}
 
 
     /* menu */
@@ -435,7 +368,7 @@ header:hover::after{ display: block; }
 
     .item{ width: 80%; margin: 0 auto; margin-top: 0px;}
     .item > div{ display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0; }
-    .item > div a{ width: 48%; padding-top: 60px; border-top: none;}
+    .item > div a{ width: 48%; padding-top: 60px; border-top: none; margin-bottom: 20px;}
     .item > div:nth-child(1) a{padding-top: 50px;}
 
     /* 제품이미지 */

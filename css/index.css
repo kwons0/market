@@ -23,55 +23,6 @@ body{ background: none;}
 
 /* header */
 
-.header{
-    height: 100px; left: 0; top: 0; background-color: white;
-    border-bottom: 1px solid lightgray; margin: 0; padding: 0px;
-    width: 100%;  position: fixed; z-index: 10;
-}
-.head{
-    position: relative;
-    width: 80%; margin: 0 auto; margin-top: 25px;
-    display: flex; align-items: flex-end; justify-content: space-between;}
-.head h1{ width: 130px;}
-.head h1 img{ width: 100%; left: 0; top: 0;}
-.head nav{margin-top: 20px;}
-.head nav ul{ display: flex;}
-.head nav ul li{position: relative; z-index: 11;}
-.head nav ul li > a{
-    /* 각 li 안의 주메뉴 */
-    font-size: 18px; padding: 15px 40px;}
-.head nav ul li > div{
-    /* 각 li 안의 서브메뉴 */
-    position: absolute; transform: translateY(100%);  left: 0; bottom: 0;
-    text-align: center; width: 100%; line-height: 1.8; padding: 30px 0;
-    display: none;}
-.head nav ul li > div a{ display: block;}
-.head nav ul li > a:hover{ background-color: #0088e7; color: white; }
-header::after{
-    content: ''; width: 100%; height: 130px;
-    background-color: rgb(248, 248, 248); border-top: 1px solid lightgray;
-    position: absolute; bottom: 0; left: 0; transform: translateY(100%);
-    z-index: 10; display: none;}
-.head nav:hover ul li > div{ display: block; }
-header:hover::after{ display: block; }
-
-.head select{  /* 언어선택 */
-    font-size: 12px; color: #999999; width: 80px; border: none;
-    right: 40px; top: 0; position: absolute;
-}
-.head nav ul li > div a:hover{color: #0088e7;}
-
-.mhead{display: none;}
-
-
-
-
-
-
-
-
-
-
 /* main1 */
 
 
@@ -79,8 +30,8 @@ header:hover::after{ display: block; }
     position: relative; left: 0; top: 101px; width: 100%;
     height: 680px; overflow: hidden; z-index: 5;
 }
-.main1 article{}
-.main1 article div { display: inline-block; position: absolute; right: 20%; top: 37%; z-index: 3; text-align: end;
+.main1 article div { 
+    display: inline-block; position: absolute; right: 20%; top: 37%; z-index: 30; text-align: end;
     text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 .main1 article div h1{  color: white; font-size: 70px; font-family: 'InkLipquid'; line-height: 1.1;}
@@ -93,7 +44,8 @@ header:hover::after{ display: block; }
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
     font-weight: normal;  font-style: normal;
 }
-.main1 article figure{
+
+/* .main1 article figure{
     display: flex; align-items: center;  justify-content: center;   flex-direction: column;
 }
 .main1 article > figure p{
@@ -108,9 +60,9 @@ header:hover::after{ display: block; }
 }
 .main1 article > figure p img{
     width: 100%; height: 680px;  vertical-align: top; object-fit: cover;
-}
+} */
 
-.main1 article > p{ 
+/* .main1 article > p{ 
     position: absolute;  right: 5%; top: 50%;
     display: flex;  justify-content: center;   align-items: center;  flex-direction: column; 
 }
@@ -121,10 +73,12 @@ header:hover::after{ display: block; }
 
 .main1 article > p span:nth-child(1){height: 40px;  background: linear-gradient( to bottom, #57b3ff, #0088e7);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+} */
+.main1 article figure::after{
+    content:''; font-size: 0;    position: absolute; 
+    z-index:31; left: 0; top: 0;    width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5);
 }
-.main1 article > span{
-    font-size: 0;  position: absolute; left: 0; top: 0;   width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5)
-}
+
 
 
 
@@ -211,7 +165,7 @@ header:hover::after{ display: block; }
 
 
 .main3{ position: relative; left: 0; top: 0; width: 100%; height: 430px;}
-.main3 figure{ min-height: 100%; background: url('3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;}
+.main3 figure{ min-height: 100%; background: url('../img/3-photo1.jpg') fixed; background-size: cover; background-position-x: 50%;}
 
 
 .main3 article{ position: absolute; left: 50%; top: 50px;  transform: translate(-50%, 40%);
@@ -314,56 +268,27 @@ header:hover::after{ display: block; }
 
 /* main5 */
 .main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 200px;}
-.main5 article > div{ display: flex; align-items: flex-start; justify-content: space-between;}
-.main5 article > div a{ position: relative;}
+.oncon > div{ display: flex; align-items: flex-start; justify-content: space-between;}
+.oncon > div a{ position: relative; width: 100%;}
 
-.main5 div a > p{
+.oncon div a > p{
     position: absolute; left: 50%; top: 50%; font-size: 18px; color: white;
     z-index: 4; transform: translate(-50%, -50%);
     text-shadow: 4px 4px 5px rgba(0,0,0,0.5); font-family: 'Chosunilbo_myungjo';
 }
 
-.main5 div a div{ height: 50%;  z-index: 3;}
-.main5 div a div span{
+.oncon div a div{  z-index: 3;}
+.oncon div a div span{
     position: absolute; display: inline-block;
     width: 100%; height: 100px; background-color: rgba(0,0,0,0.5); font-size: 0;}
-.main5 div a div p{ width: 100%; height: 100px; overflow: hidden;}
-.main5 div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
-.main5 div a:hover div span{
+.oncon div a div p{ width: 100%; height: 100px; overflow: hidden;}
+.oncon div a div p img{ width: 100%; height: 100%; vertical-align: top; object-fit: cover;}
+.oncon div a:hover div span{
     transition: 0.5s; background-color: rgba(0,0,0,0.2); z-index: 2;
 }
 .onlinetitle{display: none;}
 
-
-
-
-/* footer */
-.footer{ left: 0; top: 0;
-    width: 100%; height: 100px; background-color: rgb(248, 248, 248);}
-.footer > div{ width: 80%; left: 0; top: 0; margin: 0 auto; padding-top: 35px;
-    display: flex; align-items: flex-start; justify-content: space-between;}
-
-/* logo */
-.logo{  width: 20%; display: flex; align-items: center; justify-content: space-between;}
-.logo p{ margin: 6px;}
-.logo p img{ width: 100%;}
-
-/* 안내 */
-.text{  width: 60%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
-.text li{ margin: 2px 0; font-size: 13px; color: #999;}
-.text > li:nth-child(1) a{ font-size: 13px; padding: 0 10px; color: #999;}
-.text > li  small{ font-size: 11px; color: #c6c6c6;}
-
-/* sns */
-.sns{ width: 20%; left: 0; top: 0;}
-.sns input{ float: left; width: 70%;}
-.sns input::after{ content: ''; display: block; clear: both;}
-.sns p{ float: right; width: 23%; height: 20px;
-    display: flex; align-items: center; justify-content: space-between;}
-.sns p a{ width: 23px;}
-.sns p a img{ width: 100%;}
-
-
+.footer{margin-top: 0;}
 
 
 
@@ -397,13 +322,12 @@ header:hover::after{ display: block; }
     .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
     .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
     .bgmenu div div > h2{ font-size: 20px; margin: 5px 0;}
-    .bgmenu div div > a{}
     .bgmenu div div > a p{ color: #999; font-size: 17px;}
     .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(250px);}
     .bgmenu div > p img{width: 100%;}
 
-    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
-
+    .bgmenu.active{transform: translateX(0);}
+    .active div > a p:hover{color: #0088e7;}
 
     /* main1 시장 사진 움직임 */
     .main1{ 
@@ -418,6 +342,18 @@ header:hover::after{ display: block; }
     .main1 article div p{color: #dbdbdb; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
     .main1 article div p b{color: #57b3ff; margin-top: 20px; white-space: pre-line; line-height: 1.5; font-size: 18px; font-family: 'Chosunilbo_myungjo';}
     .main1 article > p{display: none;}
+    .main1 article figure ul li {display: none;}
+
+    .main1 article figure::after{
+        content:'';
+        font-size: 0;  
+        position: absolute; 
+        z-index:31;
+        left: 0; top: 0;   
+        width: 100%;  height: 200%; background-color: rgba(0,0,0,0.5);
+    }
+    .slick-track p{width: 100%; }
+    .slick-track p img {width: 100%; height: 800px; transform: translate(-30.15%, 200px); object-fit: cover;}
 
     .mapnav{display: none;}
 
@@ -615,6 +551,9 @@ header:hover::after{ display: block; }
     .main1 article div h1 b{font-size: 50px;}
     .main1 article div p{font-size: 16px;}
     .main1 article div p b{font-size: 16px;}
+    .slick-track p{width: 100%; }
+    .slick-track p img {width: 100%; height: 800px; transform: translate(-30.15%, 155px); object-fit: cover;}
+
 
     /* main2 시장 여러개 보기 */
     .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 150px;}

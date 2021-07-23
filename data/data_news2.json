@@ -1,0 +1,67 @@
+{
+    "news2":[
+        {
+            "link":"https://www.youtube.com/watch?v=f8PRALqJXBI",
+            "img":"img/b-photo1.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-06-18",
+            "title":"[시장마실] \"나보기에 행복하면 됐죠\" 포항 구룡포시장 - 2부"
+        },
+        {
+            "link":"https://www.facebook.com/semas.korea/posts/4368988136466313",
+            "img":"img/b-photo2.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Facebook | 2021.06.17",
+            "title":"#마켙맨 #그림일기10화 처음 간 #5일장! #괴산전통시장 에서도 폭우가..."
+        },
+        {
+            "link":"https://www.youtube.com/watch?v=66n7Urb4mSY",
+            "img":"img/b-photo3.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2020-06-17",
+            "title":"하루에 약 천 마리의 치킨을 파는 가게가 있다? | 괴산전통시장 마켙맨 EP.10"
+        },
+        {
+            "link":"https://www.youtube.com/watch?v=iiL_M2h34FQ",
+            "img":"img/b-photo4.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-06-11",
+            "title":"[시장마실] 처니 떠난 시장마실에 갓예리의 등장이라.... 포항 구룡포시장 - 1부"
+        },
+        {
+            "link":"https://blog.naver.com/marketagency/222394217269I",
+            "img":"img/b-photo5.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Blog | 2021.06.11",
+            "title":"[다시,시장2_맨발의주임] Ep.18 인천에서 3만원의 행복즐기기"
+        },
+        {
+            "link":"https://www.facebook.com/semas.korea/posts/4349779291720531",
+            "img":"img/b-photo6.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Facebook | 2021.06.10",
+            "title":"#마켙맨 #그림일기9화 코미디언 #이문재 님과..."
+        },
+        {
+            "link":"https://youtu.be/B4CaF056yhc",
+            "img":"img/b-photo7.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-06-09",
+            "title":"마켙맨 드디어 지상파 데뷔! |  대전 신도꼼지락시장 마켙맨 EP.09"
+        },
+        {
+            "link":"https://m.blog.naver.com/marketagency/222391347461",
+            "img":"img/b-photo8.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"BLog | 2021.06.09",
+            "title":"[다시,시장2_맨발의주임] Ep.17 인천에서 즐기는 세계여행"
+        },
+        {
+            "link":"https://youtu.be/IBzw1lH5dt4",
+            "img":"img/b-photo9.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021.06.09",
+            "title":"[시장마실] 마지막 방송 처니, 보스를 만나다? , 대구 서남신시장 - 2부"
+        }
+    ]
+}

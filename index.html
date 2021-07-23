@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>market_renewal</title>
+    <title>전통시장통통</title>
     <link href="./css/index.css" rel="stylesheet">
 
     <meta property="og:title" content="전통시장통통">
@@ -20,55 +20,60 @@
 
     <link rel="shortcut icon" href="img/favi1.ico">
     <link rel="apple-touch-icon-precomposed" sizes="114*114" href="img/favi2.png">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <!-- index.html -->
     <header class="header">
         <div class="head">
-            <h1><a href="index.html"><img src="img/main_logo.png" alt="logo"></a></h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="map.html">전통시장</a>
-                        <div>
-                            <a href="map.html">전통시장 찾기</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="onnuri_1.html">온누리상품권</a>
-                        <div>
-                            <a href="onnuri_1.html">온누리상품권이란?</a>
-                            <a href="onnuri_2.html">구매 및 사용 안내</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="news_1.html">전통시장소식</a>
-                        <div>
-                            <a href="news_1.html">언론 기사</a>
-                            <a href="news_2.html">시장 이야기</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="online_1.html">온라인장보기</a>
-                        <div>
+                <h1><a href="index.html"><img src="img/main_logo.png" alt="logo"></a></h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="map.html">전통시장</a>
+                            <div>
+                                <a href="map.html">전통시장 찾기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="onnuri_1.html">온누리상품권</a>
+                            <div>
+                                <a href="onnuri_1.html">온누리상품권이란?</a>
+                                <a href="onnuri_2.html">구매 및 사용 안내</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="news_1.html">전통시장소식</a>
+                            <div>
+                                <a href="news_1.html">언론 기사</a>
+                                <a href="news_2.html">시장 이야기</a>
+                            </div>
+                        </li>
+                        <li>
                             <a href="online_1.html">온라인장보기</a>
-                            <a href="online_2.html">이벤트</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <select>
-                <option selected>Language</option>
-                <option>한국어</option>
-                <option>English</option>
-            </select>
+                            <div>
+                                <a href="online_1.html">온라인장보기</a>
+                                <a href="online_2.html">이벤트</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <select>
+                    <option selected>Language</option>
+                    <option>한국어</option>
+                    <option>English</option>
+                </select>
         </div>
         <div class="mhead">
             <ul>
                 <li><a href="index.html"><img src="img/m-logo1.png" alt=""></a></li>
                 <li>
                     <a href="#"><img src="img/m-logo2.png" alt=""></a>
-                    <a href="#"><img src="img/m-logo3.png" onmouseover="this.src='img/m-logo4.png'" onmouseout="this.src='img/m-logo3.png'" alt=""></a>
+                    <a href="#"><img src="img/m-logo3.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
                     <div>
@@ -97,6 +102,21 @@
             </ul>
         </div>
     </header>
+
+    <script>
+        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a:nth-of-type(2)'), //
+            menuList = document.querySelector('.mhead .bgmenu');
+
+            menuBtn.addEventListener('click', function(){
+                if(menuList.classList.contains('active')){
+                    menuList.classList.remove('active');
+                    menuBtn.innerHTML = `<img src="img/m-logo3.png" alt="">`
+                }else{
+                    menuList.classList.add('active');
+                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
+                }
+            });
+    </script>
     
 
     <div class="main1">
@@ -106,21 +126,28 @@
                 <p> 우리 동네를 지켜주는 든든한 버팀목,
                     <b>전통시장</b>과 함께 서민경제를 활짝!</p>
             </div>
-            <figure>
+            <figure class="slider">
                 <p><img src="img/1_photo1.jpg" alt=""></p>
                 <p><img src="img/1_photo2.jpg" alt=""></p>
                 <p><img src="img/1_photo3.jpg" alt=""></p>
-                <p><img src="img/1_photo1.jpg" alt=""></p>
             </figure>
             <p>
                 <span></span>
                 <span></span>
                 <span></span>
             </p>
-            <span>background</span>
         </article>
     </div>
 
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+          $(".slider").slick({
+            arrow:true, dots: true, infinite: true, slidesToShow: 1,
+            slidesToScroll: 1, autoplay:true, autoplaySpeed:2500,
+            vertical:true
+          });
+        }); 
+    </script>
 
     <div class="mapnav">
         <nav>
@@ -342,8 +369,8 @@
             <h3>온라인장보기</h3>
             <a href="online_1.html">더보기</a>
         </article>
-        <article>
-            <div class="line1">
+        <article class="oncon">
+            <div>
                 <a href="online_1.html">
                     <div>
                         <span>background</span>
@@ -366,7 +393,7 @@
                     <p>생선, 정육, 닭</p>
                 </a>
             </div>
-            <div class="line2">
+            <div>
                 <a href="online_1.html">
                     <div>
                         <span>background</span>
@@ -394,30 +421,6 @@
 
 
     <footer class="footer">
-        <div>
-            <div class="logo">
-                <p><img src="img/6_logo1.png" alt=""></p>
-                <p><img src="img/6_logo2.png" alt=""></p>
-            </div>
-            <ul class="text">
-                <li>
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/rule.do">이용안내</a> |
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/privacy.do">개인정보처리방침</a> |
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/copyright.do">저작권정책</a> |
-                    <a href="http://113366.com/seda">원격지원</a>
-                </li>
-                <li>
-                    <small>Copyright 2015 SEMAS, All Right Reserved.</small>
-                </li>
-            </ul>
-            <div class="sns">
-                <input type="search">
-                <p>
-                    <a href="https://www.facebook.com/semas.korea/" target="_blank"><img src="img/6_icon1.png" alt="">
-                    <a href="https://www.instagram.com/semas_2014/" target="_blank"><img src="img/6_icon2.png" alt="">
-                </p>
-            </div>
-        </div>
     </footer>
 
 </body>

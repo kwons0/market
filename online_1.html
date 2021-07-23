@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./css/online_1.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/data_online1a.js"></script>
 </head>
 <body>
     <header class="header">
@@ -81,6 +85,21 @@
             </ul>
         </div>
     </header>
+
+    <script>
+        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a'), //
+            menuList = document.querySelector('.mhead .bgmenu');
+
+            menuBtn.addEventListener('click', function(){
+                if(menuList.classList.contains('active')){
+                    menuList.classList.remove('active');
+                    menuBtn.innerHTML = `<img src="img/m-logo3-1.png" alt="">`
+                }else{
+                    menuList.classList.add('active');
+                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
+                }
+            });
+    </script>
 
     <div class="menu">
         <ul>
@@ -287,7 +306,7 @@
 
     <div class="item">
         <div>
-            <a href="https://url.kr/qmvckl" target="_blank">
+            <!-- <a href="https://url.kr/qmvckl" target="_blank">
                 <figure>
                     <div><img src="img/d-photo9.jpg" onmouseover="this.src='img/d-photo10.jpg'" onmouseout="this.src='img/d-photo9.jpg'" alt=""></div>
                     <span><b>BEST</b></span>
@@ -329,7 +348,7 @@
                     <div>
                         <p>10%</p>
                         <h3>1,080원</h3>
-                        <p>12,000원</p>
+                        <p>1,200원</p>
                     </div>
                 </article>
             </a>
@@ -346,21 +365,6 @@
                         <p>10%</p>
                         <h3>11,970원</h3>
                         <p>13,300원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/mjv9o7"  target="_blank">
-                <figure>
-                    <div><img src="img/e-photo8.jpg" onmouseover="this.src='img/e-photo8-1.jpg'" onmouseout="this.src='img/e-photo8.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 인순이네반찬]</small>
-                    <h2>영양풍부한 삼색나물 1팩</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>4,800원</h3>
-                        <p>4,320원</p>
                     </div>
                 </article>
             </a>
@@ -427,21 +431,6 @@
                         <p>5,400원</p>
                     </div>
                 </article>
-                <a href="https://url.kr/a61ktl" target="_blank">
-                    <figure>
-                        <div><img src="img/e-photo9.jpg" onmouseover="this.src='img/e-photo1-1.jpg'" onmouseout="this.src='img/e-photo9.jpg'" alt=""></div>
-                        <p><img src="img/d-icon1.png" alt=""></p>
-                    </figure>
-                    <article>
-                        <small>[수유전통시장 | 부산식품]</small>
-                        <h2>구수한 맥반석 재래김</h2>
-                        <div>
-                            <p>10%</p>
-                            <h3>6,000원</h3>
-                            <p>5,400원</p>
-                        </div>
-                    </article>
-                </a>
             </a>
         </div>
         <div>
@@ -462,7 +451,7 @@
             </a>
             <a href="https://url.kr/o7fv85" target="_blank">
                 <figure>
-                    <div><img src="img/d-photo7.jpg" onmouseover="this.src='img/d-photo7-1.jpg'" onmouseout="this.src='img/d-photo7.jpg' alt="""></div>
+                    <div><img src="img/d-photo7.jpg" onmouseover="this.src='img/d-photo7-1.jpg'" onmouseout="this.src='img/d-photo7.jpg'" alt=""></div>
                     <span><b>BEST</b></span>
                     <p><img src="img/d-icon1.png" alt=""></p>
                 </figure>
@@ -505,54 +494,13 @@
                         <p>7,560원</p>
                     </div>
                 </article>
-            </a>
-            <a href="https://url.kr/oncy78" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo10.jpg" onmouseover="this.src='img/e-photo10-1.jpg'" onmouseout="this.src='img/e-photo10.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 대광수제두부]</small>
-                    <h2>달달한 식혜 (1.8L)</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>9,300원</h3>
-                        <p>8,370원</p>
-                    </div>
-                </article>
-            </a>
+            </a> -->
         </div>
         <a href="#">더보기</a>
     </div>
 
 
-
-
     <footer class="footer">
-        <div>
-            <div class="logo">
-                <p><img src="img/6_logo1.png" alt=""></p>
-                <p><img src="img/6_logo2.png" alt=""></p>
-            </div>
-            <ul class="text">
-                <li>
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/rule.do">이용안내</a> |
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/privacy.do">개인정보처리방침</a> |
-                    <a href="https://www.sbiz.or.kr/sup/cmm/member/copyright.do">저작권정책</a> |
-                    <a href="http://113366.com/seda">원격지원</a>
-                </li>
-                <li>
-                    <small>Copyright 2015 SEMAS, All Right Reserved.</small>
-                </li>
-            </ul>
-            <div class="sns">
-                <input type="search">
-                <p>
-                    <a href="https://www.facebook.com/semas.korea/" target="_blank"><img src="img/6_icon1.png" alt="">
-                    <a href="https://www.instagram.com/semas_2014/" target="_blank"><img src="img/6_icon2.png" alt="">
-                </p>
-            </div>
-        </div>
     </footer>
 </body>
 </html>

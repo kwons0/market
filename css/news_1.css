@@ -5,48 +5,7 @@
 
 /* header */
 
-.header{
-    height: 100px; left: 0; top: 0;
-    background-color: white;
-    border-bottom: 1px solid lightgray; margin: 0; padding: 0px;
-    width: 100%;  position: fixed; z-index: 10;
-}
-.head{
-    position: relative;
-    width: 80%; margin: 0 auto; margin-top: 25px;
-    display: flex; align-items: flex-end; justify-content: space-between;}
-.head h1{ width: 130px;}
-.head h1 img{ width: 100%; left: 0; top: 0;}
-.head nav{margin-top: 20px;}
-.head nav ul{ display: flex;}
-.head nav ul li{position: relative; z-index: 11;}
-.head nav ul li > a{
-    /* 각 li 안의 주메뉴 */
-    font-size: 18px; padding: 15px 40px;}
-.head nav ul li > div{
-    /* 각 li 안의 서브메뉴 */
-    position: absolute; transform: translateY(100%);  left: 0; bottom: 0;
-    text-align: center; width: 100%; line-height: 1.8; padding: 30px 0;
-    display: none;}
-.head nav ul li > div a{ display: block;}
 .head nav ul li:nth-child(3) > a{ background-color: #0088e7; color: white; }
-.head nav ul li > a:hover{ background-color: #0088e7; color: white; }
-header::after{
-    content: ''; width: 100%; height: 130px;
-    background-color: rgb(248, 248, 248); border-top: 1px solid lightgray;
-    position: absolute; bottom: 0; left: 0; transform: translateY(100%);
-    z-index: 10; display: none;}
-.head nav:hover ul li > div{ display: block; }
-header:hover::after{ display: block; }
-
-.head select{  /* 언어선택 */
-    font-size: 12px; color: #999999; width: 80px; border: none;
-    right: 40px; top: 0; position: absolute;
-}
-.head nav ul li > div a:hover{color: #0088e7;}
-
-.mhead{display: none;}
-
 
 /* menu */
 
@@ -83,11 +42,14 @@ header:hover::after{ display: block; }
     display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; margin-top: 50px;
 }
 .contents div article{
-    width: 32%; height: 400px;  overflow: hidden;
-    border-bottom: 2px solid #eaeaea; margin-bottom: 50px; padding-bottom: 20px;
+    width: 32%;  overflow: hidden; display: flex; flex-wrap: wrap; 
+    border-top: 2px solid #eaeaea; padding-top: 50px; margin-bottom: 30px;
 }
+.contents div article:nth-of-type(1){border-top: none; padding-top: 0;}
+.contents div article:nth-of-type(2){border-top: none; padding-top: 0;}
+.contents div article:nth-of-type(3){border-top: none; padding-top: 0;}
+
 .contents div article figure{position: relative; overflow: hidden;}
-.contents div article figure > a{}
 .contents div article figure > a img{
     width: 100%; height: 220px;
     object-fit: cover; transition: 1s; 
@@ -107,10 +69,9 @@ header:hover::after{ display: block; }
     margin: 15px 0 10px 0; padding: 0 10px;
     display: block;
 }
-.contents div article > a{}
-.contents div article > a h2{line-height: 1.5; padding: 0 10px; font-size: 17px;}
-.contents div article > a p{font-size: 14px; color: rgb(151, 151, 151);
-    margin: 15px 0 10px 0; padding: 0 10px; line-height: 1.5;}
+.contents div article h2{line-height: 1.5; padding: 0 10px; font-size: 17px;}
+.contents div article p{font-size: 14px; color: rgb(151, 151, 151);
+    margin: 15px 0 0 0; padding: 0 10px; line-height: 1.5;}
 
 .contents > a{
     margin: 0 auto; margin-top: 30px; display: block;
@@ -122,7 +83,7 @@ header:hover::after{ display: block; }
 /* hover */
 .contents div article:hover figure > a > img{ transform: scale(1.2);}
 .contents div article:hover figure > a span{ opacity: 1;}
-.contents div article:hover > a h2{color: #0088e7;}
+.contents div article:hover h2{color: #0088e7;}
 
 .contents > a:hover{
     border: 1.5px solid #0088e7;
@@ -131,35 +92,6 @@ header:hover::after{ display: block; }
 
 
 
-
-
-
-
-/* footer */
-.footer{ margin-top: 50px; left: 0; top: 0;
-    width: 100%; height: 100px; background-color: rgb(248, 248, 248);}
-.footer > div{ width: 80%; left: 0; top: 0; margin: 0 auto; padding-top: 35px;
-    display: flex; align-items: flex-start; justify-content: space-between;}
-
-/* logo */
-.logo{  width: 20%; display: flex; align-items: center; justify-content: space-between;}
-.logo p{ margin: 6px;}
-.logo p img{ width: 100%;}
-
-/* 안내 */
-.text{  width: 60%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
-.text li{ margin: 2px 0; font-size: 13px; color: #999;}
-.text > li:nth-child(1) a{ font-size: 13px; padding: 0 10px; color: #999;}
-.text > li  small{ font-size: 11px; color: #c6c6c6;}
-
-/* sns */
-.sns{ width: 20%; left: 0; top: 0;}
-.sns input{ float: left; width: 70%;}
-.sns input::after{ content: ''; display: block; clear: both;}
-.sns p{ float: right; width: 23%; height: 20px;
-    display: flex; align-items: center; justify-content: space-between;}
-.sns p a{ width: 23px;}
-.sns p a img{ width: 100%;}
 
 
 
@@ -191,12 +123,12 @@ header:hover::after{ display: block; }
     .bgmenu > div{ width: 80%; transform: translateY(20%); border-top: 2px solid #e3e3e3;}
     .bgmenu div > div{width: 100%; margin: 0px 0; line-height: 1.5; margin: 30px 0;}
     .bgmenu div div > h2{ font-size: 19px; margin: 5px 0;}
-    .bgmenu div div > a{}
     .bgmenu div div > a p{ color: #999; font-size: 17px;}
     .bgmenu div > p{width: 40%; position: fixed; right: 0; bottom: 0; transform: translateY(250px);}
     .bgmenu div > p img{width: 100%;}
 
-    .mhead ul li:nth-last-of-type(2):hover + .bgmenu{ transform: translateX(0);}
+    .bgmenu.active{transform: translateX(0);}
+    .active div > a p:hover{color: #0088e7;}
 
 
     /* menu */
@@ -217,23 +149,23 @@ header:hover::after{ display: block; }
 
     /* contents */
     .contents{  width: 80%; margin: 0 auto;}
-    .contents div{margin: 0 auto; width: 100%; margin-top: 30px;
+    .contents div{margin: 0 auto; width: 100%; margin-top: 50px;
          display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;
     }
-    .contents div article{ width: 47%; height: 460px;  overflow: visible;border-bottom: none;  margin-bottom: 50px; padding-bottom: 20px;
-    }
-    .contents div article figure{position: relative; overflow: hidden; border-radius: 15px; transform: translateY(150px);}
+    .contents div article{width: 47%; border-top: none;  margin-bottom: 50px; padding-top: 20px;}
+    .contents div article:nth-of-type(3){ padding-top: 20px;}
+    .contents div article figure{order: 3; position: relative; overflow: hidden; border-radius: 15px; margin: 15px 0; width: 100%;}
     .contents div article figure > a span{display: none;}
     .contents div article figure > a span img{display: none;}
-    .contents div article small{ font-size: 16px; color: rgb(183, 183, 183); margin: 15px 0 10px 0; padding: 0 10px; display: block; 
-        transform: translateY(-200px);
+
+    .contents div article small{ order: 1; font-size: 16px; color: rgb(183, 183, 183); margin: 0 0 10px 0; padding: 0 10px; display: block; 
     }
-    .contents div article > a{}
-    .contents div article > a h2{line-height: 1.5; padding: 0 10px; font-size: 22px; transform: translateY(-200px);}
-    .contents div article > a p{font-size: 14px; color: rgb(151, 151, 151); border-top: 1px solid #e3e3e3;
-        margin: 15px 0 10px 0; padding: 15px 10px; line-height: 1.5; transform: translateY(50px)
+    .contents div article h2{order: 2; line-height: 1.5; margin: 0; padding: 0 10px; font-size: 22px;}
+    .contents div article p{order: 4; font-size: 14px; color: rgb(151, 151, 151); border-top: 1px solid #e3e3e3;
+        margin: 0; padding: 15px 10px; line-height: 1.5;
     }
     .contents > a{margin-top: 60px;}
+
 
 
     /* footer */
@@ -262,15 +194,8 @@ header:hover::after{ display: block; }
 
 @media (max-width:700px){
 
-    .contents{  width: 80%; margin: 0 auto;}
-    .contents div{margin: 0 auto; width: 100%; margin-top: 30px;
-    }
-    .contents div article{ width: 100%; height: 460px;}
-    .contents div article figure{transform: translateY(120px);}
-    .contents div article small{ transform: translateY(-200px);}
-    .contents div article > a h2{transform: translateY(-200px);}
-    .contents div article > a p{ transform: translateY(50px)}
-
-    .contents > a{width: 20%;} 
+    .contents div article{width: 100%;}
+    .contents div article figure{width: 100%;}
+    .contents > a{margin-top: 10px; width: 30%;}
 
 }
