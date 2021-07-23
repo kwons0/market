@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* common.html */
 
@@ -15,7 +15,7 @@ a{text-decoration: none;}
 *{
     font-size: 16px;
     color: #333333;
-    font-family: 'Noto Sans KR', serif;
+    font-family: "Noto Sans KR", sans-serif;
 }
 body{ background: url('../img/bgimg.jpg') fixed; background-size: cover; height: 100vh;}
 
