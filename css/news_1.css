@@ -49,7 +49,7 @@
 .contents div article:nth-of-type(2){border-top: none; padding-top: 0;}
 .contents div article:nth-of-type(3){border-top: none; padding-top: 0;}
 
-.contents div article figure{position: relative; overflow: hidden;}
+.contents div article figure{position: relative; overflow: hidden; width: 100%;}
 .contents div article figure > a img{
     width: 100%; height: 220px;
     object-fit: cover; transition: 1s; 
