@@ -12,7 +12,7 @@
 .menu{ margin-top: 101px; border-top: 1px solid rgb(248, 248, 248);
     left: 0; top: 101px; width: 100%; height: 50px; background-color: rgb(248, 248, 248);}
 .menu ul{ width: 80%; height: 100%; margin: 0 auto;}
-.menu ul li{  width: 30%;  text-align: center; margin: 16.5px auto; transform: translateX(140%);}
+.menu ul li{  width: 30%;  text-align: center; margin: 11px auto; transform: translateX(140%);}
 .menu ul li a{ margin: 0 20px;}
 .menu ul li a:nth-child(1){ color: #0088e7;}
 
@@ -119,16 +119,16 @@
 
 /* 하단정보 */
 .best1 > a figure figcaption{ position: absolute; left: 0%; bottom: 0;
-    background-color: rgba(0,0,0,0.5); width: 100%; height: 170px; text-align: center; padding: 45px 20px; box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5); width: 100%; height: 170px; text-align: center; padding: 40px 20px; box-sizing: border-box;
 }
 .best2 > a figure figcaption{ position: absolute; left: 0%; bottom: 0;
-    background-color: rgba(0,0,0,0.5); width: 100%; height: 100px; text-align: center; padding: 15px 20px; box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5); width: 100%; height: 100px; text-align: center; padding: 10px 20px; box-sizing: border-box;
 }
 .best3 > a figure figcaption{ position: absolute; left: 0%; bottom: 0;
-    background-color: rgba(0,0,0,0.5); width: 100%; height: 100px; text-align: center; padding: 15px 20px; box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5); width: 100%; height: 100px; text-align: center; padding: 10px 20px; box-sizing: border-box;
 }
 .best > div > div > a figure figcaption small{ color: #c6c6c6; font-size: 13px;}
-.best > div > div > a figure figcaption > h2{ color: white; margin: 4px 0; font-size: 17px;}
+.best > div > div > a figure figcaption > h2{ color: white; margin: 0; font-size: 17px;}
 .best > div > div > a figure figcaption div{ display: flex; align-items: baseline; justify-content: center;}
 .best > div > div > a figure figcaption div > p{font-size: 20px; padding: 0 10px;}
 .best > div > div > a figure figcaption div > p:nth-of-type(1){ color: #fad354;}
