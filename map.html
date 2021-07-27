@@ -82,21 +82,6 @@
             </ul>
         </div>
     </header>
-
-    <script>
-        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a'), //
-            menuList = document.querySelector('.mhead .bgmenu');
-
-            menuBtn.addEventListener('click', function(){
-                if(menuList.classList.contains('active')){
-                    menuList.classList.remove('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo3-1.png" alt="">`
-                }else{
-                    menuList.classList.add('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
-                }
-            });
-    </script>
     
     <div class="menu">
         <ul>

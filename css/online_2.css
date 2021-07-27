@@ -71,7 +71,7 @@ box-sizing: border-box; min-height: 470px; position: relative; margin-bottom: 45
     background-color: #0088e7; position: absolute; right: 5%; top: 42%; text-align: center;
 }
 .event ul li a > span h2{
-    color: white;  font-size: 20px; transform: translateY(70%);
+    color: white;  font-size: 20px; transform: translateY(50%);
 }
 .event ul li a:nth-of-type(2) > span{display: none;}
 .event ul li a:nth-of-type(4) > span{display: none;}

@@ -90,7 +90,6 @@
 }
 
 .market{  width: 30%;}
-.market p{}
 .market p img{width: 100%;}
 
 .market div{ margin: 30px 20px 0 20px;}
@@ -99,7 +98,6 @@
 .market div small b{color: rgb(119, 119, 119);}
 
 .guid{ position: relative; width: 63%;}
-.guid div{}
 .guid div img{width: 100%;}
 .guid p{ position: absolute; left: 71%; top: 30%;}
 .guid p img{ width: 60px;}
@@ -174,10 +172,10 @@
         position: absolute; left: 50%; top: 140px; transform: translateX(-50%);
         z-index: 3;
     }
-    .mmnav div{ width: 90%; margin: 0 auto; transform: translateY(80%);
+    .mmnav div{ width: 90%; margin: 0 auto; transform: translateY(50%);
         display: flex; align-items: center; justify-content: space-between;}
     .mmnav div p{ font-size: 18px; color: #c6c6c6;}
-    .mmnav div figure{ width: 20px}
+    .mmnav div figure{ width: 20px; transform: translateY(10%) }
     .mmnav div figure img{ width: 100%;}
     
     .popup{display: none;}

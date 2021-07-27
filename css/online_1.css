@@ -130,7 +130,7 @@
 .best > div > div > a figure figcaption small{ color: #c6c6c6; font-size: 13px;}
 .best > div > div > a figure figcaption > h2{ color: white; margin: 0; font-size: 17px;}
 .best > div > div > a figure figcaption div{ display: flex; align-items: baseline; justify-content: center;}
-.best > div > div > a figure figcaption div > p{font-size: 20px; padding: 0 10px;}
+.best > div > div > a figure figcaption div > p{ padding: 0 10px;}
 .best > div > div > a figure figcaption div > p:nth-of-type(1){ color: #fad354;}
 .best > div > div > a figure figcaption div > p:nth-of-type(2){ color: white;}
 
@@ -176,8 +176,8 @@
 .item > div a figure > div > img{width: 100%; height: 180px; object-fit: cover;transition: .5s;}
 
 /* 주석 */
-.item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s;}
-.item > div a figure > span b{ background-color: #0088e7; color: white; padding: 3px 13px 0 13px; border-radius: 25px;}
+.item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s; background-color: #0088e7; border-radius: 25px;}
+.item > div a figure > span b{  color: white; padding: 0 13px ;}
 
 .item > div a:nth-of-type(2) figure > span{display: none;}
 .item > div a:nth-of-type(3) figure > span{display: none;}
@@ -199,12 +199,12 @@
 
 
 /* 판매내용 */
-.item > div a article{ margin-top: 15px; line-height: 1.5;}
+.item > div a article{ margin-top: 12px; line-height: 1.5;}
 .item > div a article small{ color: #c6c6c6; font-size: 14px;}
-.item > div a article h2{ margin-top: 5px; color: #5a5a5a;}
+.item > div a article h2{margin: 3px 0; color: #5a5a5a; font-size: 19px;}
 .item > div a article > div{ display: flex; align-items: baseline; justify-content: flex-start;}
-.item > div a article > div p:nth-child(1){color: #0088e7; font-size: 21px; padding-right: 10px;}
-.item > div a article > div h3{ font-size: 21px; padding-right: 10px;}
+.item > div a article > div p:nth-child(1){color: #0088e7; padding-right: 10px; font-weight: bold;}
+.item > div a article > div h3{ padding-right: 10px;}
 .item > div a article > div p:nth-child(3){ color: #c6c6c6; text-decoration: line-through;}
 
 

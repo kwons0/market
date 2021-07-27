@@ -99,21 +99,6 @@
             </ul>
         </div>
     </header>
-
-    <script>
-        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a:nth-of-type(2)'), //
-            menuList = document.querySelector('.mhead .bgmenu');
-
-            menuBtn.addEventListener('click', function(){
-                if(menuList.classList.contains('active')){
-                    menuList.classList.remove('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo3.png" alt="">`
-                }else{
-                    menuList.classList.add('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
-                }
-            });
-    </script>
     
 
     <div class="main1">
@@ -140,7 +125,7 @@
         $(document).on('ready', function() {
           $(".slider").slick({
             arrow:true, dots: true, infinite: true, slidesToShow: 1,
-            slidesToScroll: 1, autoplay:true, autoplaySpeed:2500,
+            slidesToScroll: 1, autoplay:true, autoplaySpeed:3000,
             vertical:true
           });
         }); 
