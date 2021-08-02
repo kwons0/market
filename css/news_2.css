@@ -12,9 +12,9 @@
 
 .menu{ margin-top: 101px; border-top: 1px solid rgb(248, 248, 248);
     left: 0; top: 101px; width: 100%; height: 50px; background-color: rgb(248, 248, 248);}
-.menu ul{ width: 80%; height: 100%; margin: 0 auto;}
-.menu ul li{  width: 30%;  text-align: center; margin: 11px auto; transform: translateX(100%);}
-.menu ul li a{ margin: 0 10px;}
+.menu ul{ width: 80%; height: 100%; margin: 0 auto;  position: relative;}
+.menu ul li{width: 190px; margin: 11px 0 ; position: absolute; right: 170px; top: 0; }
+.menu ul li a{ color: #333; margin: 0 10px; }
 .menu ul li a:nth-child(2){ color: #0088e7;}
 
 /* title */
@@ -73,7 +73,7 @@
     margin: 0 auto; margin-top: 30px; display: block;
     width: 10%; padding: 15px 40px; font-size: 18px;
     text-align: center; transition: .3s; color: #0088e7;background-color: white;
-    border: 1.5px solid #c6c6c6; border-radius: 30px;
+    border: 1.5px solid #c6c6c6; border-radius: 30px; cursor: pointer; 
 } 
 
 /* hover */
@@ -110,7 +110,6 @@
 
     .mhead ul li:nth-child(2) a{width: 20px; z-index: 20;}
     .mhead ul li:nth-child(2) a img{width: 100%;}
-
     .bgmenu{ position: fixed; width: 50%; height: 100%; right: 0; top: 0; background-color: rgba(255, 255, 255);
         display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;
         z-index: 10; transform: translateX(100%); transition: .5s; box-shadow: -10px 0 10px rgba(0, 0, 0, 0.05);
@@ -130,12 +129,12 @@
 
     .menu{ margin-top: 0; border-top: none;
         left: 0; top: 0; width: 100%; height: 50px; background-color: white;}
-    .menu ul{ width: 80%; height: 100%; margin: 0 auto; border-bottom: 2px solid #e3e3e3;}
+    .menu ul{ width: 80%; height: 100%; margin: 0 auto; border-bottom: 2px solid #e3e3e3; }
     .menu ul li{  width: 100%;  text-align: center; margin: 0 auto; transform: translateX(0);
-        display: flex; align-items: center; justify-content: center;
+        display: flex; align-items: center; justify-content: center; position: inherit; right: 0; top: 0;
     }
     .menu ul li a{ margin: 0; width: 100%; height: 32.5px; color: #adadad;
-        display: block; font-size: 20px; transform: translateY(50%);
+        display: block; font-size: 20px; transform: translateY(50%); 
     }
     .menu ul li a:nth-child(2){ color: #0088e7; border-bottom: 2px solid #0088e7}
 
@@ -148,7 +147,7 @@
     .contents{  width: 80%; margin: 0 auto;}
     .contents div{width: 100%; margin: 0 auto; margin-top: 50px;}
     .contents div article{ width: 47%; border-top: none; padding-top: 20px; margin-bottom: 50px;}
-    .contents div article:nth-of-type(3){padding-top: 50px;}
+    .contents div article:nth-of-type(3){padding-top: 20px;}
 
     .contents div article figure{position: relative; overflow: hidden; border-radius: 15px; }
     .contents div article figure > a span{display: none;}
@@ -190,7 +189,7 @@
 
 
 @media (max-width:700px){
-
+    .menu ul li a{font-size: 18px;}
     .contents div{ width: 100%;}
     .contents div article{ width: 100%;}
     .contents > a{margin-top: 0; width: 30%;}

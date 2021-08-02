@@ -8,7 +8,16 @@
     <link href="./css/online_1.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js"></script>
+
     <script src="js/data_online1a.js"></script>
+    <script src="js/data_online1b.js"></script>
+    <script src="js/data_online1c.js"></script>
+    <script src="js/data_online1d.js"></script>
+    <script src="js/data_online1e.js"></script>
+    <script src="js/data_online1f.js"></script>
+    <script src="js/data_online1g.js"></script>
+
+    <script src="js/online1.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -51,7 +60,7 @@
             <ul>
                 <li><a href="index.html"><img src="img/m-logo6.png" alt=""></a></li>
                 <li>
-                    <a href="#"><img src="img/m-logo3-1.png" onmouseover="this.src='img/m-logo4.png'" onmouseout="this.src='img/m-logo3-1.png'" alt=""></a>
+                    <a href="#"><img src="img/m-logo3-1.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
                     <div>
@@ -81,21 +90,6 @@
         </div>
     </header>
 
-    <script>
-        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a'), //
-            menuList = document.querySelector('.mhead .bgmenu');
-
-            menuBtn.addEventListener('click', function(){
-                if(menuList.classList.contains('active')){
-                    menuList.classList.remove('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo3-1.png" alt="">`
-                }else{
-                    menuList.classList.add('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
-                }
-            });
-    </script>
-
     <div class="menu">
         <ul>
             <li>
@@ -109,7 +103,6 @@
         <p><img src="img/c-icon1.png" alt=""></p>
         <h2>온라인장보기</h2>
     </div>
-
 
     <div class="mapnav">
         <ul>
@@ -152,8 +145,6 @@
         </div>
     </div>
 
-
-
     <div class="delivery">
         <figure>
             <p>
@@ -180,7 +171,6 @@
             </article>
         </figure>
     </div>
-
 
     <div class="best">
         <h2>BEST PRODUCT</h2>
@@ -288,19 +278,19 @@
 
     <div class="new">
         <h2>NEW ARRIVAL</h2>
-        <nav>
-            <a href="#">전체</a>
-            <a href="#">한식, 반찬, 떡</a>
-            <a href="#">과일, 건어물, 야채</a>
-            <a href="#">생선, 정육, 닭</a>
-            <a href="#">의류, 침구, 미용</a>
-            <a href="#">먹거리</a>
-            <a href="#">기타</a>
+        <nav class="onlinetab">
+            <a class="view">전체</a>
+            <a>한식, 반찬</a>
+            <a>과일,야채</a>
+            <a>건어물, 견과</a>
+            <a>생선, 육류</a>
+            <a>먹거리</a>
+            <a>기타</a>
         </nav>
     </div>
 
     <div class="item">
-        <div>
+        <div class="a view">
             <!-- <a href="https://url.kr/qmvckl" target="_blank">
                 <figure>
                     <div><img src="img/d-photo9.jpg" onmouseover="this.src='img/d-photo10.jpg'" onmouseout="this.src='img/d-photo9.jpg'" alt=""></div>
@@ -316,182 +306,15 @@
                         <p>13,300원</p>
                     </div>
                 </article>
-            </a>
-            <a href="https://url.kr/5zojpc" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo1.jpg" onmouseover="this.src='img/e-photo1-1.jpg'" onmouseout="this.src='img/e-photo1.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 부산식품]</small>
-                    <h2>담백한 조랭이어묵(300g)</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>3,600원</h3>
-                        <p>3,240원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/6ehyvk" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo2.jpg" onmouseover="this.src='img/e-photo2-1.jpg'" onmouseout="this.src='img/e-photo2.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 동두천상회]</small>
-                    <h2>향긋한 깻잎 4묶음</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>1,080원</h3>
-                        <p>1,200원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/e15jya"  target="_blank">
-                <figure>
-                    <div><img src="img/d-photo1.jpg" onmouseover="this.src='img/d-photo1-1.jpg'" onmouseout="this.src='img/d-photo1.jpg'" alt=""></div>
-                    <span><b>BEST</b></span>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 수유촌놈떡갈비]</small>
-                    <h2>맛있는 떡갈비 오리지널 2장+청양고추 2장</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>11,970원</h3>
-                        <p>13,300원</p>
-                    </div>
-                </article>
-            </a>
-        </div>
-        <div>
-            <a href="https://url.kr/3c7nra"  target="_blank">
-                <figure>
-                    <div><img src="img/d-photo3.jpg" onmouseover="this.src='img/d-photo3-1.jpg'" onmouseout="this.src='img/d-photo3.jpg'" alt=""></div>
-                    <span><b>BEST</b></span>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 수유티각태각]</small>
-                    <h2>인기 부각믹스 250g</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>11,970원</h3>
-                        <p>13,300원</p>
-                    </div>
-                </article>
-            </a>
-          e-photo3-1  <a href="https://url.kr/jsqon9" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo3.jpg" onmouseover="this.src='img/e-photo3-1.jpg'" onmouseout="this.src='img/e-photo3.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 안동상회]</small>
-                    <h2>달고 맛있는 곶감(대)</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>12,000원</h3>
-                        <p>10,800원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/am6viw" target="_blank">
-                <figure>
-                    <div><img src="img/d-photo5.jpg" onmouseover="this.src='img/d-photo5-1.jpg'" onmouseout="this.src='img/d-photo5.jpg'" alt=""></div>
-                    <span><b>BEST</b></span>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 수유수유 김밥나라]</small>
-                    <h2>속이 꽉 찬 충무김밥 1인분</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>6,700원</h3>
-                        <p>6,030원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/wlupde" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo4.jpg" onmouseover="this.src='img/e-photo4-1.jpg'" onmouseout="this.src='img/e-photo4.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 대성수산]</small>
-                    <h2>수입산 소 바지락 1Kg</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>6,000원</h3>
-                        <p>5,400원</p>
-                    </div>
-                </article>
-            </a>
-        </div>
-        <div>
-            <a href="https://url.kr/dteirk" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo5.jpg" onmouseover="this.src='img/e-photo5-1.jpg'" onmouseout="this.src='img/e-photo5.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 가족사랑축산]</small>
-                    <h2>국산 도드람으뜸삼겹살 600g</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>19,500원</h3>
-                        <p>17,550원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/o7fv85" target="_blank">
-                <figure>
-                    <div><img src="img/d-photo7.jpg" onmouseover="this.src='img/d-photo7-1.jpg'" onmouseout="this.src='img/d-photo7.jpg'" alt=""></div>
-                    <span><b>BEST</b></span>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 수유 강북김치]</small>
-                    <h2>아삭아삭 맛좋은 오이소박이 4개</h2>
-                    <div>
-                        <p>5%</p>
-                        <h3>6,000원</h3>
-                        <p>5,700원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/3pcfir" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo6.jpg" onmouseover="this.src='img/e-photo6-1.jpg'" onmouseout="this.src='img/e-photo6.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 진우과일]</small>
-                    <h2>달콤 간식 골드키위 8개</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>12,000원</h3>
-                        <p>10,800원</p>
-                    </div>
-                </article>
-            </a>
-            <a href="https://url.kr/mw2e5z" target="_blank">
-                <figure>
-                    <div><img src="img/e-photo7.jpg" onmouseover="this.src='img/e-photo8-1.jpg'" onmouseout="this.src='img/e-photo7.jpg'" alt=""></div>
-                    <p><img src="img/d-icon1.png" alt=""></p>
-                </figure>
-                <article>
-                    <small>[수유전통시장 | 인순이네반찬]</small>
-                    <h2>아삭매콤한 알타리 1kg</h2>
-                    <div>
-                        <p>10%</p>
-                        <h3>8,400원</h3>
-                        <p>7,560원</p>
-                    </div>
-                </article>
             </a> -->
         </div>
-        <a href="#">더보기</a>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+        <div class="g"></div>
+        <p>더보기</p>
     </div>
 
 

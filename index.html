@@ -22,9 +22,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="114*114" href="img/favi2.png">
 
     <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/common.js"></script>
     
 </head>
@@ -69,7 +72,6 @@
             <ul>
                 <li><a href="index.html"><img src="img/m-logo1.png" alt=""></a></li>
                 <li>
-                    <a href="#"><img src="img/m-logo2.png" alt=""></a>
                     <a href="#"><img src="img/m-logo3.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
@@ -121,7 +123,7 @@
         </article>
     </div>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(document).on('ready', function() {
           $(".slider").slick({
             arrow:true, dots: true, infinite: true, slidesToShow: 1,
@@ -129,7 +131,7 @@
             vertical:true
           });
         }); 
-    </script>
+    </script> -->
 
     <div class="mapnav">
         <nav>
@@ -169,7 +171,7 @@
                 신선하고 다양한 상품들로 가득한 전통시장으로 떠나요!
             </p>
         </article>
-        <div class="right">
+        <div class="autoplay">
             <figure>
                 <p><img src="img/2_photo1.jpg" alt=""></p>
                 <figcaption>
@@ -220,7 +222,57 @@
                     <p>제주특별자치도 제주시 이도일동 관덕로14길 20</p>
                 </figcaption>
             </figure>
-            <div><img src="img/2_icon1.png" alt=""></div>
+        </div>
+        <div class="right">
+            <figure>
+                <p><img src="img/2_photo1.jpg" alt=""></p>
+                <figcaption>
+                    <h1>서울 망원시장</h1>
+                    <p>서울특별시 마포구 망원1동 망원로8길 7</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo2.jpg" alt=""></p>
+                <figcaption>
+                    <h1>속초 중앙시장</h1>
+                    <p>강원도 속초시 중앙동 중앙로147번길 16</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo3.jpg" alt=""></p>
+                <figcaption>
+                    <h1>대구 서문시장</h1>
+                    <p>대구광역시 중구 대신동 큰장로26길 45</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo4.jpg" alt=""></p>
+                <figcaption>
+                    <h1>부산 부평깡통시장</h1>
+                    <p>부산광역시 중구 부평동 부평1길 39</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo5.jpg" alt=""></p>
+                <figcaption>
+                    <h1>서울 노량진수산시장</h1>
+                    <p>서울특별시 동작구 노량진동 노들로 674</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo6.jpg" alt=""></p>
+                <figcaption>
+                    <h1>울산 중앙전통시장</h1>
+                    <p>울산광역시 중구 옥교동 125-2</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <p><img src="img/2_photo7.jpg" alt=""></p>
+                <figcaption>
+                    <h1>제주 동문시장</h1>
+                    <p>제주특별자치도 제주시 이도일동 관덕로14길 20</p>
+                </figcaption>
+            </figure>
         </div>
         <figure class="arrow">
             <div>
@@ -236,8 +288,25 @@
                 <span></span>
             </div>
         </figure>
-        
     </div>
+    
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $('.autoplay').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        }); 
+
+        var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: { el: ".swiper-pagination", clickable: true }
+        });
+    </script>
+
 
     
     <div class="main3">
@@ -285,65 +354,138 @@
     <div class="main4">
         <div class="tap">
             <div>
-                <h3>전통시장소식</h3>
                 <span>NEWS</span>
-                <span>시장이야기</span>
             </div>
-            <a href="news_1.html">
-                더보기
-            </a>
+            <a href="news_1.html"> 더보기</a>
         </div>
         <div class="news">
-            <figure>
-                <a href="https://www.sedaily.com/NewsView/22IGRRC1PI" target="_blank">
-                    <figcaption>
-                        <h3>NEWS</h3>
+            <ul class="aco">
+                <li class="item">
+                    <h2 class="newTitle active">가격 불투명·불결·현금결제 '옛말'···전통시장 서비스 확 달라졌다<span class="acoIcon ani"></span></h2>
+                    <div class="newTxt show">
                         <small>서울경제 | 2021-02-09</small>
-                        <h2>가격 불투명·불결·현금결제 '옛말'···
-                            전통시장 서비스 확 달라졌다</h2>
-                        <p>판매 가격이 불투명한 데다 지저분하고 현금 결제만 가능해 대형 마트보다 불편하다는 전통 시장의 선입관이 개선되고 있는 것으로 조사됐다.<br>
-                            9일 소상공인시장진흥공단이 전국 특성화 시장 119곳의 서비스 개선 현황을 조사...</p>
-                    </figcaption>
-                    <p><img src="img/4-photo1.jpg" alt=""></p>
-                </a>
-            </figure>
-            <figure>
-                <a href="https://www.chosun.com/economy/smb-venture/2021/02/15/7PVZXUEPJFAIHPXU7KR2RJC53Y/" target="_blank">
-                    <figcaption>
-                        <h2>김 모락모락 가래떡을 집으로… 재래시장 배달 혁명</h2>
+                        판매 가격이 불투명한 데다 지저분하고 현금 결제만 가능해 대형 마트보다 불편하다는 전통 시장의 선입관이 개선되고 있는 것으로 조사됐다. 9일 소상공인시장진흥공단이 전국 특성화 시장 119곳의 서비스 개선 현황을 조사한 결과 원산지 표시율은 1년 전 73.2%에서 95%로, 가격 표시율은 64%에서 92%로 급격히 개선됐다. 청결도 점수 역시...
+                        <a href="https://www.sedaily.com/NewsView/22IGRRC1PI" target="_blank"> <span></span> <span></span> </a>
+                    </div>
+                </li>
+                <li class="item">
+                    <h2 class="newTitle">김 모락모락 가래떡을 집으로… 재래시장 배달 혁명<span class="acoIcon"></span></h2>
+                    <div class="newTxt">
                         <small>조선일보 | 2021.02.15</small>
-                        <!-- <p>지난 4일 대구 수성구에 있는 신매전통시장에는 지지고 볶는 소리가 요란했다.<br>
-                            매주 목요일 열리는 장날, 설 연휴를 일주일 앞두고 미리 제수용품 등을 사러 온 손님과 이들을 맞이하는 상인 모두 활기가 넘쳤다...</p> -->
-                    </figcaption>
-                    <!-- <p><img src="img/4-photo2.jpg" alt=""></p> -->
-                </a>
-            </figure>
-            <figure>
-                <a href="https://view.asiae.co.kr/article/2021031123294180570"target="_blank">
-                    <figcaption>
-                        <h2>양천구 신영시장 문화관광형 시장육성사업 성과 평가 최우수(S) 등급</h2>
+                        지난 4일 대구 수성구에 있는 신매전통시장에는 지지고 볶는 소리가 요란했다. 매주 목요일 열리는 장날, 설 연휴를 일주일 앞두고 미리 제수용품 등을 사러 온 손님과 이들을 맞이하는 상인 모두 활기가 넘쳤다. 시장 어귀 연희떡방에는 김이 모락모락 나는 가래떡을 사려고 긴 줄이 늘어섰다. 한 손님이 “떡 한 상자 배달돼요?” 묻자 주인은 “되지예, GO배달 있다 아입니꺼” 했다. ‘GO배달’은...
+                        <a href="https://www.chosun.com/economy/smb-venture/2021/02/15/7PVZXUEPJFAIHPXU7KR2RJC53Y/" target="_blank"> <span></span> <span></span> </a>
+                    </div>
+                </li>
+                <li class="item">
+                    <h2 class="newTitle">양천구 신영시장 문화관광형 시장육성사업 성과 평가 최우수(S) 등급<span class="acoIcon"></span></h2>
+                    <div class="newTxt">
                         <small>아시아경제 | 2021.03.12</small>
-                        <!-- <p>양천구(구청장 김수영)는 신월1동 신영시장이 중소벤처기업부와 소상공인 시장진흥공단의 2020년도 문화관광형 시장육성사업 성과 평가에서
-                            최우수 S등급을 획득했다고 밝혔다.<br>
-                            문화관광형 시장육성사업은 중소벤처기업부...</p> -->
-                    </figcaption>
-                    <!-- <p><img src="img/4-photo3.jpg" alt=""></p> -->
+                        양천구(구청장 김수영)는 신월1동 신영시장이 중소벤처기업부와 소상공인 시장진흥공단의 2020년도 문화관광형 시장육성사업 성과 평가에서 최우수 S등급을 획득했다고 밝혔다. 문화관광형 시장육성사업은 중소벤처기업부 공모사업으로, 지역의 문화·특색과 연계한 테마형 전통시장을 육성하는 사업이다. 이번 평가는 2020년 문화관광형 시장 육성사업 대상지로 선정된 전국 45곳의 시장을 대상으로...
+                        <a href="https://view.asiae.co.kr/article/2021031123294180570"target="_blank"> <span></span> <span></span> </a>
+                    </div>
+                </li>
+                <li class="item">
+                    <h2 class="newTitle">온누리상품권, 전통시장 넘어 배달앱도 통한다<span class="acoIcon"></span></h2>
+                    <div class="newTxt">
+                        <small>아이뉴스24 | 2020.11.12</small>
+                        전통시장에서 주로 쓰였던 '온누리상품권'으로도 배달음식 주문이 가능해진다. 허니비즈는 소상공인시장진흥공단과 양해각서(MOU)를 체결하고, 12월 중 배달앱 '띵동' 결제수단에 온누리상품권을 적용하겠다고 12일 발표했다. 전통시장 활성화를 위해 도입된 온누리상품권은 누구나 10% 할인된 금액에 구매할 수 있다. 매월 100만원까지 구매 가능하며 구매일로부터 5년간 사용할 수 있다...
+                        <a href="http://www.inews24.com/view/1316128" target="_blank"> <span></span> <span></span> </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main4m swiper-container mySwiper">
+        <div class="tapm">
+            <div> <h3>전통시장소식</h3> </div>
+            <a href="news_1.html">더보기</a>
+        </div>
+        <div class="newsm swiper-wrapper">
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo1.jpg" alt=""></p>
+                <a href="https://www.sedaily.com/NewsView/22IGRRC1PI" target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>가격 불투명·불결·현금결제 '옛말'···
+                        전통시장 서비스 확 달라졌다</h2>
+                    <p>판매 가격이 불투명한 데다 지저분하고 현금 결제만 가능해 대형 마트보다 불편하다는 전통 시장의 선입관이 개선되고 있는 것으로 조사됐다.<br>
+                        9일 소상공인시장진흥공단이 전국 특성화 시장 119곳의 서비스 개선 현황을 조사...
+                    </p>
                 </a>
             </figure>
-            <figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo2.jpg" alt=""></p>
+                <a href="https://www.chosun.com/economy/smb-venture/2021/02/7PVZXUEPJFAIHPXU7KR2RJC53Y/" target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>김 모락모락 가래떡을 집으로… 재래시장 배달 혁명</h2>
+                    <p>지난 4일 대구 수성구에 있는 신매전통시장에는 지지고 볶는 소리가 요란했다.<br>
+                        매주 목요일 열리는 장날, 설 연휴를 일주일 앞두고 미리 제수용품 등을 사러 온 손님과 이들을 맞이하는 상인 모두 활기가 넘쳤다...
+                    </p>
+                </a>
+            </figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo13.jpg" alt=""></p>
+                <a href="http://www.m-i.kr/news/articleView.html?idxno=821480" target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>당진전통시장, 특성화육성사업 전국 최우수</h2>
+                    <p>전국최초 전통시장 온라인 쇼핑몰 당찬한끼가 큰 성과로 평가 된다. <br>
+                        당진시(시장 김홍장)가 올해 실시한 2020년도 ‘특성화시장 육성사업’ 평가에서 당진전통시장 온라인 쇼핑몰 `당찬한끼’에...
+                    </p>
+                </a>
+            </figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo7.jpg" alt=""></p>
+                <a href="https://www.fnnews.com/news/202012271033537542" target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>충남도, 전통시장 살려 ‘명품 시장’ 만든다</h2>
+                    <p>충남도는 내년 중소벤처기업부 전통시장 활성화 공모사업에 국비 95억 원을 확보, <br>
+                        명품시장 육성에 나선다고 27일 밝혔다. 이번에 선정된 사업은 △문화관광형 시장 △주차환경개선 △시장경영바우처 등...
+                    </p>
+                </a>
+            </figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo3.jpg" alt=""></p>
+                <a href="https://view.asiae.co.kr/article/2021031123294180570"target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>양천구 신영시장 문화관광형 시장육성사업 성과 평가 최우수(S) 등급</h2>
+                    <p>양천구(구청장 김수영)는 신월1동 신영시장이 중소벤처기업부와 소상공인 시장진흥공단의 2020년도 문화관광형 시장육성사업 성과 평가에서 최우수 S등급을 획득했다고 밝혔다.<br>
+                        문화관광형 시장육성사업은 중소벤처기업부...
+                    </p>
+                </a>
+            </figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo8.jpg" alt=""></p>
+                <a href="https://view.asiae.co.kr/article/2020121408102628671" target="_blank">
+                    <h3>NEWS</h3>
+                    <h2>쿠팡이츠, 연말 맞아 전통시장 음식 배달 특별전</h2>
+                    <p>쿠팡이츠가 오는 27일까지 온라인 전통시장 특별전을 연다. <br>
+                        쿠팡은 음식 배달 플랫폼 쿠팡이츠와 중소벤처기업부 산하 소상공인시장진흥공단이 손잡고 신종 코로나바이러스감염증(코로나19)으로 인해...
+                    </p>
+                </a>
+            </figure>
+            <figure class="swiper-slide">
+                <p><img src="img/4-photo4.jpg" alt=""></p>
                 <a href="http://www.inews24.com/view/1316128" target="_blank">
-                    <figcaption>
-                        <h2>온누리상품권, 전통시장 넘어 배달앱도 통한다</h2>
-                        <small>아이뉴스24 | 2020.11.12</small>
-                        <!-- <p>전통시장에서 주로 쓰였던 '온누리상품권'으로도 배달음식 주문이 가능해진다.<br>
-                            허니비즈는 소상공인시장진흥공단과 양해각서(MOU)를 체결하고,
-                            12월 중 배달앱 '띵동' 결제수단에 온누리상품권을 적용하겠다고...</p> -->
-                    </figcaption>
-                    <!-- <p><img src="img/4-photo4.jpg" alt=""></p> -->
+                    <h3>NEWS</h3>
+                    <h2>온누리상품권, 전통시장 넘어 배달앱도 통한다</h2>
+                    <p>전통시장에서 주로 쓰였던 '온누리상품권'으로도 배달음식 주문이 가능해진다.<br>
+                        허니비즈는 소상공인시장진흥공단과 양해각서(MOU)를 체결하고, 12월 중 배달앱 '띵동' 결제수단에 온누리상품권을 적용하겠다고...
+                    </p>
                 </a>
             </figure>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+          }
+        });
+    </script>
+
 
 
     <div class="main5">
@@ -358,30 +500,30 @@
                         <span>background</span>
                         <p><img src="img/5_photo1.jpg" alt=""></p>
                     </div>
-                    <p>한식, 반찬, 떡</p>
+                    <p>한식, 반찬</p>
                 </a>
                 <a href="online_1.html">
                     <div>
                         <span>background</span>
                         <p><img src="img/5_photo2.jpg" alt=""></p>
                     </div>
-                    <p>과일, 건어물, 야채</p>
+                    <p>과일, 야채</p>
                 </a>
                 <a href="online_1.html">
                     <div>
                         <span>background</span>
-                        <p><img src="img/5_photo3.jpg" alt=""></p>
+                        <p><img src="img/5_photo4.jpg" alt=""></p>
                     </div>
-                    <p>생선, 정육, 닭</p>
+                    <p>건어물, 견과</p>
                 </a>
             </div>
             <div>
                 <a href="online_1.html">
                     <div>
                         <span>background</span>
-                        <p><img src="img/5_photo4.jpg" alt=""></p>
+                        <p><img src="img/5_photo3.jpg" alt=""></p>
                     </div>
-                    <p>의류, 침구, 미용</p>
+                    <p>생선, 육류</p>
                 </a>
                 <a href="online_1.html">
                     <div>

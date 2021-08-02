@@ -1,6 +1,48 @@
 {
     "news2":[
         {
+            "link":"https://www.youtube.com/watch?v=Br64tugronQ",
+            "img":"img/b-photo10.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-07-23",
+            "title":"[시장마실] 스마트미러로 여자 최준의 탄생! 서울 성대전통시장 - 2부"
+        },
+        {
+            "link":"https://www.youtube.com/watch?v=eDrCE_-crrg",
+            "img":"img/b-photo11.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-07-16",
+            "title":"[시장마실] VR 선글라스로 세상에서 가장 힙한 사람이 되었다. 서울 성대전통시장 - 1부"
+        },
+        {
+            "link":"https://m.blog.naver.com/marketagency/222428861883",
+            "img":"img/b-photo12.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"BLog | 2021.07.13",
+            "title":"Ep24.계획형들의 춘천 인생샷 명소 찾기! MBTI별 여행 유형"
+        },
+        {
+            "link":"https://www.youtube.com/watch?v=VberAx6OwxY",
+            "img":"img/b-photo13.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Youtube | 2021-07-12",
+            "title":"[제로페이 브랜디드 콘텐츠 1탄 : 떼아블리편] 토끼 밥주러 왔다가 떼아가 토끼 됐어요"
+        },
+        {
+            "link":"https://m.blog.naver.com/marketagency/222425858224",
+            "img":"img/b-photo14.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"BLog | 2021.07.09",
+            "title":"Ep.23 아산 무계획 당일치기! MBTI별 여행 유형"
+        },
+        {
+            "link":"https://www.facebook.com/760339237331239/posts/4427455237286269/?d=n",
+            "img":"img/b-photo15.jpg",
+            "hover":"img/1_icon1.png",
+            "date":"Facebook | 2021.07.08",
+            "title":"#마켙맨 #그림일기12화 그동안 마켙맨을 사랑해주셔서 감사합니다!"
+        },
+        {
             "link":"https://www.youtube.com/watch?v=f8PRALqJXBI",
             "img":"img/b-photo1.jpg",
             "hover":"img/1_icon1.png",

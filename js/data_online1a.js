@@ -2,26 +2,48 @@ $(function(){
     $.ajax({
         url:'data/data_online1a.json',
         success:function(data){
+
             let tagList='';
-            data.online1.forEach(function(o){
-                tagList += `<a href="${o.link}" target="_blank">
+            for(var i=0; i<9; i++){
+                tagList += `<a href="${data.online1a[i].link}" target="_blank">
                                 <figure>
-                                    <div><img src="${o.img1}" onmouseover="this.src='${o.img2}'" onmouseout="this.src='${o.img1}'" alt=""></div>
-                                    <span><b>${o.tag}</b></span>
-                                    <p><img src="${o.icon}" alt=""></p>
+                                    <div><img src="${data.online1a[i].img1}" onmouseover="this.src='${data.online1a[i].img2}'" onmouseout="this.src='${data.online1a[i].img1}'" alt=""></div>
+                                    <p><img src="${data.online1a[i].icon}" alt=""></p>
                                 </figure>
                                 <article>
-                                    <small>${o.market}</small>
-                                    <h2>${o.title}</h2>
+                                    <small>${data.online1a[i].market}</small>
+                                    <h2>${data.online1a[i].title}</h2>
                                     <div>
-                                        <p>${o.sale}</p>
-                                        <h3>${o.price}</h3>
-                                        <p>${o.orig}</p>
+                                        <p>${data.online1a[i].sale}</p>
+                                        <h3>${data.online1a[i].price}</h3>
+                                        <p>${data.online1a[i].orig}</p>
                                     </div>
                                 </article>
                             </a>`
-            });
-            $('.item div').html(tagList);
+            };
+            $('.item .a').html(tagList);
+
+            $('.item > p').click(function(){
+                $('.item > p').fadeOut(200)
+                for(var i=9; i<data.online1a.length; i++){
+                    tagList += `<a href="${data.online1a[i].link}" target="_blank">
+                                    <figure>
+                                        <div><img src="${data.online1a[i].img1}" onmouseover="this.src='${data.online1a[i].img2}'" onmouseout="this.src='${data.online1a[i].img1}'" alt=""></div>
+                                        <p><img src="${data.online1a[i].icon}" alt=""></p>
+                                    </figure>
+                                    <article>
+                                        <small>${data.online1a[i].market}</small>
+                                        <h2>${data.online1a[i].title}</h2>
+                                        <div>
+                                            <p>${data.online1a[i].sale}</p>
+                                            <h3>${data.online1a[i].price}</h3>
+                                            <p>${data.online1a[i].orig}</p>
+                                        </div>
+                                    </article>
+                                </a>`
+                };
+                $('.item .a').html(tagList);
+            })
 
         },
         error:function(){

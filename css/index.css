@@ -93,29 +93,20 @@ body{ background: none;}
 .left p{ font-size: 15px; white-space: pre-line; color: #999999;}
 
 /* right */
-.right{
+.right{display: none;}
+.autoplay{
     width: 60%; float: right; margin: 105px 0;
     display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
     position: relative; right: 0; overflow: hidden;}
-.right figure{
+.autoplay figure{
     width: 220px; height: 360px; margin: 0 15px;
-    animation: a2 10s 2s infinite;
 }
-@keyframes a2 {
-    0%{transform: translateX(0%);}
-    35%{transform: translateX(-120%);}
-    70%{transform: translateX(-230%);}
-    100%{transform: translateX(-340%);}
-}
-
-.right figure > p{ margin-bottom: 17px; width:100%; height: 300px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+.autoplay figure > p{ margin-bottom: 17px; width:100%; height: 300px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
     box-sizing: border-box; border-radius: 10px; overflow: hidden;}
-.right figure p img{
-    height: 100%; vertical-align: top; object-fit: cover; transform: translate(-12%, 0); }
-.right figure figcaption h1{ font-size: 16px; margin-bottom: 5px;}
-.right figure figcaption p{ font-size: 13px; line-height: 1.2; color: #999;}
-.right div{ position: absolute; right: 0; top: 38%; width: 30px;}
-.right div img{ width: 100%;}
+.autoplay figure p img{ width: 100%;
+    height: 100%; vertical-align: top; object-fit: cover; transform: translate(0, 0); }
+.autoplay figure figcaption h1{ font-size: 16px; margin-bottom: 5px;}
+.autoplay figure figcaption p{ font-size: 13px; line-height: 1.2; color: #999;}
 
 .arrow{display: none;}
 
@@ -181,50 +172,77 @@ body{ background: none;}
 
 
 /* main4 */
+.main4m{display: none;}
 
-.main4{ left: 0; top: 0; width: 65%; margin: 0 auto; margin-top: 101px;}
+.main4{ width: 60%; margin: 100px auto; }
+.tap{ display: flex; align-items: flex-start; justify-content: space-between;}
+.tap div span{ display: inline-block; padding: 0 10px 10px 0; font-size: 18px; font-weight: bold; color: #777;}
+.tap a{ font-size: 14px; color: #999;}
 
-/* 상단탭 */
-.tap{margin-bottom: 15px;
-    display: flex; align-items: baseline; justify-content: space-between;}
-.tap div span{ font-size: 18px; margin: 0 10px; opacity: 70%;}
-.tap div span:nth-child(2){ margin-left: 0; opacity: 100%; border-bottom: 2px solid #0088e7;}
-.tap div span:hover{ border-bottom: 2px solid #0088e7; opacity: 100%;}
-.tap > a{font-size: 13px; color: gray;}
-.tap > a:hover{ color: #0088e7;  border-bottom: 1px solid #0088e7; font-weight: bold;}
+.news{ width: 100%; }
 
-.tap div h3{display: none;}
-
-
-/* 컨텐츠 */
-
-.news{}
-.news figure{}
-.news figure a{  border-bottom: 2px solid #e3e3e3;
-    display: flex; align-items: flex-start; justify-content: space-between;
+/* 타이틀 */
+.newTitle{ padding: 20px; position: relative; margin: 0; color: #777; font-weight: 500;
+    transition: ease-in-out 0.2s all; cursor: pointer; 
 }
-.news figure:nth-child(1){  border-top: 2px solid #e3e3e3;  background-color: rgba(0, 136, 231, 0.05);}
-
-
-.news figure a figcaption{
-    width: 100%; left: 0px; top: 0; padding: 10px 30px;
-    display: flex;  align-items: center; justify-content: space-between;
+.item:nth-of-type(1){ border-top: 2px solid #dbdbdb;}
+.newTitle:hover{ padding-left: 25px;}
+.newTitle::before, .newTitle::after{
+    content: ''; position: absolute; height: 2px;  border-radius: 50px;
+    transition: ease-in-out 0.6s all; bottom: 0; left: 0;
+    display: flex; justify-content: center; align-items: center;
 }
-.news figure:nth-child(1) a figcaption{
-    display: block;  width: 70%; padding: 20px 30px;
+.newTitle::before {  width: 100%;  background-color: #dbdbdb;}
+.newTitle::after{ background-image: linear-gradient(90deg, #0088e7, #dbdbdb); width: 0%;}
+.newTitle:hover::after{width: 100%;}
+
+.newTitle.active{ font-size: 18px; color: #333; font-weight: bold;}
+.newTitle.active::after{
+    content: ''; position: absolute; height: 2px;  border-radius: 50px;
+    transition: ease-in-out 0.6s all; bottom: 0; left: 0;
+    display: flex; justify-content: center; align-items: center;
+    background-image: linear-gradient(90deg, #0088e7, #c9d6df);  width: 100%;
+}
+
+/* 아이콘 */
+.acoIcon{ float: right; width: 30px; height: 30px; margin-top: -3px;
+    display: flex;  align-items: center; justify-content: center;
+}
+.acoIcon::before, .acoIcon::after{ content:''; position: absolute;  background-color: #dbdbdb;
+    transition: ease 0.3s all;
+}
+.acoIcon::before { width: 2px; height: 15px; }
+.acoIcon::after { width: 15px; height: 2px; }
+
+.newTitle:hover .acoIcon::before, .newTitle:hover .acoIcon::after{ background-color: #0088e7; }
+.acoIcon.ani.acoIcon:before{ transform: rotate(90deg); }
+
+/* 내용 */
+.newTxt small{ font-size: 12px; color: #999; display: block; padding-bottom: 10px;}
+.newTxt{
+    opacity: 0; height: 0; padding: 0px 20px; font-size: 15px;
+    position: relative; transition: all 0.6s cubic-bezier(.42,.2,.08,1);
     overflow: hidden;
 }
+/* 화살표 */
+.newTxt > a{ float: right; transform: translate(-50%, 400%);}
+.newTxt > a > span{ display: flex; justify-content: center; align-items: center; flex-direction: column;
+    box-sizing: border-box; border: 0.2px solid rgb(183, 183, 183); transition: .5s;
+}
+.newTxt > a > span:nth-child(1){width: 10px; transform: rotate(40deg) translate(20px, -6px);}
+.newTxt > a > span:nth-child(2){width: 30px; transform: translateY(10px);}
+
+.newTxt:hover > a > span{ border: 0.2px solid #555; }
+.newTxt:hover > a > span:nth-child(1){transform: rotate(40deg) translate(43px, -26px)}
+.newTxt:hover > a > span:nth-child(2){width: 50px; transform: translate(10px, 10px);}
+
+.newTxt.show{   opacity: 1;
+    height: auto; padding: 25px 20px; position: relative;
+    z-index: 0; border-radius: 0px 0px 3px 3px;
+    background-color: rgba(0, 136, 231, 0.05);
+}
 
 
-.news figure a figcaption small{ font-size: 11px; color: rgb(195, 195, 195);}
-.news figure a figcaption h2{  margin: 10px 0; font-size: 16px; color: #666; transition: .5s;}
-.news figure a figcaption h3{  display: none;}
-.news figure:nth-child(1) a figcaption h2{ font-size: 20px; color: #333;}
-.news figure a figcaption p{ font-size: 15px; line-height: 1.3; color: #999;}
-.news figure a > p{ width: 30%; height: 200px; }
-.news figure a p img{ width: 100%; height: 100%; object-fit: cover; vertical-align: top;}
-
-.news figure a:hover figcaption h2{  color: #0088e7;}
 
 
 /* main5 */
@@ -272,10 +290,9 @@ body{ background: none;}
     .mhead ul li:nth-child(1){width: 100px;}
     .mhead ul li:nth-child(1) a img{width: 100%;}
 
-    .mhead ul li:nth-child(2){width: 70px;}
-    .mhead ul li:nth-child(2) a{width: 20px;}
+    .mhead ul li:nth-child(2){width: 24px;}
+    .mhead ul li:nth-child(2) a{width: 20px; z-index: 20;}
     .mhead ul li:nth-child(2) a img{width: 100%;}
-    .mhead ul li:nth-child(2) a:nth-child(2){ z-index: 20;}
 
     .bgmenu{ position: fixed; width: 50%; height: 100%; right: 0; top: 0; background-color: rgba(255, 255, 255);
         display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;
@@ -321,25 +338,29 @@ body{ background: none;}
 
 
     /* main2 시장 여러개 보기 */
-    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 200px; position: relative;}
-    .main2::after{clear: none;}
-
-    /* left */
-    .left{ width: 100%; left: 0; top: 0; margin-top: 60px; padding-left: 5%;
-        float: none; text-align: center; display: none;}
-    /* right */
-    .right{
-        width: 85%; float: none; margin: 40px 0; top: -235px; right: 0; z-index: 2; 
-        position: absolute; overflow: hidden; background-color: white; padding: 20px 10px;
-        border-radius: 15px 0 15px 0;
+    .main2{ left: 0; top: 0; margin-top: 0; width: 100%; height: 200px; position: relative; 
     }
-    .right figure{ width: 180px; height: 350px; margin: 0 15px; animation: none; margin: 0 10px;}
-    .right figure > p{ margin-bottom: 17px; width:100%; max-height: 270px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+    .main2::after{clear: none;}
+    /* left */
+    .left{ display: none;}
+    /* right */
+    .right{ display: flex; overflow: hidden;
+        width: 85%; margin: 40px 0; top: -235px; right: 0; z-index: 2; 
+        position: absolute; background-color: white; padding: 20px 10px;
+        border-radius: 15px 0 15px 0; overflow-x: scroll; -ms-overflow-style: none;
+    }
+    .right::-webkit-scrollbar{display: none;}
+    
+    .right figure{ width: 180px; height: 350px; margin: 0 15px; margin: 0 10px; 
+    }
+    .right figure > p{ margin-bottom: 17px; width:100%; height: 270px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
         box-sizing: border-box; border-radius: 10px; overflow: hidden; }
     .right figure p img{  height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
+    .right figure figcaption h1{ font-size: 16px; margin-bottom: 5px;}
+    .right figure figcaption p{ font-size: 13px; line-height: 1.2; color: #999;}
     .right div{ display: none;}
 
-    .arrow{display: block;width: 100px; height: 100px;
+    .arrow{display: block; width: 100px; height: 100px;
         position: absolute; left: 40px; top: -90px; z-index: 50;
         display: flex; align-items: flex-start; justify-content: flex-start;
         animation: scroll 1.2s infinite;
@@ -353,6 +374,7 @@ body{ background: none;}
         0%{ transform: translateX(15%);}
         100%{transform: translateX(-5px); opacity: 0;}
     }
+    .autoplay.slick-slider{display: none;}
 
 
     /* main3 온누리상품권 */
@@ -400,55 +422,50 @@ body{ background: none;}
 
 
 
-
+    
     /* main4 전통시장 소식*/
-
-    .main4{ left: 0; top: 0; width: 100%; height: 400px; margin: 0 auto; margin-top: 60px;}
+    .main4{display: none;}
+    .main4m{ display: block; left: 0; top: 0; width: 100%; height: 400px; margin: 0 auto; margin-top: 60px;}
 
     /* 상단탭 */
-    .tap{width: 90%; margin: 0 auto;
+    .tapm{width: 90%; margin: 0 auto; margin-bottom: 15px;
         display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 25px;}
-    .tap div span{ display: none;}
-    .tap > a{font-size: 16px; color: #999;}
-    .tap > a:hover{ color: #999;  border-bottom: none; font-weight: unset;}
-    .tap div h3{display: block; font-size: 22px;}
+    .tapm div h3{display: block; font-size: 22px;}
+    .tapm > a{font-size: 16px; color: #999;}
+    .tapm > a:hover{ color: #999;  border-bottom: none; font-weight: unset;}
 
 
     /* 컨텐츠 */
 
-    .news{position: relative;}
-    .news figure{}
-    .news figure:nth-child(2){display: none;}
-    .news figure:nth-child(3){display: none;}
-    .news figure:nth-child(4){display: none;}
+    .newsm{position: relative;}
 
-    .news figure a{  border-bottom: none; display: inherit; align-items: flex-start; justify-content: space-between; }
-    .news figure:nth-child(1){  border-top: none;  background-color: rgba(0, 0, 0,0);}
+    .newsm figure > p{ width: 100%; height: 327px; border-radius: 0 0 30px 0; overflow: hidden;}
+    .newsm figure > p img{ width: 100%; height: 100%; object-fit: cover; vertical-align: top; }
 
-    .news figure a figcaption{ 
-        width: 100%; left: 0px; top: 0; margin: 10px 30px;
-        display: flex;  align-items: center; justify-content: space-between;
-    }
-    .news figure:nth-child(1) a figcaption{
-        display: block;  width: 60%; max-width: 600px;  height: 160px; margin: 0; overflow: hidden; padding: 20px 30px;
-        position: absolute; left: 0; top: 60%; width: 80%;  background-color: rgba(255, 255, 255);
+
+    .newsm figure a{
+        width: 60%; max-width: 600px;  height: 160px; margin: 0; padding: 20px 30px;
+        position: absolute; left: 0; top: 32%; width: 80%;  background-color: rgba(255, 255, 255);
         border-radius: 0 30px 0 0;
     }
 
-    .news figure a figcaption small{ display: none;}
-    .news figure a figcaption h2{  white-space: pre-line;}
-    .news figure a figcaption h3{  display: block; color: #0088e7; font-size: 15px;}
+    .newsm figure a h2{  margin: 10px 0; font-size: 20px; color: #333;}
+    .newsm figure a h3{ color: #0088e7; font-size: 15px;}
+    .newsm figure a p{ font-size: 15px; line-height: 1.3; color: #999;}
 
-    .news figure a > p{ width: 100%; height: 300px; overflow: hidden; border-radius: 0 0 30px 0;}
-    .news figure a p img{ width: 100%; height: 100%; object-fit: cover; vertical-align: top; }
-    .news figure a:hover figcaption h2{  color: #333;}
+    .swiper-pagination.swiper-pagination-progressbar{ transform: translateY(396px); background: #ececec;}
+    .swiper-pagination.swiper-pagination-progressbar span{ background: #2ea0f1;}
 
+    
 
 
 
     /* main5 온라인장보기 */
-    .main5{ left: 0; top: 0; margin-top: 101px; width: 100%; height: 320px; background-color: #f6f6f6; padding-top: 50px; overflow: hidden;}
-    .oncon {display: flex; align-items: flex-start; justify-content: flex-start; width: 90%; margin: 0 auto;}
+    .main5{ left: 0; top: 0; margin-top: 60px; width: 100%; height: 320px; background-color: #f6f6f6; padding-top: 50px; overflow: hidden;}
+    .oncon {display: flex; align-items: flex-start; justify-content: flex-start; width: 95%; margin-left: 5%;
+        overflow-x: scroll; -ms-overflow-style: none;
+    }
+    .oncon::-webkit-scrollbar{display: none;}
     .oncon div{ display: flex; align-items: flex-start; justify-content: flex-start;}
     .oncon div a{ position: relative; margin: 0 20px 0 0;}
     .oncon div a > p{
@@ -503,7 +520,6 @@ body{ background: none;}
     .mhead{width: 80%;}
     .mhead ul{margin-top: 30px;}
     .mhead ul li:nth-child(1){width: 85px;}
-    .mhead ul li:nth-child(2){width: 70px;}
 
     /* main1 사진움직이는 */
     .main1 article div{ left: 15%; top: 43%; }
@@ -526,7 +542,7 @@ body{ background: none;}
     .right{
         width: 85%; float: none; margin: 40px 0; top: -235px; right: 0; z-index: 1;
         position: absolute; overflow: hidden; background-color: white; padding: 20px 10px;
-        border-radius: 15px 0 15px 0;
+        border-radius: 15px 0 15px 0; overflow-x: scroll;
     }
     .right figure{ width: 140px; height: 300px; margin: 0 10px; animation: none;}
     .right figure > p{ margin-bottom: 17px; width:100%; max-height: 220px; box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
@@ -534,7 +550,12 @@ body{ background: none;}
     .right figure p img{
         height: 100%; vertical-align: top; object-fit: cover; transform: translate(-17%, 0); }
     .right div{ display: none;}
-
+    
+    .arrow{left: 35px;}
+    .arrow div:nth-child(3){display: none;}
+    .arrow div span{ width: 10px;}
+    .arrow div span:nth-child(1){ transform: rotate(-45deg) translateY(-220%);}
+    .arrow div span:nth-child(2){ transform: rotate(45deg) translateY(220%);}
 
     /* main3 온누리상품권 */
 
@@ -546,5 +567,9 @@ body{ background: none;}
         100%{transform: translateX(-30%); opacity: 0;}
     }
     .bgmenu div > p{display: none;}
+
+    .newsm figure a h2{ font-size:18px; margin: 2px 0 10px 0;}
+    .newsm figure a h3{font-size:12px; }
+    .newsm figure a p{ font-size: 14px;}
 
 }

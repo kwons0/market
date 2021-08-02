@@ -11,9 +11,9 @@
 
 .menu{ margin-top: 101px; border-top: 1px solid rgb(248, 248, 248);
     left: 0; top: 101px; width: 100%; height: 50px; background-color: rgb(248, 248, 248);}
-.menu ul{ width: 80%; height: 100%; margin: 0 auto;}
-.menu ul li{  width: 30%;  text-align: center; margin: 11px auto; transform: translateX(140%);}
-.menu ul li a{ margin: 0 20px;}
+.menu ul{ width: 80%; height: 100%; margin: 0 auto;  position: relative;}
+.menu ul li{width: 180px; margin: 11px 0 ; position: absolute; right: 0px; top: 0; }
+.menu ul li a{ color: #333; margin: 0 10px; }
 .menu ul li a:nth-child(1){ color: #0088e7;}
 
 
@@ -155,9 +155,11 @@
 .new nav{ border-bottom: 2px solid lightgray;
     display: flex; align-items: flex-start; justify-content: space-between;
 }
-.new nav a{  padding: 0 20px; font-size: 17px; color:lightgray; transform: translateY(2px);}
+.new nav a{  padding: 0 20px; font-size: 17px; color:lightgray; transform: translateY(2px); cursor: pointer; }
 .new nav a:nth-child(7){margin-right: 30px;}
-.new nav a:nth-child(1){ color: #333; border-bottom: 2px solid #333; margin-left: 30px;}
+.new nav a:nth-child(1){ margin-left: 30px;}
+.new nav a.view{ color: #333; border-bottom: 2px solid #333;}
+
 .new nav a:hover{ color: #0088e7; border-bottom: 2px solid #0088e7;}
 
 
@@ -166,8 +168,9 @@
 
 .item{ width: 80%; margin: 0 auto; margin-top: 50px;}
 .item > div{ display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;
-    margin-bottom: 30px; 
+    margin-bottom: 30px; display: none;
 }
+.item > div.view{display: flex;}
 .item > div a{ width: 32%; border-top: 2px solid rgb(244, 244, 244); margin-bottom: 50px;
 }
 
@@ -176,19 +179,8 @@
 .item > div a figure > div > img{width: 100%; height: 180px; object-fit: cover;transition: .5s;}
 
 /* 주석 */
-.item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s; background-color: #0088e7; border-radius: 25px;}
-.item > div a figure > span b{  color: white; padding: 0 13px ;}
-
-.item > div a:nth-of-type(2) figure > span{display: none;}
-.item > div a:nth-of-type(3) figure > span{display: none;}
-.item > div a:nth-of-type(6) figure > span{display: none;}
-.item > div a:nth-of-type(8) figure > span{display: none;}
-.item > div a:nth-of-type(9) figure > span{display: none;}
-.item > div a:nth-of-type(11) figure > span{display: none;}
-.item > div a:nth-of-type(12) figure > span{display: none;}
-.item > div a:nth-of-type(13) figure > span{display: none;}
-.item > div a:nth-of-type(14) figure > span{display: none;}
-.item > div a:nth-of-type(15) figure > span{display: none;}
+.item > div a figure > span{ display: inline-block; position: absolute; left: 3%; top: 5%; transition: .5s; }
+.item > div a figure > span b{  color: white; padding: 0 13px ; background: #0088e7; border-radius: 25px;}
 
 /* 아이콘 */
 .item > div a figure > p{ position: absolute; right: 4%; bottom: 5%;}
@@ -209,13 +201,13 @@
 
 
 
-.item > a{
-    margin: 0 auto; margin-top: 30px; display: block;
+.item > p{
+    margin: 0 auto; margin-top: 30px; display: block; cursor: pointer;
     width: 10%; padding: 15px 40px; font-size: 18px;
     text-align: center; transition: .3s; color: #0088e7;background-color: white;
     border: 1.5px solid #c6c6c6; border-radius: 30px;
-} 
-.item > a:hover{
+}
+.item > p:hover{
     border: 1.5px solid #0088e7;
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -224,7 +216,7 @@
 
 
 
-@media (max-width:1074px) and (min-width:1047px){
+@media (max-width:1111px) and (min-width:1047px){
     .new nav a:nth-child(7){margin-right: 0;}
     .new nav a:nth-child(1){ margin-left: 0;}
 }
@@ -269,7 +261,7 @@
         left: 0; top: 0; width: 100%; height: 50px; background-color: white;}
     .menu ul{ width: 80%; height: 100%; margin: 0 auto; border-bottom: 2px solid #e3e3e3;}
     .menu ul li{  width: 100%;  text-align: center; margin: 0 auto; transform: translateX(0);
-        display: flex; align-items: center; justify-content: center;
+        display: flex; align-items: center; justify-content: center; position: inherit;
     }
     .menu ul li a{ margin: 0; width: 100%; height: 32.5px; color: #adadad;
         display: block; font-size: 20px; transform: translateY(50%);
@@ -307,46 +299,7 @@
 
 
     /* best */
-    .best{ width: 100%; margin-top: 130px; overflow: visible;}
-    .best h2{margin-bottom: 30px;}
-    .best > div{ width: 100%; height: 380px;
-        display: flex; align-items: flex-start; justify-content: flex-start; }
-    .best > div > div{ width: auto; height: 360px; overflow: visible; 
-        display: flex; align-items: center; justify-content: flex-start; flex-direction: row; 
-    }
-    .best > div > div > a {width: 230px; height: 360px; margin: 0 10px; animation: best 8s 2s infinite; }
-    @keyframes best {
-        0%{ttransform: translateX(0%);}
-        50%{transform: translateX(-85%);}
-        100%{transform: translateX(-170%);}
-    }
-    .best2{display: flex; align-items: flex-start; justify-content: flex-start;}
-    .best3{display: flex; align-items: flex-start; justify-content: flex-start;}
-
-    /* 메뉴 */
-    .best > div > div > a figure {  position: inherit; width: 100%; overflow: hidden; }
-    .best > div > div > a figure > div{height: 230px; border-radius: 10px; overflow: hidden;}
-
-    /* 이미지 */
-    .best > div > div > a figure > div > img{width: 250px; height: 100%; object-fit: cover; transition: .5s;}
-    .best > div div > a:hover figure > div > img{transform: scale(1.1);}
-
-    /* 하단정보 */
-    .best > div > div > a figure figcaption{position: unset; background-color: rgba(0,0,0,0); 
-        width: 100%; height: auto; text-align: left; padding: 10px 5px 0 5px; box-sizing: border-box;}
-    .best > div > div > a figure figcaption small{ color: #c6c6c6; font-size: 13px;}
-    .best > div > div > a figure figcaption > h2{ color: #333; margin: 5px 0; font-size: 17px; text-align: left;}
-    .best > div > div > a figure figcaption div{ display: flex; align-items: baseline; justify-content: space-between;}
-    .best > div > div > a figure figcaption div > p{font-size: 20px; padding: 0; }
-    .best > div > div > a figure figcaption div > p:nth-of-type(1){ color: #0088e7;}
-    .best > div > div > a figure figcaption div > p:nth-of-type(2){ color: #333; font-weight: bold;}
-    .best > div > div > a figure figcaption{transform: translateY(0); transition: 0;}
-    .best > div > div > a:hover figure figcaption{transform: translateY(0);}
-
-    /* 더보기 버튼 */
-    .best > div > div > a figure > figure{display: none;}
-
-
+    .best{display: none;}
 
     /* new title */
 
@@ -364,11 +317,13 @@
 
 
 
+
     /* item */
 
     .item{ width: 80%; margin: 0 auto; margin-top: 0px;}
-    .item > div{ display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0; }
-    .item > div a{ width: 48%; padding-top: 60px; border-top: none; margin-bottom: 20px;}
+    .item > div{ display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0; display: none; }
+    .item > div.view{display: flex;}
+    .item > div a{ width: 48%; padding-top: 60px; border-top: none; margin-bottom: 20px; display: block;}
     .item > div:nth-child(1) a{padding-top: 50px;}
 
     /* 제품이미지 */
@@ -384,16 +339,15 @@
     .item > div a article small{ color: #c6c6c6; font-size: 14px;}
     .item > div a article h2{ margin-top: 5px; color: #5a5a5a;}
     .item > div a article > div{ display: flex; align-items: baseline; justify-content: flex-start;}
-    .item > div a article > div p{}
     .item > div a article > div p:nth-child(1){color: #0088e7; font-size: 21px; padding-right: 10px;}
     .item > div a article > div h3{ font-size: 21px; padding-right: 10px;}
     .item > div a article > div p:nth-child(3){ color: #c6c6c6; text-decoration: line-through;}
 
 
 
-    .item > a{
+    .item > p{
         margin: 0 auto; margin-top: 60px; display: block;
-        width: 10%; padding: 15px 40px; font-size: 18px;
+        width: 15%; padding: 15px 40px; font-size: 18px;
     } 
 
     /* footer */
@@ -420,6 +374,8 @@
 
 
 @media (max-width:700px){
+    .menu ul li a{font-size: 18px;}
+    
     .delivery figure article{ position: absolute; left: 5%; top:50%;  width: 100%; display: inherit;}
     .delivery figure article h2{ padding-bottom: 25px;}
     .delivery figure article ul{width: 100%;}

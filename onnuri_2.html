@@ -8,6 +8,7 @@
     <link href="./css/onnuri_2.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/onnuri2.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -50,7 +51,7 @@
             <ul>
                 <li><a href="index.html"><img src="img/m-logo6.png" alt=""></a></li>
                 <li>
-                    <a href="#"><img src="img/m-logo3-1.png" onmouseover="this.src='img/m-logo4.png'" onmouseout="this.src='img/m-logo3-1.png'" alt=""></a>
+                    <a href="#"><img src="img/m-logo3-1.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
                     <div>
@@ -80,21 +81,6 @@
         </div>
     </header>
 
-    <script>
-        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a'), //
-            menuList = document.querySelector('.mhead .bgmenu');
-
-            menuBtn.addEventListener('click', function(){
-                if(menuList.classList.contains('active')){
-                    menuList.classList.remove('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo3-1.png" alt="">`
-                }else{
-                    menuList.classList.add('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
-                }
-            });
-    </script>
-
     <div class="menu">
         <ul>
             <li>
@@ -105,15 +91,15 @@
     </div>
 
 
-    <div class="title1" id="p1">
+    <div class="title1">
         <div>
             <p><img src="img/a_icon1.png" alt=""></p>
             <h2>판매처</h2>
         </div>
-        <nav>
-            <a href="#p1">지류상품권</a>
-            <a href="#p2">전자상품권</a>
-            <a href="#p3">모바일상품권</a>
+        <nav class="nav1">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
         </nav>
         <div>
             <figure><img src="img/a_photo8.jpg" alt=""></figure>
@@ -121,24 +107,22 @@
     </div>
     
 
-
-
-    <div class="title2" id="p2">
-        <nav>
-            <a href="#p1">지류상품권</a>
-            <a href="#p2">전자상품권</a>
-            <a href="#p3">모바일상품권</a>
+    <div class="title2">
+        <nav class="nav1">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
         </nav>
         <div>
             <figure><img src="img/a_photo9.jpg" alt=""></figure>
         </div>
     </div>
 
-    <div class="title3" id="p3">
-        <nav>
-            <a href="#p1">지류상품권</a>
-            <a href="#p2">전자상품권</a>
-            <a href="#p3">모바일상품권</a>
+    <div class="title3">
+        <nav class="nav1">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
         </nav>
         <div>
             <figure><img src="img/a_photo10.jpg" alt=""></figure>
@@ -148,52 +132,52 @@
         </p>
     </div>
     
-    <div class="title4" id="p4">
+    <div class="title4">
         <div>
             <p><img src="img/a_icon1.png" alt=""></p>
             <h2>사용처</h2>
         </div>
-        <nav>
-            <a href="#p4">지류상품권</a>
-            <a href="#p5">전자상품권</a>
-            <a href="#p6">모바일상품권</a>
-            <a href="#p7">온라인쇼핑몰</a>
+        <nav class="nav2">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
+            <a>온라인쇼핑몰</a>
         </nav>
         <div>
             <figure><img src="img/a_photo11.jpg" alt=""></figure>
         </div>
     </div>
 
-    <div class="title5" id="p5">
-        <nav>
-            <a href="#p4">지류상품권</a>
-            <a href="#p5">전자상품권</a>
-            <a href="#p6">모바일상품권</a>
-            <a href="#p7">온라인쇼핑몰</a>
+    <div class="title5">
+        <nav class="nav2">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
+            <a>온라인쇼핑몰</a>
         </nav>
         <div>
             <figure><img src="img/a_photo12.jpg" alt=""></figure>
         </div>
     </div>
 
-    <div class="title6" id="p6">
-        <nav>
-            <a href="#p4">지류상품권</a>
-            <a href="#p5">전자상품권</a>
-            <a href="#p6">모바일상품권</a>
-            <a href="#p7">온라인쇼핑몰</a>
+    <div class="title6">
+        <nav class="nav2">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
+            <a>온라인쇼핑몰</a>
         </nav>
         <div>
             <figure><img src="img/a_photo13.jpg" alt=""></figure>
         </div>
     </div>
 
-    <div class="title7" id="p7">
-        <nav>
-            <a href="#p4">지류상품권</a>
-            <a href="#p5">전자상품권</a>
-            <a href="#p6">모바일상품권</a>
-            <a href="#p7">온라인쇼핑몰</a>
+    <div class="title7">
+        <nav class="nav2">
+            <a>지류상품권</a>
+            <a>전자상품권</a>
+            <a>모바일상품권</a>
+            <a>온라인쇼핑몰</a>
         </nav>
         <div class="site">
             <figure>

@@ -8,6 +8,7 @@
     <link href="./css/map.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -53,7 +54,7 @@
                     <p>전통시장 찾기</p>
                 </li>
                 <li>
-                    <a href="#"><img src="img/m-logo3-1.png" onmouseover="this.src='img/m-logo4.png'" onmouseout="this.src='img/m-logo3-1.png'" alt=""></a>
+                    <a href="#"><img src="img/m-logo3-1.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
                     <div>
@@ -140,14 +141,29 @@
     </div>
 
     <div class="popup">
-        <div>
-            <figure><img src="img/z-icon2.png"  alt=""></figure>
-            <p><b>전통시장통통</b>에서 내 위치에<br>엑세스하도록 허용하시겠습니까?</p>
-            <div>
+        <ul>
+            <li class="popTxt">
+                <h2>접근권한 설정안내</h2>
+                <p> <b>전통시장통통</b>에서는 다음 권한들을 사용하오니 <br> 허용해주시기 바랍니다. </p>
+                <article>
+                    <div>필수 접근권한 : 없음</div>
+                    <figure>선택적 접근권한 : 1건
+                        <figcaption>
+                            <p>
+                                <small>위치정보</small>
+                                <small>지도 정보제공을 위한
+                                    위치 확인</small>
+                            </p>
+                            <p><img src="img/z-icon2.png"></p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </li>
+            <li class="popBtn">
                 <input type="submit" value="허용">
                 <input type="submit" value="거부">
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 
     <div class="map">
@@ -189,10 +205,6 @@
             </figure>
         </article>
     </div>
-
-
-
-
 
     <footer class="footer">
     </footer>

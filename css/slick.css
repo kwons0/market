@@ -161,7 +161,8 @@
     margin:7px 0;
     background-color: #e3e3e3;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
-}   /* 원모양 */
+}
+/* 원모양 */
 .slick-dots li.slick-active button{
     background: linear-gradient( to bottom, #57b3ff, #0088e7);
     height:30px;
@@ -177,8 +178,6 @@
 
 .slick-list{width:100%; height:100%; left: 0; top: 0; }
 .slick-list img{width:100%; height:680px; transform: translate(0, -78.3%); object-fit: cover; }
-
-
 
 .slick-slider::after{ content: ''; display: block; left: 0; top: 0; 
     width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5);

@@ -51,7 +51,7 @@
             <ul>
                 <li><a href="index.html"><img src="img/m-logo6.png" alt=""></a></li>
                 <li>
-                    <a href="#"><img src="img/m-logo3-1.png" onmouseover="this.src='img/m-logo4.png'" onmouseout="this.src='img/m-logo3-1.png'" alt=""></a>
+                    <a href="#"><img src="img/m-logo3-1.png" alt=""></a>
                 </li>
                 <li class="bgmenu">
                     <div>
@@ -80,21 +80,6 @@
             </ul>
         </div>
     </header>
-
-    <script>
-        const menuBtn = document.querySelector('.mhead ul li:nth-of-type(2) a'), //
-            menuList = document.querySelector('.mhead .bgmenu');
-
-            menuBtn.addEventListener('click', function(){
-                if(menuList.classList.contains('active')){
-                    menuList.classList.remove('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo3-1.png" alt="">`
-                }else{
-                    menuList.classList.add('active');
-                    menuBtn.innerHTML = `<img src="img/m-logo4.png" alt="">`
-                }
-            });
-    </script>
 
     <div class="menu">
         <ul>
@@ -131,139 +116,11 @@
                         </span>
                     </article>
                     <span><h2>NEW</h2></span>
-                </a>
-                <a href="https://egnmall.net/eventmall_category.asp?uid=2350" target="_blank">
-                    <figure><img src="img/f-photo2.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo8.png" alt=""></div>
-                        <small>e경남몰</small>
-                        <h2>친환경 농산물 20%할인</h2>
-                        <p>친환경 농산물 꾸러미 20% 세일!
-                            농림축산식품부 친환경 농산물 판촉행사
-                            기간 2021.4.9 ~ 6.30 ...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="https://www.onnuri-sijang.com/onnuri/event/eventDetail?eventCd=100000027" target="_blank">
-                    <figure><img src="img/f-photo6.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo2.png" alt=""></div>
-                        <small>온누리 전통시장</small>
-                        <h2>유 퀴즈 온 더 전통시장</h2>
-                        <p>동행세일 기간 3만원 이상 구매 후 퀴즈 이벤트 참여하세요!
-                            정답을 맞히신 분 중 추첨을 통해 650명에게 경품을 쏩니다.
-                            이벤트 참여방법...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                    <span><h2>NEW</h2></span>
-                </a>
-                <a href="https://onnurigood.com/?pn=product.promotion_view&uid=18" target="_blank">
-                    <figure><img src="img/f-photo4.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo9.png" alt=""></div>
-                        <small>온누리굿데이</small>
-                        <h2>테팔 브랜드 단독특가</h2>
-                        <p>테팔 주방용품 최저가 보장! 놓칠 수 없는 기회!
-                            집밥 대성공 프로젝트 맞춤 구성들로 실속 구매찬스...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="http://gi.esmplus.com/koreafarm1/MS/ZERO.html" target="_blank">
-                    <figure><img src="img/f-photo5.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo11.png" alt=""></div>
-                        <small>온누리몰 인더마켓</small>
-                        <h2>모바일 온누리상품권 간편결제 10%할인</h2>
-                        <p>1. 전통시장 소득공제를 통한 환급(연말정산 소득공제 시 소득공제율 40%적용)
-                            2. 할인구매한도 100만원 유지...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="https://www.facebook.com/semas.korea/posts/4311731185525342" target="_blank">
-                    <figure><img src="img/f-photo3.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo19.png" alt=""></div>
-                        <small>소상공인시장진흥공단</small>
-                        <h2>청년몰 사업 지원</h2>
-                        <p>소상공인시장진흥공단 화목한 지원시책 25탄,
-                            오늘은 우리 공단의 청년몰 사업에 대해 알아보겠습니다 :)
-                            청년몰 조성 사업이란?...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="https://www.onnuri-sijang.com/onnuri/plan/planDetail?planCd=378" target="_blank">
-                    <figure><img src="img/f-photo7.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo2.png" alt=""></div>
-                        <small>온누리 전통시장</small>
-                        <h2>상하농원이 쏜다! 6월 증정 이벤트</h2>
-                        <p>Event01 / 5만원 이상 구매 시, 군고구마말랭이 4일 증정
-                            Event02 / 7만원 이상 구매 시, 새싹보리분말 28입 증정...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="https://inthemarket.co.kr/event/goods_promotion.php?event_ix=789/" target="_blank">
-                    <figure><img src="img/f-photo8.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo11.png" alt=""></div>
-                        <small>온누리몰 인더마켓</small>
-                        <h2>정남진 농협 찰보리쌀 500g 무료 증정</h2>
-                        <p>정남진 농협의 쌀을 사기만 해도
-                            하얀 찰보리쌀 500g을 무료로 같이 보내드립니다.
-                            기간 : 6월21일 ~ 8월 31...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                </a>
-                <a href="https://www.facebook.com/semas.korea/posts/4384948968203563" target="_blank">
-                    <figure><img src="img/f-photo9.jpg" alt=""></figure>
-                    <article>
-                        <div><img src="img/a_logo18.png" alt=""></div>
-                        <small>온누리시장</small>
-                        <h2>동행세일X제로페이 결제 이벤트</h2>
-                        <p>(1) 온라인 캐시백 이벤트
-                            공영쇼핑에서 온라인 제로페이로 결제시 10% 캐시백
-                            - 진행채널 : 공영쇼핑 웹사이트 또는 어플리케이션...
-                        </p>
-                        <span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </article>
-                    <span><h2>NEW</h2></span>
                 </a> -->
             </li>
             
         </ul>
-       
-        <a href="#">더보기</a>
+        <a>더보기</a>
     </div>
 
 

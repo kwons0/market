@@ -1,7 +1,6 @@
 @charset 'utf-8';
 @import url('common.css');
 
-
 /* header */
 .head nav ul li:nth-child(1) > a{ background-color: #0088e7; color: white; }
 
@@ -9,9 +8,9 @@
 
 .menu{ margin-top: 101px; border-top: 1px solid rgb(248, 248, 248);
     left: 0; top: 101px; width: 100%; height: 50px; background-color: rgb(248, 248, 248);}
-.menu ul{ width: 80%; height: 100%; margin: 0 auto;}
-.menu ul li{  width: 30%;  text-align: center; margin: 11px auto; transform: translateX(10%);}
-.menu ul li a{ margin: 0 10px; color: #0088e7;}
+.menu ul{ width: 80%; height: 100%; margin: 0 auto; position: relative; }
+.menu ul li{width: 100px; margin: 11px 0 ; position: absolute; right: 560px; top: 0; }
+.menu ul li a{ color: #0088e7; }
 
 
 /* title */
@@ -47,44 +46,49 @@
 }
 .mapnav ul li a p img{ width: 20px;}
 
-
 .mapnav .a{width: 15%;}
 .mapnav .b{width: 15%;}
 .mapnav .c{width: 48%;}
 .mapnav .d{width: 8%; background-color: #0088e7; border: 2px solid #0088e7;}
 .mapnav .e{width: 14%;}
-
-.mapnav .d p{}
 .mapnav .d p img{width: 20px;}
 .mapnav .d div{color: white;}
-
-.mapnav .e p{}
 .mapnav .e img{width: 20px}
 .mapnav .e:hover div{ color: #0088e7;}
 
 .mmnav{display: none;}
 
 /* popup */
-.popup{ z-index: 2; position: absolute;
-    left: 50%; top: 50%; transform: translateX(-50%);
-    width: 380px; height: 200px; background-color: white;
-    border: 1px solid #c6c6c6;  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);}
-.popup > div{ left: 0; top: 0; transform: translateY(20%);  width: 100%; height: 70%;
-    display: flex; align-items: center; justify-content: space-between; flex-direction: column;}
-.popup > div figure{width: 30px;}
-.popup > div figure img{width: 100%;}
-.popup > div p{ text-align: center; font-size: 17px;}
-.popup > div p b{font-size: 20px;}
-.popup > div div input{width: 120px; padding: 5px 0; margin: 0 5px;
-    border-radius: 5px; border: none;}
-.popup > div div input:nth-child(1){ background-color: #0088e7; color: white;}
-.popup > div div input:nth-child(2){ color: #999}
+.popup{ position: fixed; left: 0; top: 0;
+    background: rgba(0, 0, 0, 0.5); z-index: 2; width: 100%; height: 100%;
+}
+.popup ul{ width: 400px; height: 450px; background-color: white;
+    margin: 0 auto; transform: translateY(60%);
+}
+.popTxt{width: 80%; margin: 0 auto;}
+.popTxt h2{ padding-top: 30px; font-size: 20px; text-align: center; }
+.popTxt > p{ color: #555; padding: 15px 0; border-bottom: 2px solid #0088e7; text-align: center;  }
+.popTxt > p b{ color: #555; }
 
+.popTxt article div{ padding: 20px 0; border-bottom: 1.6px dashed #999; color: #999;}
+.popTxt article figure{ padding: 20px 0 10px 0; color: #0088e7;}
+.popTxt article figure figcaption{ width: 90%; margin: 20px auto; padding: 10px 20px; box-sizing: border-box;
+    display: flex; justify-content: space-between; align-items: center;
+    background-color: #f3f3f3;
+}
+.popTxt article figure figcaption p:nth-of-type(1) small{display: block; padding: 5px 0; }
+.popTxt article figure figcaption p:nth-of-type(1) small:nth-of-type(1){font-weight: 600; font-size: 18px; }
+.popTxt article figure figcaption p:nth-of-type(1) small:nth-of-type(2){padding-top: 0; color: #666; white-space:pre-line;}
+.popTxt article figure figcaption p:nth-of-type(2){width: 30px; background-color: white; padding: 10px 15px; border-radius: 40px;}
+.popTxt article figure figcaption p:nth-of-type(2) img{width: 100%;}
 
+.popBtn{ display: flex; margin: 0;}
+.popBtn input{cursor: pointer; border: none; width: 100%; height: 50px;}
+.popBtn input:nth-of-type(1){ background-color: #0088e7; color: white;}
 
 /* map */
 
-.map{ opacity: 40%;
+.map{
     width: 80%; margin: 0 auto; left: 0; top: 0; margin-top: 50px;
     display: flex; align-items: flex-start; justify-content: space-between;
 }
@@ -142,7 +146,7 @@
     .mhead ul li:nth-child(1) a{width: 20px;}
     .mhead ul li:nth-child(1) a img{width: 100%;}
 
-    .mhead ul li:nth-child(1) p{ margin-left: 20px; font-size: 22px;}
+    .mhead ul li:nth-child(1) p{ margin-left: 20px; font-size: 22px; transform: translateY(-6px);}
 
     .mhead ul li:nth-child(2) a{width: 20px; z-index: 20;}
     .mhead ul li:nth-child(2) a img{width: 100%;}
@@ -166,6 +170,8 @@
     .title{display: none;}
     .mapnav{display: none;}
 
+    .popup ul{ width: 90%; height: 450px;}
+
     /* mmnav */
     .mmnav{display: block; width: 80%; height: 55px; margin: 0 auto;
         background-color: white; border-radius: 10px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -178,7 +184,8 @@
     .mmnav div figure{ width: 20px; transform: translateY(10%) }
     .mmnav div figure img{ width: 100%;}
     
-    .popup{display: none;}
+    .popup{z-index: 10;}
+    .popup ul{ transform: translateY(30%);}
 
     /* map */
 
@@ -233,4 +240,7 @@
     /* sns */
     .sns{ display: none;}
 
+}
+@media(max-width:369px){
+    .popTxt article figure figcaption p:nth-of-type(1) small:nth-of-type(2){white-space:normal;}
 }
