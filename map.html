@@ -8,6 +8,7 @@
     <link href="./css/map.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cefc9a3272e141fff3b69e4c7331f5cd"></script>
     <script src="js/map.js"></script>
     <script src="js/common.js"></script>
 </head>
@@ -179,10 +180,22 @@
             </div>
         </article>
         <figure class="guid">
-            <div><img src="img/z-photo2.jpg" alt=""></div>
+            <div id="map">
+                <!-- <img src="img/z-photo2.jpg" alt=""> -->
+            </div>
             <p><img src="img/z-icon3.png" alt=""></p>
         </figure>
     </div>
+
+    <script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
     
     <div class="map2">
         <figure class="guid2">

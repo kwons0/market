@@ -101,7 +101,7 @@
 .market div small{white-space: pre-line; line-height: 1.5; color: #999;}
 .market div small b{color: rgb(119, 119, 119);}
 
-.guid{ position: relative; width: 63%;}
+.guid{ position: relative; width: 63%; height: 100%;}
 .guid div img{width: 100%;}
 .guid p{ position: absolute; left: 71%; top: 30%;}
 .guid p img{ width: 60px;}
