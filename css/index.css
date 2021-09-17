@@ -453,7 +453,8 @@ body{ background: none;}
     .newsm figure a h3{ color: #0088e7; font-size: 15px;}
     .newsm figure a p{ font-size: 15px; line-height: 1.3; color: #999;}
 
-    .swiper-pagination.swiper-pagination-progressbar{ transform: translateY(396px); background: #ececec;}
+    .main4m.swiper-container{ position: relative;}
+    .swiper-pagination.swiper-pagination-progressbar{ position: absolute; left: 0; bottom: 0; transform: translateY(396px); background: #ececec;}
     .swiper-pagination.swiper-pagination-progressbar span{ background: #2ea0f1;}
 
     
