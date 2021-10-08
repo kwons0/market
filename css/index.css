@@ -36,7 +36,10 @@ body{ background: none;}
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
     font-weight: normal;  font-style: normal;
 }
-.main1 article figure::after{
+.slider{ font-size: 0; margin: 0; padding: 0;}
+.slider p{ font-size: 0; margin: 0; padding: 0;}
+.slider p img{ font-size: 0; margin: 0; padding: 0;}
+.slider::after{
     content:''; font-size: 0;    position: absolute; 
     z-index:31; left: 0; top: 0;    width: 100%;  height: 100%; background-color: rgba(0,0,0,0.5);
 }
