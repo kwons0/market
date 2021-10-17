@@ -101,12 +101,10 @@
 .market div small{white-space: pre-line; line-height: 1.5; color: #999;}
 .market div small b{color: rgb(119, 119, 119);}
 
-.guid{ position: relative; width: 63%; height: 100%;}
-.guid div img{width: 100%;}
-.guid p{ position: absolute; left: 71%; top: 30%;}
-.guid p img{ width: 60px;}
+.guid{ position: relative; width: 63%; height: 50vh;}
+.guid div{ width: 100%; height:100%;}
 
-.map2{display: none;}
+.market2{display: none;}
 
 
 
@@ -189,23 +187,15 @@
 
     /* map */
 
-    .map{display: none;}
+    .map{ width: 100%; height: 60vh; margin-top: 0;}
+    .map article{display: none;}
 
-    .map2{ display: block; opacity: 100%;
+    .market2{ display: block; opacity: 100%;
         width: 100%; margin: 0 auto; left: 0; top: 0; margin-top: 0; display: inherit;
     }
 
-    .guid2{position: relative; width: 100%; height: 600px;}
-    .guid2 div{ width: 100%; height: 600px;}
-    .guid2 div img{width: 100%; height: 600px; object-fit: cover;}
-    .guid2 p{ position: absolute; left: 47.5%; top: 33%;}
-    .guid2 p img{ width: 60px;}
-    .guid2 a{ position: absolute; right: 5%; bottom: 5%; width: 60px; height: 60px;
-        background-color: white; border-radius: 40px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    }
-    .guid2 a img{ width: 50%; transform: translate(50%, 50%);}
+    .guid{ width: 100%; height: 100%;}
 
-    .market2{ left: 0; top: 0; width: 100%;}
 
     .market2 div{ width: 80%; margin: 20px auto; margin-top: 30px;}
     .market2 div h2{ margin-bottom: 10px; font-size: 22px;}

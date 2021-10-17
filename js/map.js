@@ -13,9 +13,9 @@ function map(){
         }else{
             $('.popup').fadeOut(500);
             $('.mmnav div').fadeTo('slow',0.4);
-            $('.map2').fadeTo('slow',0.4);
+            $('.market2').fadeTo('slow',0.4);
+            $('#map').fadeTo('slow',0.4);
         }
-        console.log(window.innerWidth)
     })
 
 
@@ -25,6 +25,5 @@ function map(){
         localStorage.menu = $(this).index() + 'a';
     })
     
-
 }
 window.onload = map;

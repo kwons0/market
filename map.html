@@ -194,34 +194,36 @@
             </div>
         </article>
         <figure class="guid">
-            <div id="map">
-                <img src="img/z-photo2.jpg" alt="">
-            </div>
-            <p><img src="img/z-icon3.png" alt=""></p>
+            <div id="map" style="width:100%; height: 100%;"></div>
         </figure>
     </div>
     
-    <div class="map2">
-        <figure class="guid2">
-            <div><img src="img/z-photo2-1.jpg" alt=""></div>
-            <p><img src="img/z-icon3.png" alt=""></p>
-            <a href="#"><img src="img/z-icon5.png" alt=""></a>
+    <article class="market2">
+        <div>
+            <h2>의정부 제일시장</h2>
+            <small>
+                <b>위치 : </b>경기도 의정부시 태평로73번길 20
+                <b>시간 : </b>09:00 ~ 22:00
+                <b>연락처 : </b>031-844-2617
+                <b>주차시설 : </b>450~500대</small>
+        </div>
+        <figure>
+            <p><img src="img/z-photo1.jpg" alt=""></p>
+            <p><img src="img/z-photo1-1.jpg" alt=""></p>
         </figure>
-        <article class="market2">
-            <div>
-                <h2>의정부 제일시장</h2>
-                <small>
-                    <b>위치 : </b>경기도 의정부시 태평로73번길 20
-                    <b>시간 : </b>09:00 ~ 22:00
-                    <b>연락처 : </b>031-844-2617
-                    <b>주차시설 : </b>450~500대</small>
-            </div>
-            <figure>
-                <p><img src="img/z-photo1.jpg" alt=""></p>
-                <p><img src="img/z-photo1-1.jpg" alt=""></p>
-            </figure>
-        </article>
-    </div>
+    </article>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPLESIhY9TE5kFOTTgo0038gVv9YaFbY&callback=initMap&region=kr"></script>
+    <script>
+      function initMap() {
+        var uijeong = { lat: 37.739766 ,lng: 127.050397 };
+        var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 13,
+                center: uijeong
+            })
+        }
+    </script>
 
     <footer class="footer">
     </footer>
