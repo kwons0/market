@@ -50,6 +50,4 @@
 
 ## 📅 프로젝트 정보
 - Date: 2021.06
-- Stack: HTML5, SCSS, JavaScript, jQuery
 - Contribution: 기획 100%, 디자인 100%, 개발 100%
-- Deploy: GitHub Pages
