@@ -23,7 +23,6 @@
 | 사용자 흐름 부재            | 시장 → 상세 → 장보기 → 지도까지 연결되는 UX 구축       |
 | 모바일 미지원              | PC·Tablet·Mobile 전 기기 대응 반응형 설계       |
 | 온라인 서비스 없음           | **온라인 장보기 기능, 지도 기반 ‘내 주변 시장 찾기’ 도입** |
-| 수작업 콘텐츠 입력           | JSON 기반으로 뉴스·이벤트 자동 생성 구조 구축          |
 
 <br/>
 
@@ -40,7 +39,7 @@
 | 분야      | 사용 기술                       |
 | ------- | --------------------------- |
 | Markup  | HTML5                       |
-| Styling | SCSS (Responsive Web)       |
+| Styling | SCSS                        |
 | Script  | JavaScript, jQuery          |
 | Device  | PC · Tablet · Mobile (반응형)  |
 | Deploy  | GitHub Pages                |
